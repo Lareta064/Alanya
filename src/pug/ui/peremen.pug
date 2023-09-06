@@ -1,0 +1,123 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+		style.
+
+			@font-face {
+				font-family: "Manrope-Regular";
+				src: url(../fonts/Manrope-Regular.woff2) format("woff2");
+				font-weight: 400;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: "Manrope-Medium";
+				src: url(../fonts/Manrope-Medium.woff2) format("woff2");
+				font-weight: 500;
+				font-style: normal;
+				font-display: swap;
+			}
+
+			@font-face {
+				font-family: "Manrope-SemiBold";
+				src: url(../fonts/Manrope-SemiBold.woff2) format("woff2");
+				font-weight: 600;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: "Manrope-Bold";
+				src: url(../fonts/Manrope-Bold.woff2) format("woff2");
+				font-weight: 700;
+				font-style: normal;
+				font-display: swap;
+			}
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				.container-dashboard__content
+					h2 Шрифты
+				
+					ul.color-scheme
+						li
+							.text-regulare(style="font-family:Manrope-Regular; font-size:34px;") Font Regulare
+							pre.
+								font-family:$reg;
+						li
+							.text-regulare(style="font-family:Manrope-Medium; font-size:34px;") Font Medium
+							pre.
+								font-family:$med;
+							
+						li
+							.text-regulare(style="font-family:Manrope-SemiBold; font-size:34px;") Font SemiBold
+							pre.
+								font-family:$semi;
+						li
+							.text-regulare(style="font-family:Manrope-Bold; font-size:34px;") Font Bold
+							pre.
+								font-family:$bold;
+				h2 Цветовая схема
+
+				.container-dashboard__content
+					ul.color-scheme
+						li
+							span.color-box(style="background-color:#5162FF;")
+							span.color-name $ac1 - #5162FF
+						li
+							span.color-box(style="background-color:#6776FF")
+							span.color-name $ac2 - #6776FF
+							
+						li
+							span.color-box(style="background-color:#7477CC;")
+							span.color-name $ac3 - #7477CC
+						li
+							span.color-box(style="background-color:#B2B9FF")
+							span.color-name $ac4 - #B2B9FF
+						li
+							span.color-box(style="background-color:#FFCC00")
+							span.color-name $ac5 - #FFCC00					
+						li
+							span.color-box(style="background-color:#fff;")
+							span.color-name $white - white
+						li
+							span.color-box(style="background-color:black")
+							span.color-name $black - black
+						li
+							span.color-box(style="background-color: #192249 ")
+							span.color-name $pr - #192249 
+						li
+							span.color-box(style="background-color:#212D64")
+							span.color-name $pr1 -#212D64							
+						
+						li
+							span.color-box(style="background-color: #767DA1")
+							span.color-name $sec - #767DA1
+						li
+							span.color-box(style="background-color:#A9ADC6")
+							span.color-name $sec1 -#A9ADC6
+
+						li
+							span.color-box(style="background-color:#E1E3EF")
+							span.color-name $sec2 - #E1E3EF
+							
+						li
+							span.color-box(style="background-color:#EDEDED;")
+							span.color-name $sec3 - #EDEDED
+						li
+							span.color-box(style="background-color:#F9F9FB")
+							span.color-name $sec4 - #F9F9FB
+						
