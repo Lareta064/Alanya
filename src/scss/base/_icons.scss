@@ -1,12 +1,25 @@
+svg{transition: .3s;}
 .svg-plus{
 	width: 24px;
 	height: 24px;
 	fill: $pr;
 }
 .chevron-left,.chevron-right{
-	width: 6px;
-	height: 12px;
+	width: 10px;
+	height: 18px;
 	fill:$sec1;
 
 
+}
+.svg-prev, .svg-next{
+	width: 9px;
+	height: 18px;
+	fill: $sec1;
+}
+
+.svg-cross{
+   width: 14px;
+   height: 13px;
+   fill: $sec;
+   
 }

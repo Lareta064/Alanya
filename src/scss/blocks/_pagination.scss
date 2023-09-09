@@ -1,0 +1,28 @@
+.pagination-nav{
+	display: flex;
+	align-items: center;
+	column-gap:-1px;
+	a{
+		border:1px solid $sec;
+		font-size: 18px;
+		color: $sec;
+		font-family: $bold;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 54px;
+		height: 54px;
+		transition:.3s;
+		&.active, &:hover{
+			color: $ac1;
+			border: 1px solid $ac1;
+			svg{fill: $ac1;}
+		}
+	}
+	.pagination-prev{
+		border-radius: 50px 0 0 50px;
+	}
+	.pagination-next {
+		border-radius: 0 50px 50px 0;
+	}
+}

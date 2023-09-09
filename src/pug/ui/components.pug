@@ -52,4 +52,21 @@ html(lang="ru")
 
 				.container-dashboard__content
 					ul.ui-components
-						
+						li
+							.pagination-nav
+								a(href="#!").pagination-prev
+									svg.svg-prev
+										use(href="../img/spriteSvg.svg#chevron-left")
+								a(href="#!") 2
+								a(href="#!").active 3
+								a(href="#!") 4
+								a(href="#!") ..
+								a(href="#!") 5
+								a(href="#!").pagination-next
+									svg.svg-next
+										use(href="../img/spriteSvg.svg#chevron-right")
+
+						li
+							.tag
+								span 05
+								span.icon-cross
