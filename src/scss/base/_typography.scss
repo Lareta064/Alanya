@@ -1,0 +1,33 @@
+.h1, .h2, .h3{
+	font-family: $bold;
+}
+.h1{
+	font-size: 54px;
+	
+	
+}
+.h2{
+    font-size: 38px;
+	@media (max-width: 1364px) {
+		font-size: 32px;
+	}
+	
+	@media (max-width: 991px) {
+	  font-size: 26px;
+	}	
+	@media (max-width: 767px) {
+		font-size: 18px;
+	}
+
+
+}
+.h3{
+	font-size: 30px;
+	line-height: 1.2;
+}
+.txt-upper{text-transform: uppercase;}
+.txt-medi{font-family: $medi; font-weight: 500;}
+.txt-semi {
+	font-family: $semi;
+	font-weight: 600;
+}

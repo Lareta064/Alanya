@@ -12,7 +12,36 @@ html(lang="ru")
 		meta(name="format-detection" content="telephone=no")
 		link(rel="stylesheet", href="../css/main.css")
 		title UI-KIT
+		style.
+			@font-face {
+				font-family: "Manrope-Regular";
+				src: url(../fonts/Manrope-Regular.woff2) format("woff2");
+				font-weight: 400;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: "Manrope-Medium";
+				src: url(../fonts/Manrope-Medium.woff2) format("woff2");
+				font-weight: 500;
+				font-style: normal;
+				font-display: swap;
+			}
 
+			@font-face {
+				font-family: "Manrope-SemiBold";
+				src: url(../fonts/Manrope-SemiBold.woff2) format("woff2");
+				font-weight: 600;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: "Manrope-Bold";
+				src: url(../fonts/Manrope-Bold.woff2) format("woff2");
+				font-weight: 700;
+				font-style: normal;
+				font-display: swap;
+			}
 	body.body-dashboard
 
 		include ui-navigation.pug
@@ -23,4 +52,16 @@ html(lang="ru")
 
 				.container-dashboard__content
 					ul
-						li
+						li 
+							.h1 Главный заголовок
+						pre.
+							.h1 Главный заголовок
+						li 
+							.h2 Заголовок второго уровня
+						pre.
+							.h2 Заголовок второго уровня
+						li 
+							.h3  Заголовок третьего уровня
+						pre.
+							.h3 Заголовок третьего уровня
+			

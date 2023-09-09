@@ -1,0 +1,57 @@
+.btn-accent, .btn-outline, .btn{
+	display: inline-flex;
+	align-items: center;
+	padding: 15px 30px;
+	height: 54px;
+	line-height: 1.4;
+	border:1px solid $ac1;
+	justify-content: center;
+	transition: .5s;
+	gap: 10px;
+	flex-shrink: 0;
+	border-radius: 12px;
+	background: $ac1;
+	cursor:pointer;
+	color: white;
+	font-family: $semi;
+	svg{fill: #fff;}
+	@media (max-width: 1199px) {
+	  height: 46px;
+	  font-size: 14px;
+	  padding: 13px 20px;
+	}
+}
+.btn-accent:hover{
+	background-color: $ac2;
+	border: 1px solid $ac2;
+}
+.btn-outline{
+  background-color: #fff;
+  color: $ac1;
+  svg{fill:$ac1;}
+  &:hover{
+	color: $ac3;
+	border: 1px solid $ac3;
+	svg {fill: $ac3;}
+  }
+}
+.btn{
+	border: 1px solid $sec;
+	background-color: #fff;
+	color: $sec;
+	svg {fill: $sec;}
+	
+	&:hover {color: $ac1;border: 1px solid $ac1;
+		svg {fill: $ac1;}
+	}
+}
+.btn-accent,
+.btn-outline,
+.btn{
+
+	&.disable{
+		cursor:default;
+		pointer-events: none;
+		opacity: .4;
+	}
+}
