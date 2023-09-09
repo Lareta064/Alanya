@@ -55,3 +55,22 @@
 		opacity: .4;
 	}
 }
+.btn-left, .btn-right{
+	border-radius: 10px;
+	border: 1px solid $sec1;
+	width: 46px;
+	height: 46px;
+	cursor:pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .3s;
+	
+		&:hover {
+			border-color: $ac1;
+	
+			svg {
+				fill: $ac1;
+			}
+		}
+}
