@@ -90,3 +90,11 @@ input[type="submit"] {
 	-webkit-appearance: none;
 }
 
+.flx-inline, .flx-block{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+.flx-block{
+	display: flex;
+}

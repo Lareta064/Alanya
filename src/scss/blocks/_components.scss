@@ -1,10 +1,29 @@
 .tag{
-	display: flex;
+	display: inline-flex;
 	align-items: center;
-	justify-content: center;
+	line-height: 1;
+	&>*+*{margin-left: 4px;}
+	height: 25px;
+	padding: 4px 8px;
 	font-size: 12px;
 	color: $sec;
 	border-radius: 4px;
-	border: 1px solid $sec;
+	border: 1px solid $sec1;
 	transition:.3s;
+	background-color: $sec4;
+	&.active{
+		background-color: $ac1;
+		color: #fff;
+		svg{fill: #fff;}
+	}
+	&.active:hover, &:hover{
+		border-color: $ac1;
+		color: $ac1;
+		background-color: $sec4;
+		svg{fill: $ac1}
+	}
+}
+.tag-wrapper{
+	column-gap:24px;
+	flex-wrap:wrap;
 }
