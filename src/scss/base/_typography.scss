@@ -31,3 +31,28 @@
 	font-family: $semi;
 	font-weight: 600;
 }
+.link, .link-medium, .link-small{
+	font-size: 16px;
+	font-weight: 400;
+	color: $ac3;
+	position: relative;
+	
+	display: inline;
+	transition:.3s;
+	line-height: 1.4;
+	&:after{
+		content:'';
+		height: 1px;
+		left: 0;
+		bottom: 2px;
+		width: 100%;
+		position: absolute;background-color: $ac3;
+	}
+	&:hover{
+		color: $ac1;
+		&:after{background-color: $ac1;}
+		
+	}
+}
+.link-medium{font-size: 14px;}
+.link-small{font-size: 12px;}
