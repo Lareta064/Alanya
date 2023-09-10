@@ -44,11 +44,15 @@ input{
   padding-top: 17px;
 }
 input.error{border: 1px solid $er;}
+input.disable, input.disable~*{
+  opacity: 0.3;
+}
+
 input.error ~ p {
  color: $er;
 }
-input:valid, input:focus{border: 1px solid $sec1;}
+input.valid, input:focus{border: 1px solid $sec1;}
 
-input:focus + .fake-placeholder, input:valid+.fake-placeholder{
+.fake-placeholder.active{
   top: 4px; font-size: 12px;
 }

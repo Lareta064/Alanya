@@ -1,5 +1,9 @@
-mixin input(plh, subtext, addCls)
+mixin input(plh, subtext, addCls, val )
 	.form-item
-		input(class=(addCls =='' ? '' : ''+addCls ) type="text" name="name" required)
+		if addCls == 'disable'
+			input.form-input(class=' disable'  readonly type="text" name="name" value=(val =='' ? '' : ''+ val ) )
+		else
+			input.form-input(class=(addCls =='' ? '' : ' '+addCls ) type="text" name="name" )
+
 		span.fake-placeholder #{plh}
 		p #{subtext}
