@@ -91,10 +91,12 @@ input[type="submit"] {
 }
 
 .flx-inline, .flx-block{
-	display: inline-flex;
-	justify-content: center;
+	display: flex;
 	align-items: center;
 }
-.flx-block{
-	display: flex;
+.flx-center{
+	justify-content: center;
+}
+.flx-inline{
+	display: inline-flex;
 }

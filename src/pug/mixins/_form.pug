@@ -1,0 +1,5 @@
+mixin input(plh, subtext, addCls)
+	.form-item
+		input(class=(addCls =='' ? '' : ''+addCls ) type="text" name="name" required)
+		span.fake-placeholder #{plh}
+		p #{subtext}
