@@ -1,9 +1,21 @@
 mixin input(plh, subtext, addCls, val )
 	.form-item
+		span.fake-placeholder !{plh}
 		if addCls == 'disable'
 			input.form-input(class=' disable'  readonly type="text" name="name" value=(val =='' ? '' : ''+ val ) )
 		else
 			input.form-input(class=(addCls =='' ? '' : ' '+addCls ) type="text" name="name" )
-
-		span.fake-placeholder #{plh}
+		
 		p #{subtext}
+
+mixin input-light
+	.form-item
+		input.form-input(type="text")
+
+mixin switch(text)
+	label.switch-item
+		input(type="checkbox" checked name="")
+		span
+		span
+		if text != ''
+			p #{text}

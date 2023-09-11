@@ -21,6 +21,7 @@ select:-webkit-autofill:focus {
     font-size: 16px;
     transition:.3s;
     pointer-events: none;
+    b{color: $er;}
   }
   p{
     font-size: 12px;
@@ -41,8 +42,9 @@ input{
   background:white;
   padding-left: 16px;
   padding-right: 16px;
-  padding-top: 17px;
+ 
 }
+.fake-placeholder + input{padding-top:17px;}
 input.error{border: 1px solid $er;}
 input.disable, input.disable~*{
   opacity: 0.3;
@@ -55,4 +57,141 @@ input.valid, input:focus{border: 1px solid $sec1;}
 
 .fake-placeholder.active{
   top: 4px; font-size: 12px;
+}
+/* switch item*/
+.switch-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  white-space: nowrap;
+  cursor:pointer;
+  input {
+    width: 0.01px;
+    height: 0.01px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  span {
+    display: inline-block;
+  }
+
+  input+span {
+    width: 52px;
+    height: 32px;
+    
+    background-color: $sec;
+    // border: 1px solid #9BADCA;
+    border-radius: 32px;
+    margin-right: 12px;
+
+  }
+
+  span+span {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2px;
+    transition: .3s;
+  }
+
+  input:checked+span+span {
+    left: 22px;
+    z-index: 2;
+    background-color: white;
+  }
+
+  input:checked+span {
+    background-color: $ac2;
+  }
+
+}
+/*=============checkbox======*/
+.form-checkbox, .form-radio{
+    label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor:pointer;
+    &.disable,
+      input.disable {
+        opacity: .36;
+        cursor: default;
+        pointer-events: none;
+      }
+
+    input {
+      width: 0.01px;
+      height: 0.01px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+  }
+}
+.form-checkbox {
+
+    span.fake-checkbox {
+      width: 20px;
+      height: 20px;
+      border-radius: 6px;
+      background: #fff;
+      border: 1px solid $sec;
+      margin-right: 12px;
+      font-size: 14px;
+      line-height: 20px;
+      color: $sec;
+      background: url(../img/icons/check.svg);
+      background-position: center -50px;
+      background-repeat: no-repeat;
+      background-size: auto;
+      transition: .3s;
+      flex-shrink: 0;
+    }
+
+    input[type="checkbox"]:checked+span.fake-checkbox {
+      background-color: $ac2;
+      background-position: center center;
+
+    }
+  }
+
+
+.form-radio {
+ 
+ 
+
+  .fake-radio {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid $sec;
+    background: #fff;
+    background: url(../img/icons/check.svg);
+    background-position: center -50px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    transition: .3s;
+    flex-shrink: 0;
+  }
+
+  span+span {
+    margin-left: 12px;
+  }
+
+  input[type="radio"]:checked+span.fake-radio {
+    background-color: $ac2;
+    background-position: center;
+    border: 1px solid $ac2;
+
+  }
 }
