@@ -1,11 +1,26 @@
 .main-menu{
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 449px;
 	background-color: #fff;
 	font-size: 16px;
 	line-height: 1.4;
+	height: 100vh;
+	overflow-y: auto;
+	&::-webkit-scrollbar{
+		display: block;
+		width: 6px;
+	}
+	&::-webkit-scrollbar-thumb {
+		width: 6px;
+		border-radius: 100px;
+		background-color: $sec2;
+	}
+	&::-webkit-scrollbar-track {
+		width: 6px;
+		background-color: transparent;
+	}
 }
 .main-menu-logo{
 	padding: 20px 30px;
