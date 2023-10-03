@@ -1,0 +1,42 @@
+.gradient-box{
+	border-radius: 20px;
+	border: 2px solid #ACB4FF;
+	background: linear-gradient(93deg, rgba(81, 98, 255, 0.50) 0.25%, rgba(115, 130, 255, 0.50) 100%);
+	box-shadow: -8px -8px 25px 0px rgba(112, 126, 255, 0.50) inset, 8px 8px 25px 0px rgba(112, 126, 255, 0.50) inset;
+	backdrop-filter: blur(12.5px);
+	padding: 60px 80px;
+	&>*{color: #fff;}
+	@media (max-width: 767px) {
+	   padding: 20px;
+	}
+}
+.gradient-block  .gradient-box{
+	padding: 40px;
+	
+}
+.gradient-box.gradient-box--special {
+	position: relative;
+	min-height: 212px;
+	padding: 40px;
+	-webkit-mask-image: radial-gradient(circle at 106px 50%, rgba(81, 98, 255, 0.80) 0%, rgba(81, 98, 255, 0.90) 56px, rgba(112, 126, 255, 1) 56px, rgba(112, 126, 255, 1) 58px, transparent 58px,
+			transparent 68px, #ACB4FF 68px, #ACB4FF 70px, black 70px, black 100px);
+}
+.gradient-box__content{
+	position: absolute;
+	left: 40px;
+	right: 40px;
+	top: 50%;
+	transform: translateY(-50%);
+	column-gap:50px;
+
+}
+.gradient-box__icon{
+	width: 132px;
+	height: 132px;
+	flex-shrink:0;
+}
+.gradient-block__group{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap:30px;
+}

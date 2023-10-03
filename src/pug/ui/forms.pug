@@ -1,6 +1,21 @@
 include ../layouts/_mixins-links.pug
 block variables
-
+mixin drop-block(obj)
+	.catalog-menu-drop
+		ul.scroll-y
+			each item in obj
+				li
+					a(href="#!"+ item.link) 
+						svg(class="svg-"+ item.svg)
+							use(href="./img/svgSprite.svg#svg-"+ item.svg +"")
+						span !{item.text}
+					if item.menuArr
+						//==== меню Уровень #2 =====
+						.catalog-menu-submenu
+							ul.scroll-y
+								each menuEl in item.menuArr
+									li
+										a(href="#!"+ menuEl.link) !{ menuEl.text}
 <!DOCTYPE html>
 html(lang="ru")
 	head
@@ -95,11 +110,63 @@ html(lang="ru")
 								label
 									input(type="checkbox" name="")
 									span.fake-checkbox
+							pre.
+								
+								.form-checkbox
+									label
+									input(type="checkbox" name="")
+									span.fake-checkbox
+						li
+							.form-checkbox.disable
+								label
+									input(type="checkbox" name="")
+									span.fake-checkbox
+							p У неактивного элемента добавляется класс disable для родиетля с классом  .form-checkbox 
+							pre.
+								 
+								.form-checkbox.disable
+									label
+										input(type="checkbox" name="")
+										span.fake-checkbox
 						li
 							.form-radio
 								label
 									input(type="radio" name="")
 									span.fake-radio
+							pre.
+								.form-radio
+									label
+										input(type="radio" name="")
+										span.fake-radio
+						li
+							.form-radio.disable
+								label
+									input(type="radio" name="radio-item" checked)
+									span.fake-radio
+							.form-radio
+								label
+									input(type="radio" name="radio-item" )
+									span.fake-radio
+							p У неактивного элемента добавляется класс disable для родиетля с классом  .form-checkbox
+							pre.
+								.form-radio.disable
+									label
+										input(type="radio" name="")
+										span.fake-radio
+						
+						li
+							.drop-block
+								label
+									a(href="#!")
+										span Инвестиционный климат
+										
+									input(type="checkbox" name="sidebar-list")
+									.drop-block__list
+										a(href="#!") Экспертам АСИ
+										a(href="#!") Почему РСО-Алания?
+										a(href="#!") Инвестиционный стандарт
+										a(href="#!") Законодательство и документы
+										a(href="#!") Инвестиционная инфраструктура
 
 
 			script(src="../js/form.js")

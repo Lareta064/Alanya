@@ -115,17 +115,17 @@ input.valid, input:focus{border: 1px solid $sec1;}
 }
 /*=============checkbox======*/
 .form-checkbox, .form-radio{
+  &.disable {
+      opacity: .36;
+      cursor: default;
+      pointer-events: none;
+    }
     label {
     display: flex;
     align-items: center;
     position: relative;
     cursor:pointer;
-    &.disable,
-      input.disable {
-        opacity: .36;
-        cursor: default;
-        pointer-events: none;
-      }
+   
 
     input {
       width: 0.01px;
@@ -160,15 +160,13 @@ input.valid, input:focus{border: 1px solid $sec1;}
     input[type="checkbox"]:checked+span.fake-checkbox {
       background-color: $ac2;
       background-position: center center;
+      border: 1px solid $ac2;
 
     }
   }
 
 
 .form-radio {
- 
- 
-
   .fake-radio {
     width: 20px;
     height: 20px;
@@ -195,3 +193,25 @@ input.valid, input:focus{border: 1px solid $sec1;}
 
   }
 }
+.drop-block{
+  position: relative;
+  label{
+    display: block;
+  }
+  input{
+    width: 0.01px;
+    height: 0.01px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0;
+  }
+  &__list{
+    display: none;
+    a{display: block;}
+  }
+  input:checked + .drop-block__list {
+    display: block;
+  }
+}
+

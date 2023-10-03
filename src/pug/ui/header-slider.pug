@@ -47,36 +47,31 @@ html(lang="ru")
 		include ui-navigation.pug
 
 		block content
-			.container-dashboard
-				h2 Типографика
+			.container-dashboard(style="background-image:url(../img/header-bg1.webp)")
+				h2 Слайдер в шапке
 
 				.container-dashboard__content
-					ul
-						li 
-							.h1 Главный заголовок-54
-						pre.
-							.h1 Главный заголовок-54
-						li 
-							.h2 Заголовок второго уровня-38
-						pre.
-							.h2 Заголовок второго уровня-38
-						li 
-							.h3  Заголовок третьего уровня-30
-						pre.
-							.h3 Заголовок третьего уровня-30
-					
-					
-					ul
+					ul.ui-components
 						li
-							a(href="#!").link Политика обработки персональных данных
-						pre.
-							a(href="#!").link Политика обработки персональных данных
+							.gradient-box
+								.h2 Поддержка инвестиционной деятельности в регионе
+							pre.
+								.gradient-box
+									.h2 Поддержка инвестиционной деятельности в регионе
+							
 						li
-							a(href="#!").link-medium Политика обработки персональных данных
-						pre.
-							a(href="#!").link-medium Политика обработки персональных данных
-						li
-							a(href="#!").link-small Политика обработки персональных данных
-						pre.
-							a(href="#!").link-small Политика обработки персональных данных
-			
+							
+							.gradient-block
+								.gradient-box.mb-30
+									.h2 Поддержка инвестиционной деятельности в регионе
+							
+								.gradient-block__group
+									.gradient-box.gradient-box--special
+										.gradient-box__content.fly-center
+											.gradient-box__icon.fl-center
+												img(src="../img/icons/target.svg", width="56" height="56" alt="alt")
+
+											.body-3 Корпорация развития - «одно окно» для инвесторов
+									+header-slider('target', 'Корпорация развития - «одно окно» для инвесторов')
+								
+									+header-slider('target', 'Корпорация развития - «одно окно» для инвесторов')
