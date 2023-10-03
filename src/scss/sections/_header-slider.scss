@@ -57,6 +57,7 @@
 }
 .header-slider-wrapper{
 	position: relative;
+	
 	&:after, &:before{
 		position: absolute;
 		content: '';
@@ -88,9 +89,9 @@
 		width: 100%;
 		background-size: cover;
 		background-repeat: no-repeat;
-		display: flex;
+		
 		padding-left: 60px;
-		align-items: center;
+		
 		position: relative;
 		&:before{
 			content:'';
