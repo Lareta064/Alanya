@@ -40,3 +40,141 @@
 	grid-template-columns: 1fr 1fr;
 	gap:30px;
 }
+.header-slider-wrapper{
+	position: relative;
+	&:after, &:before{
+		position: absolute;
+		content: '';
+		width: 1px;
+		background-color: #fff;
+		height: 34%;
+		right: 59px;
+		top: 0;
+		z-index: 2;
+	}
+	&:before {
+		top: auto;
+		bottom: 0;
+	}
+	.header-slider__decore{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		width: 48%;
+	}
+} 
+.header-slider{
+	height: 940px;
+
+	
+	.header-slider__item img{
+		height: 940px;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.owl-carousel .owl-dots{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 59px;
+	transform: translateX(50%);
+	z-index: 5;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 20px;
+	.owl-dot{
+		position: relative;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 1);
+		box-sizing: border-box;
+		cursor: pointer;
+	}
+	.owl-dot.active{
+		width: 14px;
+		height: 14px;
+	}
+	.owl-dot.active::after {
+		position: absolute;
+		content: "";
+		top: -6px;
+		bottom: -6px;
+		right: -6px;
+		left: -6px;
+		border-radius: 50%;
+		-webkit-animation-name: dot-animate;
+		animation-name: dot-animate;
+		-webkit-animation-duration: 7s;
+		animation-duration: 7s;
+		-webkit-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
+		-webkit-animation-timing-function: linear;
+		animation-timing-function: linear;
+	}
+
+	.owl-dot.active::before {
+		position: absolute;
+		content: "";
+		top: -6px;
+		bottom: -6px;
+		right: -6px;
+		left: -6px;
+		border-radius: 50%;
+		border: 6px solid transparent;
+	}
+}	
+@keyframes dot-animate {
+	0% {
+		border: 6px solid $ac1;
+		-webkit-clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 0%, 50% 0%, 50% 50%, 50% 50%);
+		clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 0%, 50% 0%, 50% 50%, 50% 50%)
+	}
+
+	12.5% {
+		-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0, 0 0, 50% 50%, 50% 50%);
+		clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0, 0 0, 50% 50%, 50% 50%)
+	}
+
+	25% {
+		-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 50%, 0 50%, 50% 50%, 50% 50%);
+		clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 50%, 0 50%, 50% 50%, 50% 50%)
+	}
+
+	37.5% {
+		-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 100%, 0 100%, 50% 50%, 50% 50%);
+		clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 100%, 0 100%, 50% 50%, 50% 50%)
+	}
+
+	50% {
+		-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 50%, 50% 50%);
+		clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 50%, 50% 50%)
+	}
+
+	62.5% {
+		-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 50%, 50% 50%);
+		clip-path: polygon(50% 0%, 100% 0, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 50%, 50% 50%)
+	}
+
+	75% {
+		-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 50% 50%, 50% 50%);
+		clip-path: polygon(50% 0%, 100% 0, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 50% 50%, 50% 50%)
+	}
+
+	87.5% {
+		-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 0, 100% 0, 100% 0, 100% 0, 100% 0, 50% 50%, 50% 50%);
+		clip-path: polygon(50% 0%, 100% 0, 100% 0, 100% 0, 100% 0, 100% 0, 100% 0, 50% 50%, 50% 50%)
+	}
+
+	100% {
+		border: 6px solid $ac1;
+		-webkit-clip-path: polygon(50% 0%, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 50%, 50% 50%);
+		clip-path: polygon(50% 0%, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 50%, 50% 50%)
+	}
+
+}
