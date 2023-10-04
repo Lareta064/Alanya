@@ -77,3 +77,33 @@
     fill: $ac1;
 	transform: translateY(-50%) rotate(180deg);
 }
+.main-menu-item.open .main-menu__sub{display: block;}
+
+.main-menu-footer{
+	padding: 40px 30px;
+}
+.call-center{
+	margin-top: 30px;
+	max-width: 220px;
+	a{
+		font-size: 24px;
+		line-height: 1.3;
+		color: $sec;
+		font-weight: 700;
+		white-space: nowrap;
+		&:hover{
+			color: $ac1;
+		}
+	}
+	p{
+		font-size: 16px;
+		line-height: 1.4;
+		color: $sec1;
+		padding-bottom: 5px;
+
+	}
+}
+.main-menu__row{
+	justify-content: space-between;
+	margin-top: 20px;
+}
