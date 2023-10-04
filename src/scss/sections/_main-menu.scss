@@ -6,6 +6,9 @@
 	top: 0;
 	left: 0;
 	width: 449px;
+	@media(max-width:1919px){
+		width: 300px;
+	}
 	@media (max-width: 1199px) {
 		transition: height .5s;
 		right: 0;
@@ -190,4 +193,9 @@
 .main-menu__row{
 	justify-content: space-between;
 	margin-top: 20px;
+	@media(max-width:1919px){
+		flex-direction: column;
+		row-gap:20px;
+		align-items: flex-start;
+	}
 }
