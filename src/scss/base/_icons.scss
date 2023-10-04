@@ -81,3 +81,82 @@ svg{transition: .3s;}
 		color: $ac1;
 	}
 }
+/*========GAMBURGER======*/
+.menu-toggle {
+	display: none;
+	z-index: 6;
+	cursor: pointer;
+
+	justify-content: center;
+	align-items: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	border: 1px solid $sec1;
+	position: relative;
+	flex-shrink: 0;
+	&:hover {
+		opacity: .8;
+	}
+}
+
+@media (max-width: 1199px) {
+	.menu-toggle {
+		display: flex;
+
+	}
+}
+
+.menu-toggle span {
+	position: relative;
+	height: 2px;
+	width: 22px;
+	border-radius: 5px;
+	background-color: $sec1;
+	-webkit-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s;
+}
+
+.menu-toggle span:after,
+.menu-toggle span:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	height: 2px;
+	background-color: $sec1;
+	border-radius: 5px;
+	right: 0;
+	-webkit-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s;
+}
+
+.menu-toggle span:after {
+	top: -6px;
+}
+
+.menu-toggle span:before {
+	bottom: -6px;
+}
+
+.active.menu-toggle span {
+	background-color: transparent !important;
+}
+
+
+.active.menu-toggle span:after {
+	top: 0px;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+
+}
+
+.active.menu-toggle span:before {
+	bottom: 0px;
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+
+}

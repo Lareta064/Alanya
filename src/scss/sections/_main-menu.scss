@@ -7,10 +7,12 @@
 	left: 0;
 	width: 449px;
 	@media (max-width: 1199px) {
+		transition: height .5s;
 		right: 0;
 		width: 100%;
 		z-index: 5;
 		padding-bottom: 0;
+		height: 70px;
 	}
 }
 .main-menu{
@@ -38,7 +40,13 @@
 	@media (max-width: 1199px) {
 	overflow-y: hidden;
 	scrollbar-width: none;
+	height: 100%;
+	}
+}
+.sidebar.active{
 	height: 100vh;
+	.main-menu__block{
+		display: block;
 	}
 }
 .main-menu-logo{
@@ -51,24 +59,25 @@
 	 top:0;
 	 z-index: 5;
 	 padding: 10px 20px;
+	 display: flex;
+	 justify-content: space-between;
 	}
 	
 }
 .main-menu__block{
 	width: 100%;
 	@media (max-width: 1199px) {
+	 display: none;
 	  padding-top: 64px;
 	  position: relative;
 	  height: calc(100vh - 70px);
 		overflow-y: auto;
-	
+
 		&::-webkit-scrollbar {
 			display: none;
 			width: 0;
 		}
 	
-		
-	  
 	}
 }
 .main-menu-list{
@@ -109,6 +118,11 @@
 	color: $pr;
 	font-weight: 600;
 	border-bottom: 1px solid $sec2;
+	font-size: 16px;
+	@media (max-width: 1199px) {
+		font-size: 14px;
+		padding: 14px 20px;
+	}
 }
 .main-menu-link{
 	position: relative;
