@@ -81,6 +81,14 @@ svg{transition: .3s;}
 		color: $ac1;
 	}
 }
+.svg-link{
+	width: 28px;
+	height: 28px;
+	fill:#E1E3EF;
+	&:hover{
+		fill: $ac1;
+	}
+}
 /*========GAMBURGER======*/
 .menu-toggle {
 	display: none;

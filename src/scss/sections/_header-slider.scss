@@ -155,16 +155,9 @@
    @media (max-width: 1199px) {
 	grid-template-columns: 1fr 1fr;
 		gap: 30px;
-		// .gradient-box.gradient-box--special {
-		// 	width: 390px;
-		// }
-   }
-		@media (max-width: 991px) {
 		
-		// .gradient-box.gradient-box--special {
-		// 	width: 290px;
-		// }
-		}
+   }
+		
    @media (max-width: 767px) {
 	    grid-template-columns: 1fr;
 		gap: 10px;
@@ -221,13 +214,13 @@
 			position: absolute;
 			bottom: 0;
 			left: 0;
-			width: 50%;
-			height: 25%;
+			width: 600px;
+			height: 220px;
 			background-image: url('../img/header-decor.svg');
 			background-size: contain;
 			background-position: left top;
 			background-repeat: no-repeat;
-			@media (max-width: 1199px) {
+			@media (max-width: 767px) {
 				background-size: cover;
 				width: 320px;
 				height: 120px;

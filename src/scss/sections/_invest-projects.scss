@@ -1,0 +1,22 @@
+.invest-projects{
+	background-color: $sec4;
+	.h2{max-width: 800px;}
+	
+
+}
+.owl-carousel .owl-nav{
+		position: absolute;
+		top: -40px;
+		right: 0;
+		width: fit-content;
+		display: flex;
+		column-gap:30px;
+		.owl-next, .owl-prev{
+			svg {
+					fill:#A9ADC6;
+				}
+		}
+	}
+.owl-carousel .owl-nav button.owl-next:hover,.owl-carousel .owl-nav button.owl-prev:hover{
+	svg{fill: $ac1;}
+}

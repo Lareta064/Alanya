@@ -91,7 +91,22 @@ input[type="submit"] {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 }
-
+.container{
+	width: 1350px;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+section{
+	padding-top: 100px;
+	padding-bottom: 100px;
+	.h2 {margin-bottom: 40px;}
+	@media (max-width: 767px) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		.h2{margin-bottom: 20px;}
+	}
+}
  .fl-block,.fly-center,.fly-center, .fl-center, .fl-column{
 	display: flex;
 	
