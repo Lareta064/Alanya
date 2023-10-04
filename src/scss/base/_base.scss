@@ -90,7 +90,7 @@ input[type="submit"] {
 	-webkit-appearance: none;
 }
 
- .fl-block,.fly-center,.fly-center, .fl-center{
+ .fl-block,.fly-center,.fly-center, .fl-center, .fl-column{
 	display: flex;
 	
 }
@@ -99,6 +99,9 @@ input[type="submit"] {
 }
 .fly-center,.fl-center{
 	align-items: center;
+}
+.fl-column{
+	flex-direction: column;
 }
 .mb-30{margin-bottom: 30px;}
 .page-grid{
