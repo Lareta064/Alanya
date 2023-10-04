@@ -105,7 +105,12 @@ input[type="submit"] {
 .fl-column{
 	flex-direction: column;
 }
-.mb-30{margin-bottom: 30px;}
+.mb-30{
+	margin-bottom: 30px;
+	@media (max-width: 767px) {
+	  margin-bottom: 10px;
+	}
+}
 .page-grid{
 	padding-left: 449px;
 	position: relative;
