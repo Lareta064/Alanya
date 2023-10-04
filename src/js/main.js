@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		dots: true,
 		loop: true,
 		smartSpeed: 800,
-		autoplay: true,
+		// autoplay: true,
 		
 		animateOut: 'fadeOut',
 	});

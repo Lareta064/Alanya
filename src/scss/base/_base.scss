@@ -107,5 +107,9 @@ input[type="submit"] {
 .page-grid{
 	padding-left: 449px;
 	position: relative;
+	@media (max-width: 1199px) {
+		padding-left: 0;
+		padding-top: 70px;
+	}	
 	
 }

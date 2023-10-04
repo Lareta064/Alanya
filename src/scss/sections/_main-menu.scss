@@ -6,6 +6,12 @@
 	top: 0;
 	left: 0;
 	width: 449px;
+	@media (max-width: 1199px) {
+		right: 0;
+		width: 100%;
+		z-index: 5;
+		padding-bottom: 0;
+	}
 }
 .main-menu{
 	
@@ -14,6 +20,8 @@
 	line-height: 1.4;
 	height: calc(100vh - 40px);
 	overflow-y: auto;
+	scrollbar-width: thin;
+	scrollbar-color: transparent $sec2;
 	&::-webkit-scrollbar{
 		display: block;
 		width: 6px;
@@ -27,21 +35,60 @@
 		width: 6px;
 		background-color: transparent;
 	}
+	@media (max-width: 1199px) {
+	overflow-y: hidden;
+	scrollbar-width: none;
+	height: 100vh;
+	}
 }
 .main-menu-logo{
 	padding: 20px 30px;
 	background-color:  $sec4;
 	border-bottom: 1px solid $sec2;
 	width: 100%;
+	@media (max-width: 1199px) {
+	 position: sticky;
+	 top:0;
+	 z-index: 5;
+	 padding: 10px 20px;
+	}
 	
 }
-.main-menu-list{width: 100%;}
+.main-menu__block{
+	width: 100%;
+	@media (max-width: 1199px) {
+	  padding-top: 64px;
+	  position: relative;
+	  height: calc(100vh - 70px);
+		overflow-y: auto;
+	
+		&::-webkit-scrollbar {
+			display: none;
+			width: 0;
+		}
+	
+		
+	  
+	}
+}
+.main-menu-list{
+	width: 100%;
+
+}
 .logo{
 	column-gap: 20px;
 	color: $sec;
 	font-weight: 600;
+	@media (max-width: 1199px) {
+		column-gap: 10px;
+	}
 	
-	p{font-size: 16px;max-width: 230px;}
+	p{
+		font-size: 16px;max-width: 230px;
+		@media (max-width: 1199px) {
+		  font-size: 14px;
+		}
+	}
 	
 	line-height: 1.4;
 	img{
@@ -49,6 +96,10 @@
 		height: 75px;
 		object-fit: contain;
 		flex-shrink: 0;
+		@media (max-width: 1199px) {
+		 width: 50px;
+		 height: 50px;
+		}
 	}
 }
 .main-menu-item a{
@@ -91,6 +142,9 @@
 	padding: 40px 30px 0;
 	
 	margin-top: auto;
+	@media (max-width: 1199px) {
+	  padding: 20px;
+	}
 }
 .call-center{
 	margin-top: 30px;
@@ -109,8 +163,14 @@
 		font-size: 16px;
 		line-height: 1.4;
 		color: $sec1;
-		padding-bottom: 5px;
+		padding-bottom: 3px;
 
+
+	}
+	@media (max-width: 1199px) {
+		margin-top: 20px;
+		a{font-size: 18px;}
+		p{font-size: 12px;}
 	}
 }
 .main-menu__row{
