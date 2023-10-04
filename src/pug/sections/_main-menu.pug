@@ -1,95 +1,96 @@
 //====menu-sidebar ======
-.main-menu
-	.main-menu-logo.fly-center
-		a(href="index.html").logo.fly-center
-			img(src="./img/logo.webp", width="75" height="75" alt="logo")
-			p Инвестиционный портал РСО&#8209;Алания
-	
-	//===== main-menu-list====
-	.main-menu-list#main-menu-list
+.sidebar
+	.main-menu
+		.main-menu-logo.fly-center
+			a(href="index.html").logo.fly-center
+				img(src="./img/logo.webp", width="75" height="75" alt="logo")
+				p Инвестиционный портал РСО&#8209;Алания
 		
-		//===добавление класса open  элементу main-menu-item делает видимым подменю .main-menu__sub ======
-		.main-menu-item.open
-			a(href="#!").main-menu-link О регионе
-				svg.svg-down
-					use(href="./img/spriteSvg.svg#svg-down")
+		//===== main-menu-list====
+		.main-menu-list#main-menu-list
 			
-			.main-menu__sub
-				a(href="#!") Экспертам АСИ
-				a(href="#!") Почему РСО-Алания?
-				a(href="#!") Инвестиционный стандарт
-				a(href="#!") Законодательство и документы
-				a(href="#!") Инвестиционная инфраструктура
-				a(href="#!") Инвестиционные проекты
-				a(href="#!") Часто задаваемые вопросы
-		
-		
-		.main-menu-item
-			a(href="#!").main-menu-link Инвестиционный климат
-				svg.svg-down
-					use(href="./img/spriteSvg.svg#svg-down")
-			.main-menu__sub
-				a(href="#!") Экспертам АСИ
-				a(href="#!") Почему РСО-Алания?
-				a(href="#!") Инвестиционный стандарт
-				a(href="#!") Законодательство и документы
-				a(href="#!") Инвестиционная инфраструктура
-				a(href="#!") Инвестиционные проекты
-				a(href="#!") Часто задаваемые вопросы
-		.main-menu-item
-			a(href="#!").main-menu-link Для бизнеса
-		.main-menu-item
-			a(href="#!").main-menu-link Команда региона
-		.main-menu-item
-			a(href="#!").main-menu-link Новости и события
-		.main-menu-item
-			a(href="#!").main-menu-link Кабинет инвестора
-				svg.svg-user
-					use(href="./img/spriteSvg.svg#svg-user")
-		.main-menu-item
-			a(href="#!").main-menu-link Инвестиционная карта
-
-	//===== main-menu-contacts ====
-	.main-menu-footer
-		//==== search form =====
-		form(role="search" method="get" action="" ).search-form
-			.form-item
-				input.form-input(type="text" placeholder="Найти...")
-				button(type="submit").flx-center
-					svg.svg-search
-						use(href="./img/spriteSvg.svg#svg-search")
-		
-		//==== tel =====
-		.call-center
-			p Круглосуточная линия поддержки инвесторов:
-			a(href="tel:+78672700140") +7 (8672) 70-01-40
-		
-		//==== social + lang =====
-		.main-menu__row.fly-center
-			.social-group.fly-center
-				//=== single item ===
-				a(href="#!").social-group__item.fl-center
-					img(src="./img/icons/vk.webp", width="23" alt="img")
-
-				//=== single item ===
-				a(href="#!").social-group__item.fl-center
-					img(src="./img/icons/tg.webp", width="19" alt="img")
-
-				//=== single item ===
-				a(href="#!").social-group__item.fl-center
-					img(src="./img/icons/rutube.webp", width="19" alt="img")
-
+			//===добавление класса open  элементу main-menu-item делает видимым подменю .main-menu__sub ======
+			.main-menu-item.open
+				a(href="#!").main-menu-link О регионе
+					svg.svg-down
+						use(href="./img/spriteSvg.svg#svg-down")
+				
+				.main-menu__sub
+					a(href="#!") Экспертам АСИ
+					a(href="#!") Почему РСО-Алания?
+					a(href="#!") Инвестиционный стандарт
+					a(href="#!") Законодательство и документы
+					a(href="#!") Инвестиционная инфраструктура
+					a(href="#!") Инвестиционные проекты
+					a(href="#!") Часто задаваемые вопросы
 			
-			.lang-group.fly-center
-				//==== у активного языка добавляем класс active
-				a(href="#!").lang-group__item.fl-center.active
-					span RU
+			
+			.main-menu-item
+				a(href="#!").main-menu-link Инвестиционный климат
+					svg.svg-down
+						use(href="./img/spriteSvg.svg#svg-down")
+				.main-menu__sub
+					a(href="#!") Экспертам АСИ
+					a(href="#!") Почему РСО-Алания?
+					a(href="#!") Инвестиционный стандарт
+					a(href="#!") Законодательство и документы
+					a(href="#!") Инвестиционная инфраструктура
+					a(href="#!") Инвестиционные проекты
+					a(href="#!") Часто задаваемые вопросы
+			.main-menu-item
+				a(href="#!").main-menu-link Для бизнеса
+			.main-menu-item
+				a(href="#!").main-menu-link Команда региона
+			.main-menu-item
+				a(href="#!").main-menu-link Новости и события
+			.main-menu-item
+				a(href="#!").main-menu-link Кабинет инвестора
+					svg.svg-user
+						use(href="./img/spriteSvg.svg#svg-user")
+			.main-menu-item
+				a(href="#!").main-menu-link Инвестиционная карта
 
-				a(href="#!").lang-group__item.fl-center
-					span EN
+		//===== main-menu-contacts ====
+		.main-menu-footer
+			//==== search form =====
+			form(role="search" method="get" action="" ).search-form
+				.form-item
+					input.form-input(type="text" placeholder="Найти...")
+					button(type="submit").flx-center
+						svg.svg-search
+							use(href="./img/spriteSvg.svg#svg-search")
+			
+			//==== tel =====
+			.call-center
+				p Круглосуточная линия поддержки инвесторов:
+				a(href="tel:+78672700140") +7 (8672) 70-01-40
+			
+			//==== social + lang =====
+			.main-menu__row.fly-center
+				.social-group.fly-center
+					//=== single item ===
+					a(href="#!").social-group__item.fl-center
+						img(src="./img/icons/vk.webp", width="23" alt="img")
 
-				a(href="#!").lang-group__item.fl-center
-					span CH
+					//=== single item ===
+					a(href="#!").social-group__item.fl-center
+						img(src="./img/icons/tg.webp", width="19" alt="img")
 
-				a(href="#!").lang-group__item.fl-center
-					span ES
+					//=== single item ===
+					a(href="#!").social-group__item.fl-center
+						img(src="./img/icons/rutube.webp", width="19" alt="img")
+
+				
+				.lang-group.fly-center
+					//==== у активного языка добавляем класс active
+					a(href="#!").lang-group__item.fl-center.active
+						span RU
+
+					a(href="#!").lang-group__item.fl-center
+						span EN
+
+					a(href="#!").lang-group__item.fl-center
+						span CH
+
+					a(href="#!").lang-group__item.fl-center
+						span ES
