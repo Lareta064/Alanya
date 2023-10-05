@@ -1,0 +1,17 @@
+mixin news-card(img, sp1, sp2, title)
+	a(href="#!").news-card.fl-block
+		.news-card__img
+			img(src="./img/news"+ img +".webp", width="320"  height="200" alt="img")
+		
+		.news-card__info.fl-block 
+			.news-card__date.fl-block
+				span #{sp1}
+				span / #{sp2}
+				span / 23
+
+			.news-card__link.fl-center
+				svg.svg-link
+					use(href="../img/spriteSvg.svg#svg-link")
+		.news-card__text
+			.body-3 !{title}
+			block
