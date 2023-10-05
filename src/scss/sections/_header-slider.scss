@@ -254,7 +254,7 @@
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	right: 59px;
+	// right: 59px;
 	transform: translateX(50%);
 	z-index: 5;
 	display: flex;
@@ -314,7 +314,15 @@
 	@media (max-width: 1199px) {
 		right: 29px;
 	}
-}	
+}
+.header-slider.owl-carousel {
+	 .owl-dots{
+		right: 59px;
+		@media (max-width: 1199px) {
+			right: 29px;
+		}
+	}
+}
 @keyframes dot-animate {
 	0% {
 		border: 6px solid $ac1;

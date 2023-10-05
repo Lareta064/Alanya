@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		dots: true,
 		loop: true,
 		smartSpeed: 800,
-		// autoplay: true,
+		autoplay: true,
 		
 		animateOut: 'fadeOut',
 	});
@@ -87,7 +87,11 @@ document.addEventListener("DOMContentLoaded", function (){
 	});
 	$('.news-slider').owlCarousel({
 		items:1,
-		dots:true
+		dots:true,
+		animateOut: 'fadeOut',
+		// autoplay: true,
+		margin:30,
+		loop:true
 	})
     /*==== main-menu ========= */
 	$(function () {
