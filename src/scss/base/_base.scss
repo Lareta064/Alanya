@@ -102,7 +102,7 @@ input[type="submit"] {
 		width: calc(100% - 60px);
 	}
 	@media(max-width:574px) {
-		width: calc(100% - 30px);
+		width: calc(100% - 40px);
 	}
 }
 section{
@@ -128,10 +128,20 @@ section{
 .fl-column{
 	flex-direction: column;
 }
+.pos-rel{
+	position: relative;
+	
+}
 .mb-30{
 	margin-bottom: 30px;
 	@media (max-width: 767px) {
 	  margin-bottom: 10px;
+	}
+}
+.btn-wrapper{
+	margin-top: 40px;
+	@media (max-width: 767px) {
+		margin-top: 30px;
 	}
 }
 .visible-mobile{

@@ -229,3 +229,11 @@ input.valid, input:focus{border: 1px solid $sec1;}
     
   }
 }
+.help-input {
+  width: 0.01em;
+  height: 0.01em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

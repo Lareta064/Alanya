@@ -60,7 +60,11 @@ document.addEventListener("DOMContentLoaded", function (){
 			424: {
 				items: 1.2,
 				
-			},			
+			},
+			550: {
+				items: 1.5,
+
+			},		
 			768: {
 				items: 2,
 				margin: 30,
@@ -108,4 +112,23 @@ document.addEventListener("DOMContentLoaded", function (){
 		
 		let accordion = new Accordion($('#main-menu-list'), false);
 	});
+
+	/*футер в зоне видимости */
+	// Создаем новый observer (наблюдатель)
+	let observer = new IntersectionObserver(function (entries) {
+		entries.forEach(function (entry) {
+			
+			if (entry.isIntersecting == true){
+				
+				document.querySelector('#header-menu').classList.add('hide')
+			}else{
+				
+				document.querySelector('#header-menu').classList.remove('hide')
+			}
+		});
+	});
+	
+	let el = document.querySelector('#footer');
+	observer.observe(el);
+	
 });

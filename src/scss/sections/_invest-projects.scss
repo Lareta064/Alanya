@@ -1,5 +1,24 @@
 .invest-projects{
 	background-color: $sec4;
+	.container{
+		position: relative;
+		z-index: 1;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 992px;
+		height: 370px;
+		background-image: url('../img/mountains.svg');
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		@media (max-width: 767px) {
+		   display: none;
+		}
+	}
 	.h2{
 		max-width: 800px;
 		@media (max-width: 767px) {
@@ -10,11 +29,14 @@
 	overflow: hidden;
 }
 .invest-projects-slider{
+	position: relative;
+
 	@media (max-width: 767px) {
 	  width: calc(50% + 50vw);
 	}
 }
 .invest-projects{
+
 	.owl-carousel .owl-nav{
 		position: absolute;
 		top: -55px;

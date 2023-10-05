@@ -6,6 +6,7 @@
 	top: 0;
 	left: 0;
 	width: 449px;
+	transition: .3s;
 	@media(max-width:1919px){
 		width: 300px;
 	}
@@ -17,6 +18,9 @@
 		padding-bottom: 0;
 		height: 70px;
 	}
+}
+.sidebar.hide{
+	transform: translateX(-110%);
 }
 .main-menu{
 	
