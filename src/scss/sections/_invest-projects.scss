@@ -1,0 +1,44 @@
+.invest-projects{
+	background-color: $sec4;
+	.h2{
+		max-width: 800px;
+		@media (max-width: 767px) {
+		  margin-bottom: 70px;
+		}
+	
+	}
+	overflow: hidden;
+}
+.invest-projects-slider{
+	@media (max-width: 767px) {
+	  width: calc(50% + 50vw);
+	}
+}
+.invest-projects{
+	.owl-carousel .owl-nav{
+		position: absolute;
+		top: -55px;
+		right: 0;
+		width: fit-content;
+		display: flex;
+		column-gap:30px;
+		.owl-next, .owl-prev{
+			svg {
+					fill:#A9ADC6;
+				}
+		}
+		@media (max-width: 767px) {
+		   top: -35px;
+		   left: 50%;
+		   transform: translateX(-50%);
+		   right: auto;
+		   width:100%;
+		   display: flex;
+		   justify-content: space-between;
+			padding-right: 15px;
+		}
+	}
+}
+.owl-carousel .owl-nav button.owl-next:hover,.owl-carousel .owl-nav button.owl-prev:hover{
+	svg{fill: $ac1;}
+}

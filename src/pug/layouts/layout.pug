@@ -14,6 +14,9 @@ html(lang="ru")
 		meta(name="format-detection" content="telephone=no")
 		
 		link(rel="stylesheet", href="./fonts/fonts.css")
+		link(rel="stylesheet", href="./libs/owlCarousel/owl.carousel.min.css")
+		//- link(rel="stylesheet", href="./libs/owlCarousel/owl.theme.default.css")
+		
 		link(rel="stylesheet", href="./css/main.css")
 		title !{title}
 
@@ -50,11 +53,14 @@ html(lang="ru")
 				font-display: swap;
 			}
 	body(class=(bodyCl !=="" ? bodyCl : ''))
-		#overlay
+		
 		block content
 		
 		//=============== jquery ===================
 		script(src="./libs/jquery/jquery-3.0.0.min.js")
+		
+		//=============== owl.carousel ===================
+		script(src="./libs/owlCarousel/owl.carousel.min.js")
 				
 		//=============== мои скрипты ===================
 		

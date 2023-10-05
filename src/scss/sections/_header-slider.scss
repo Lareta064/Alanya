@@ -4,22 +4,94 @@
 	background: linear-gradient(93deg, rgba(81, 98, 255, 0.50) 0.25%, rgba(115, 130, 255, 0.50) 100%);
 	box-shadow: -8px -8px 25px 0px rgba(112, 126, 255, 0.50) inset, 8px 8px 25px 0px rgba(112, 126, 255, 0.50) inset;
 	backdrop-filter: blur(12.5px);
+	background-blend-mode: normal, screen, normal;
 	padding: 60px 80px;
 	&>*{color: #fff;}
-	@media (max-width: 767px) {
-	   padding: 20px;
+	width: fit-content;
+	min-width: 77%;
+		@media (max-width: 1919px) { 
+			border-radius: 10px;
+			.h2 {
+					font-size: 28px;
+				}
+		}
+	@media (max-width: 1439px) {
+		
+		min-width: 85%;
+		padding: 60px 40px;
+		.h2 {
+				font-size: 24px;
+			}
+	}
+	@media (max-width: 1199px) {
+		max-width:750px;
+		padding: 60px 80px;
+		
+	}
+	@media (max-width: 991px) {
+	  
+	   min-width: 290px;
+	   max-width: 610px;
+	  
+	   .h2{
+		font-size: 20px;
+	   }
+	}
+	@media (max-width: 767px){
+		 max-width: 290px; padding: 20px;
+		.h2 {
+				font-size: 16px;
+			}
 	}
 }
-.gradient-block  .gradient-box{
-	padding: 40px;
+.gradient-block{
+	width: fit-content;
+	.gradient-box{
+		padding: 40px;	width: 100%;
+
+		@media (max-width: 1199px) {
+			padding: 40px;
+			max-width: 100%;
+		}
+		@media (max-width: 991px) {
+			
+			max-width: 610px;
+		}
+		@media (max-width: 767px) {
+			max-width: 290px;
+			padding: 20px;
+		}
+	}
 	
-}
+}  
 .gradient-box.gradient-box--special {
 	position: relative;
 	min-height: 212px;
 	padding: 40px;
+	width: 603px;
+	min-width: 603px;
 	-webkit-mask-image: radial-gradient(circle at 106px 50%, rgba(81, 98, 255, 0.80) 0%, rgba(81, 98, 255, 0.90) 56px, rgba(112, 126, 255, 1) 56px, rgba(112, 126, 255, 1) 58px, transparent 58px,
 			transparent 68px, #ACB4FF 68px, #ACB4FF 70px, black 70px, black 100px);
+	
+	@media (max-width:1919px) {
+		padding: 20px;
+		width: 470px;
+		-webkit-mask-image: radial-gradient(circle at 65px 50%, rgba(81, 98, 255, 0.8) 0%, rgba(81, 98, 255, 0.9) 20px, rgb(112, 126, 255) 20px, rgb(112, 126, 255) 28px, transparent 28px, transparent 35px, #ACB4FF 36px, #ACB4FF 40px, black 40px, black 100px);
+		min-width: 290px;
+		min-height: 100px;
+	}
+	@media (max-width:1439px) {width: 360px;}
+	@media (max-width:1199px) {
+		
+		-webkit-mask-image: radial-gradient(circle at 30px 50%, rgba(81, 98, 255, 0.8) 0%, rgba(81, 98, 255, 0.9) 10px, rgb(112, 126, 255) 10px, rgb(112, 126, 255) 16px, transparent 16px, transparent 20px, #ACB4FF 20px, #ACB4FF 22px, black 22px, black 100px);
+		min-width: 290px;
+		min-height: 100px;
+		width: 346px;
+	}
+	@media (max-width: 991px) {
+		 width: 290px;;
+	}
+	@media (max-width: 767px) {min-height: 68px;}
 }
 .gradient-box__content{
 	position: absolute;
@@ -28,15 +100,267 @@
 	top: 50%;
 	transform: translateY(-50%);
 	column-gap:50px;
+	@media (max-width: 1919px) {
+		left: 36px;
+		right: 30px;
+		column-gap: 30px;
+	}
+	@media (max-width: 1199px) {
+	   left: 8px;
+	   right: 18px;
+	   column-gap:20px;
+	}
 
 }
 .gradient-box__icon{
 	width: 132px;
 	height: 132px;
 	flex-shrink:0;
+	img{
+		width: 56px!important;
+		height: 56px!important;
+		@media (max-width: 1919px) {
+			width: 36px !important;
+			height: 36px !important;
+		}
+		@media (max-width: 1199px) {
+		 width: 16px!important;
+			height: 16px!important;
+		}
+	}
+	@media (max-width: 1919px) {
+		width: 60px;
+		height: 60px;
+	}
+	@media (max-width: 1199px) {
+	 width: 40px;
+	 height: 40px;
+	}
 }
+
 .gradient-block__group{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap:30px;
+	width: fit-content;
+	@media (max-width: 1919px) {
+		
+		gap: 20px;
+	}
+	@media (max-width: 1439px) {
+		// grid-template-columns: 1fr;
+		gap: 15px;
+	}
+
+   @media (max-width: 1199px) {
+	grid-template-columns: 1fr 1fr;
+		gap: 30px;
+		
+   }
+		
+   @media (max-width: 767px) {
+	    grid-template-columns: 1fr;
+		gap: 10px;
+	   
+   }
+}
+.header-slider-wrapper{
+	position: relative;
+	
+	&:after, &:before{
+		position: absolute;
+		content: '';
+		width: 1px;
+		background-color: #fff;
+		height: 34%;
+		right: 59px;
+		top: 0;
+		z-index: 2;
+		@media (max-width: 1199px) {
+		right: 29px;
+		}
+	}
+	&:before {
+		top: auto;
+		bottom: 0;
+	}
+	.header-slider__decor{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		width: 48%;
+	}
+} 
+.header-slider{
+	height: 940px;
+    .h1{
+		@media (max-width: 1199px) {
+		 br{display: none;}
+		}
+	}
+	
+	.header-slider__item {
+		height: 940px;
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		
+		padding-left: 60px;
+		
+		position: relative;
+		&:before{
+			content:'';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 600px;
+			height: 220px;
+			background-image: url('../img/header-decor.svg');
+			background-size: contain;
+			background-position: left top;
+			background-repeat: no-repeat;
+			@media (max-width: 767px) {
+				background-size: cover;
+				width: 320px;
+				height: 120px;
+				
+
+			}
+		}
+	}
+	@media (max-width: 1919px){
+		height: 800px;
+		.header-slider__item {height: 800px;}
+	}
+	@media (max-width: 1199px) {
+	  height:(calc(100vh - 70px));
+	  
+	.header-slider__item{
+		height: (calc(100vh - 70px));
+		padding-left: 60px;
+		padding-top: 60px;
+		align-items: flex-start!important;
+	}
+	}
+		@media (max-width: 767px) {
+			.header-slider__item{
+			padding-left: 20px;
+			padding-top: 30px;}
+		}
+}
+
+.owl-carousel .owl-dots{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 59px;
+	transform: translateX(50%);
+	z-index: 5;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 20px;
+	.owl-dot{
+		position: relative;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 1);
+		box-sizing: border-box;
+		cursor: pointer;
+		@media (max-width: 1199px) {
+			width: 6px;
+			height: 6px;
+		}
+	}
+	.owl-dot.active{
+		width: 14px;
+		height: 14px;
+		@media (max-width: 1199px) {
+		  width: 10px;
+		  height: 10px;
+		}
+	}
+	.owl-dot.active::after {
+		position: absolute;
+		content: "";
+		top: -6px;
+		bottom: -6px;
+		right: -6px;
+		left: -6px;
+		border-radius: 50%;
+		-webkit-animation-name: dot-animate;
+		animation-name: dot-animate;
+		-webkit-animation-duration: 7s;
+		animation-duration: 7s;
+		-webkit-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
+		-webkit-animation-timing-function: linear;
+		animation-timing-function: linear;
+	}
+
+	.owl-dot.active::before {
+		position: absolute;
+		content: "";
+		top: -6px;
+		bottom: -6px;
+		right: -6px;
+		left: -6px;
+		border-radius: 50%;
+		border: 6px solid transparent;
+	}
+	@media (max-width: 1199px) {
+		right: 29px;
+	}
+}	
+@keyframes dot-animate {
+	0% {
+		border: 6px solid $ac1;
+		-webkit-clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 0%, 50% 0%, 50% 50%, 50% 50%);
+		clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 0%, 50% 0%, 50% 50%, 50% 50%)
+	}
+
+	12.5% {
+		-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0, 0 0, 50% 50%, 50% 50%);
+		clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0, 0 0, 50% 50%, 50% 50%)
+	}
+
+	25% {
+		-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 50%, 0 50%, 50% 50%, 50% 50%);
+		clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 50%, 0 50%, 50% 50%, 50% 50%)
+	}
+
+	37.5% {
+		-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 100%, 0 100%, 50% 50%, 50% 50%);
+		clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 100%, 0 100%, 50% 50%, 50% 50%)
+	}
+
+	50% {
+		-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 50%, 50% 50%);
+		clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 50%, 50% 50%)
+	}
+
+	62.5% {
+		-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 50%, 50% 50%);
+		clip-path: polygon(50% 0%, 100% 0, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 50%, 50% 50%)
+	}
+
+	75% {
+		-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 50% 50%, 50% 50%);
+		clip-path: polygon(50% 0%, 100% 0, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 50% 50%, 50% 50%)
+	}
+
+	87.5% {
+		-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 0, 100% 0, 100% 0, 100% 0, 100% 0, 50% 50%, 50% 50%);
+		clip-path: polygon(50% 0%, 100% 0, 100% 0, 100% 0, 100% 0, 100% 0, 100% 0, 50% 50%, 50% 50%)
+	}
+
+	100% {
+		border: 6px solid $ac1;
+		-webkit-clip-path: polygon(50% 0%, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 50%, 50% 50%);
+		clip-path: polygon(50% 0%, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 50%, 50% 50%)
+	}
+
 }
