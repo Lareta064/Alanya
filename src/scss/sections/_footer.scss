@@ -1,7 +1,10 @@
 .footer{
 	background: $pr1;
-	padding: 60px;
+	padding: 100px 200px;
 	padding-bottom: 20px;
+	@media (max-width: 2399px) {
+		padding: 60px;
+	}
 	@media (max-width: 767px) {
 		padding: 20px;
 	}
@@ -17,22 +20,31 @@
 
 .footer-menu{
 	display: flex;
-	column-gap:60px;	
-
+	column-gap:90px;	
+		label ul li> a{
+			color: $sec;
+		}
 		ul{
 			
-			
+			li{
+				display: flex;
+				align-items: center;
+				column-gap:10px;
+				svg{fill:white}
+			}
 			a{
 				display: block;
 				font-size: 16px;
 				transition: .3s;
-				color: $sec;
-				padding-top: 6px;
-				padding-bottom: 6px;
+				color: white;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				
 				&:hover{
 					color: white;
 				}
 			}
+			
 			
 	}
 	li +li{margin-top: 4px;} 
@@ -40,6 +52,7 @@
 		font-size: 16px;
 		color: white;
 		font-weight: 600;
+		font-family: $semi;
 		line-height: 1.4;
 		margin-bottom: 18px;
 		
@@ -126,6 +139,7 @@
 	font-size: 20px;
 	white-space: nowrap;
 	font-weight: 600;
+	font-family: $semi;
 	color: white;
 	display: block;
 	width: fit-content;

@@ -1,9 +1,10 @@
 svg{transition: .3s;}
-.svg-plus{
+.svg-plus, .svg-mail{
 	width: 24px;
 	height: 24px;
 	fill: $pr;
 }
+ .svg-mail{fill:white}
 .chevron-left,.chevron-right{
 	width: 10px;
 	height: 18px;
@@ -70,6 +71,7 @@ svg{transition: .3s;}
 	background-color: #fff;
 	color:$sec1;
 	font-weight: 700;
+	font-family: $bold;
 	font-size: 14px;
 	&:hover{
 		background-color: #fff;
