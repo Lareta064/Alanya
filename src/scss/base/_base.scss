@@ -98,11 +98,11 @@ input[type="submit"] {
 	@media(max-width:1919px){
 		width: calc(100% - 100px);
 	}
-	@media(max-width:1599px) {
-		
+	@media(max-width:767px) {
+		width: calc(100% - 60px);
 	}
-	@media(max-width:1364px) {
-		
+	@media(max-width:574px) {
+		width: calc(100% - 30px);
 	}
 }
 section{
@@ -132,6 +132,19 @@ section{
 	margin-bottom: 30px;
 	@media (max-width: 767px) {
 	  margin-bottom: 10px;
+	}
+}
+.visible-mobile{
+	display: none!important;
+	@media (max-width: 767px) {
+	display:block!important;
+	}
+}
+.visible-768 {
+	display: block !important;
+
+	@media (max-width: 767px) {
+		display: none !important;
 	}
 }
 .page-grid{

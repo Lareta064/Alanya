@@ -8,6 +8,9 @@
 	padding: 30px 20px;
 	display: flex;
 	flex-direction: column;
+	@media (max-width: 767px) {
+		width: 320px;
+	}
 	.project-card__img{
 		flex-grow: 1;
 		padding-bottom: 40px;
