@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		items:1,
 		dots:true,
 		animateOut: 'fadeOut',
-		// autoplay: true,
+		autoplay: true,
 		margin:30,
 		loop:true
 	})

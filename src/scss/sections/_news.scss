@@ -5,13 +5,22 @@
 	
 	.news-slider{
 		@media(max-width:2399px){
-		width: calc(100% + 60px);}
+			width: calc(100% + 60px);
+		}
+		@media(max-width:1919px) {
+			width: calc(50% + 50vw);
+		}
 	}
 	.h2{
 		position: absolute;
 		left: 0;
 		top:0;
 		z-index: 3;
+		@media (max-width: 991px) {
+		  position: relative;
+		  margin-bottom: 30px;
+		  
+		}
 	}
 }
 
@@ -24,26 +33,69 @@
 		
 		line-height: 1.4;
 		.txt-semi{margin-bottom: 10px; color: $pr;}
-		.link-medium{padding-top: 10px;padding-bottom: 1px; width:fit-content}
+		.txt-clamp{margin-bottom: 10px; height: 67px;
+			@media (max-width: 767px) {
+			//   width: 320px;
+			}
+		}
+		.link-medium{padding-bottom: 1px; width:fit-content}
+		.btn-wrapper{display: none;}
+		@media (max-width: 991px) {
+		width: 100%;
+		.btn-wrapper {
+				
+				display: inline-flex;
+				margin-top: 30px;
+				
+			}
+		}
 	}
 	.news-slider__img{
-		overflow: hidden;
+		// overflow: hidden;
+		border-radius: 20px 0 0 20px;
 		flex-grow: 1;
 		img{
 			width: 100%;
 			height: 646px;
 			object-fit: cover;
-			border-radius: 20px;
+			border-radius: 20px 0 0 20px;
+			@media (max-width: 1199px) {
+				height: 400px;
+			}
+			
+			@media (max-width: 767px) {
+			   height: 230px;
+			}
 		}
-		
+		.btn-wrapper{
+			display: inline-flex;
+			@media (max-width: 991px) {
+			   display: none;
+			}
+		}
+		@media (max-width: 991px) {
+		margin-bottom: 30px;
+		}
+	}
+	@media (max-width: 991px) {
+	   flex-direction: column-reverse;
+	   align-items: flex-start;
+	   &>*{width: 100%;}
 	}
 }
 .news-slider.owl-carousel{
 	.owl-dots {
 		left: 365px;
+		right:auto;
 		.owl-dot{background-color: $sec2;}
-		@media (max-width: 1199px) {
-			
+		@media (max-width: 991px) {
+			right:40px;left: auto;
+			gap:10px;
+			height: 400px;
+		}
+		@media (max-width: 767px) {
+			right: 30px;
+			height: 230px;
 		}
 	}
 		.owl-dots:after,.owl-dots:before{
@@ -55,10 +107,22 @@
 				
 				top: -100px;
 				z-index: 2;
+				@media (max-width: 991px) {
+					top: 0;
+					height: 25%;
+				}
+				@media (max-width: 767px) {
+					
+					height: 60px;
+				}
 			}
 		
 		.owl-dots:before {
 			top: auto;
 			bottom: -100px;
+			@media (max-width: 991px) {
+				bottom: 0;
+				top: auto;
+			}
 		}
 }
