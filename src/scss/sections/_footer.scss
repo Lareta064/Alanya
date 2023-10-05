@@ -2,6 +2,10 @@
 	background: $pr1;
 	padding: 100px 200px;
 	padding-bottom: 20px;
+	color: $sec1;
+	.social-group{
+		column-gap:30px;
+	}
 	@media (max-width: 2399px) {
 		padding: 60px;
 	}
@@ -11,6 +15,10 @@
 	color: white;
 	.footer-logo{
 		width: 300px;
+		color: #fff;
+		p{
+			color: #fff
+		}
 	}
 	.footer-top{
 		display: flex;
@@ -90,78 +98,22 @@
 		}
 	}
 }
+.footer-contacts{
+	justify-content: space-between;
+	color: $sec1;
+	margin-top: 60px;
+	padding-bottom: 20px;
+}
+.footer-contacts__row{column-gap:30px;}
+.footer-contacts__row .flex-link{
+	color: $sec1;
+	svg{fill:$sec1; width:20px; height:20px;}
+}
 .footer-bottom{
-	padding-top: 75px;
-	padding-bottom: 50px;
-	@media (max-width: 991px) {
-		padding-top: 30px;
-		padding-bottom: 30px;
-		
-	}
-	&__content{
-		display: flex;
-		justify-content: space-between;
-		@media (max-width: 767px) {
-			flex-direction: column;
-			align-items: center;
-			text-align: center;
-			row-gap:20px;
-		}
-	}
-	&__logo{
-        img{
-			height: 40px;
-			width: auto;
-		}
-	}
-	&__column{
-		display: flex;
-		column-gap:35px;
-		@media (max-width: 767px) {
-			flex-direction: column;
-			align-items: center;
-			text-align: center;
-			row-gap:20px;
-			.outline-button{margin-top: 20px;}
-		}
-	}
-	.footer-contacts{
-		max-width: 235px;
-		font-size: 14px;
-		line-height: 20px;
-	}
-	.opening-hours ul{
-		margin-bottom: 10px;
-	}
+	border-top: 1px solid $sec1;
+	padding-top: 20px;
+	justify-content: space-between;
+	color: $sec1;
+	a{color: $sec1;}
+}
 	
-}
-.footer-phone a{
-	font-size: 20px;
-	white-space: nowrap;
-	font-weight: 600;
-	font-family: $semi;
-	color: white;
-	display: block;
-	width: fit-content;
-	margin-bottom: 10px;
-	&:hover{
-		opacity: .7;
-	}
-}
-.footer-copyright{
-	border-top:1px solid white;
-	padding-top: 30px;
-		padding-bottom: 30px;
-	&__content{
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		@media (max-width: 767px) {
-			flex-direction: column-reverse;
-			row-gap: 15px;
-		}
-	}
-	.social-block a:hover{
-		background-color: white;
-	}
-}

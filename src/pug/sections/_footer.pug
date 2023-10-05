@@ -4,7 +4,7 @@ footer.footer#footer
 		.footer-logo
 			a(href="index.html").logo.fly-center
 				img(src="./img/logo.webp", width="75" height="75" alt="logo")
-				p Инвестиционный портал РСО&#8209;Алания
+				p Инвестиционный<br> портал РСО&#8209;Алания
 			.btn-wrapper
 				button(type="button").btn-accent
 					span Подписаться на новости
@@ -91,43 +91,43 @@ footer.footer#footer
 							a(href="#!") Кабинет инвестора
 							svg.svg-user
 								use(href="./img/spriteSvg.svg#svg-user")
-	//======== footer bottom =============
-	.footer-bottom
-		.container
-			.footer-bottom__content
-				.footer-bottom__logo
-					img(src="./img/logo_footer.png", alt="logo")
-				.footer-bottom__column
-					.footer-contacts
-						.opening-hours
-							ul
-								li Пн-Пт с 09:00 до 18:00,
-								li Сб с 10:00 до 15:30, Вс- выходной
-							a(href="mailto:help.cyberstore@gmail.com").light-link help.cyberstore@gmail.com
-					
-					.footer-phone
-						a(href="tel:+38 (093) 124-45-01") +38 (093) 124-45-01
-						a(href="tel:+38 (066) 124-45-02") +38 (066) 124-45-02
-					
-						button.outline-button Заказать звонок
-
+	
 	//====== footer copyright ===========
-	.footer-copyright
-		.container
-			.footer-copyright__content
-				p CyberStore - Демонстрация шаблона © 2023
-				.social-block
-					a(href="#!")
-						svg.svg-tg
-							use(href="./img/svgSprite.svg#svg-tg")
-					a(href="#!")
-						svg.svg-tg
-							use(href="./img/svgSprite.svg#svg-tg")
-					a(href="#!")
-						svg.svg-tg
-							use(href="./img/svgSprite.svg#svg-tg")
-					a(href="#!")
-						svg.svg-tg
-							use(href="./img/svgSprite.svg#svg-tg")
+	.footer-contacts.fly-center
+		.footer-contacts__row.fly-center
+			p.flex-link
+				svg.svg-pin
+					use(href="./img/spriteSvg.svg#svg-pin")
+				span 362000, г. Владикавказ, РСО-Алания улица Шмулевича, д. 8/Б Офис: 106
+			
+			a(href="mailto:alania-invest@mail.ru").flex-link
+				svg.svg-mail
+					use(href="./img/spriteSvg.svg#svg-mail")
+				span alania-invest@mail.ru
+			
+			a(href="tel:+78672700140").flex-link
+				svg.svg-call
+					use(href="./img/spriteSvg.svg#svg-call")
+				span +7 (8672) 70-01-40		
+		
+		.social-group.fly-center
+			//=== single item ===
+			a(href="#!").social-group__item.fl-center
+				img(src="./img/icons/vk.webp", width="23" alt="img")
+
+			//=== single item ===
+			a(href="#!").social-group__item.fl-center
+				img(src="./img/icons/tg.webp", width="19" alt="img")
+
+			//=== single item ===
+			a(href="#!").social-group__item.fl-center
+				img(src="./img/icons/rutube.webp", width="19" alt="img")
+	
+	
+	//======== footer bottom =============
+	.footer-bottom.fly-center
+		p &copy; 2023 АО «Корпорация развития РСО-Алания». Все права защищены
+		a(href="#!").link-medium Политика обработки персональных данных
+		
 
 

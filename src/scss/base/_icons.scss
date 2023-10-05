@@ -4,7 +4,12 @@ svg{transition: .3s;}
 	height: 24px;
 	fill: $pr;
 }
- .svg-mail{fill:white}
+.svg-call, .svg-pin{
+	width: 20px;
+	height: 20px;
+	fill: #A9ADC6;
+}
+.svg-pin,.svg-mail{fill:white}
 .chevron-left,.chevron-right{
 	width: 10px;
 	height: 18px;

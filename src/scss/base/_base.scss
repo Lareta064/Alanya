@@ -140,16 +140,17 @@ section{
 	}
 
 }
- .fl-block,.fly-center,.fly-center, .fl-center, .fl-column{
+ .fl-block,.fly-center,.fly-center, .fl-center, .fl-column,.flex-link{
 	display: flex;
 	
 }
 .flx-center,.fl-center{
 	justify-content: center;
 }
-.fly-center,.fl-center{
+.fly-center,.fl-center, .flex-link{
 	align-items: center;
 }
+ .flex-link{column-gap:10px;}
 .fl-column{
 	flex-direction: column;
 }
