@@ -149,6 +149,7 @@ section{
 }
 .fly-center,.fl-center, .flex-link{
 	align-items: center;
+	svg{flex-shrink: 0;}
 }
  .flex-link{column-gap:10px;}
 .fl-column{

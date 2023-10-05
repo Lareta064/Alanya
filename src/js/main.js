@@ -79,6 +79,10 @@ document.addEventListener("DOMContentLoaded", function (){
 				items: 3,
 
 			},
+			2400: {
+				items: 4,
+
+			},
 		}
 	});
     /*==== main-menu ========= */
