@@ -1,0 +1,31 @@
+.news{
+	overflow: hidden;
+	.news-slider{
+		@media(max-width:2399px){
+		width: calc(50% + 50vw);}
+	}
+}
+
+.news-slide{
+	align-items: flex-end;
+	
+	justify-content: space-between;
+	.news-slider__text{
+		width: 315px;
+		flex-shrink: 0;
+		
+		line-height: 1.4;
+		.txt-semi{margin-bottom: 10px; color: $pr;}
+		.link-medium{padding-top: 10px;padding-bottom: 1px; width:fit-content}
+	}
+	.news-slider__img{
+		width: 950px;
+		img{
+			width: 100%;
+			height: 646px;
+			object-fit: cover;
+			border-radius: 20px;
+		}
+		
+	}
+}

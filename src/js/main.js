@@ -85,6 +85,10 @@ document.addEventListener("DOMContentLoaded", function (){
 			},
 		}
 	});
+	$('.news-slider').owlCarousel({
+		items:1,
+		dots:true
+	})
     /*==== main-menu ========= */
 	$(function () {
 		var Accordion = function (el, multiple) {
