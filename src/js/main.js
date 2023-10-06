@@ -143,4 +143,17 @@ document.addEventListener("DOMContentLoaded", function (){
 	let el = document.querySelector('#footer');
 	observer.observe(el);
 	
+	/*====fotorama =====*/
+	
+	$('.fotorama').fotorama({
+		width: 1120,
+		maxwidth: '100%',
+		// ratio: 16 / 9,
+		allowfullscreen: false,
+		nav: 'thumbs',
+		navwidth:'100%',
+		thumbwidth: 157,
+		thumbheight: 94
+	});
+	
 });
