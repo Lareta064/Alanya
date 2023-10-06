@@ -43,6 +43,10 @@
 	line-height: 1.2;
 }
 .txt-upper{text-transform: uppercase;}
+.txt-bold{
+	font-family: $bold;
+		font-weight: 700;
+}
 .txt-medi{font-family: $medi; font-weight: 500;}
 .txt-semi {
 	font-family: $semi;
@@ -85,9 +89,7 @@
 	@media (max-width: 1199px) {
 	  font-size: 14px;
 	}	
-	@media (max-width: 767px) {
-	  font-size: 12px;
-	}
+	
 }
 
 .link-medium{font-size: 14px;}
