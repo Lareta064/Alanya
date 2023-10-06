@@ -1,6 +1,8 @@
 .sidebar{
 	padding-bottom: 40px;
 	background-color: #fff;
+	box-shadow: 6px 0px 40px 0px rgba(118, 125, 161, 0.10);
+	border-right: 1px solid $sec2;
 	height: 100vh;
 	position: fixed;
 	z-index: 5;
