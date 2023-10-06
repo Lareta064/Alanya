@@ -4,10 +4,13 @@ svg{transition: .3s;}
 	height: 24px;
 	fill: $pr;
 }
-.svg-call, .svg-pin{
+.svg-call, .svg-pin, .svg-add{
 	width: 20px;
 	height: 20px;
 	fill: #A9ADC6;
+}
+.svg-add{
+	fill:$pr1 ;
 }
 .svg-pin,.svg-mail{fill:white}
 .chevron-left,.chevron-right{

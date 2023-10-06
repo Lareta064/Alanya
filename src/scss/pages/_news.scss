@@ -1,0 +1,14 @@
+.news-content{
+	.btn-wrapper{
+		justify-content: space-between;
+		@media (max-width: 767px) {
+		flex-direction: column-reverse;
+		align-items: center;
+		row-gap:10px;
+		}
+	}
+	.news-counter{
+		font-size: 18px;
+		color: $sec1
+	}
+}

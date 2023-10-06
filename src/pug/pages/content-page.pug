@@ -1,0 +1,14 @@
+extends ../layouts/layout.pug
+
+block content
+	.page-grid
+		include ../sections/_main-menu
+		+header('Заголовок страницы можеть быть в две строки','content-page' )
+		include ../sections/_fotorama.pug
+		include ../sections/_news.pug
+	
+	//====footer======
+	include ../sections/_footer.pug
+	
+block variables
+	-var title = "Content page";
