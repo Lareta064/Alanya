@@ -1,8 +1,8 @@
-.h1, .h2, .h3{
+.h1, .h2, .h3, h1, h2, h3, h4, h5, h6{
 	font-family: $bold;
 	font-weight: 700;
 }
-.h1{
+.h1, h1{
 	font-size: 54px;
 	@media (max-width: 1439px) {
 		font-size: 38px;
@@ -23,7 +23,7 @@
 	
 	
 }
-.h2{
+.h2, h2{
     font-size: 38px;
 	@media (max-width: 1364px) {
 		font-size: 32px;
@@ -38,7 +38,7 @@
 
 
 }
-.h3{
+.h3, h3{
 	font-size: 30px;
 	line-height: 1.2;
 }
