@@ -1,0 +1,49 @@
+.benefit-card{
+	border-radius: 20px;
+	border: 0.5px solid $sec2;
+	background-color: $sec4;
+	padding: 40px 60px;
+	transition: .3s;
+	.txt-medi{
+		text-transform: uppercase;
+		color:$pr ;
+		letter-spacing: 0.48px;
+		line-height: 1.4;
+		padding-top: 10px;
+	}
+	&:hover{
+		border-color: $pr1;
+		svg{fill: $pr1;}
+	}
+	@media (max-width: 1439px) {
+		padding: 40px;
+		.txt-medi{
+			font-size: 14px;
+			letter-spacing: 0.36px;
+		}
+	}
+	@media (max-width: 991px) {
+		border-radius: 10px;
+	   padding: 20px;
+	   display: flex;
+	   gap:10px;
+	   svg{
+		width: 24px;
+		height: 24px;
+		flex-shrink: 0;
+	   }
+		.txt-medi {
+			font-size: 12px;
+			letter-spacing: 0.36px;
+		}
+	}
+}
+.benefits-block{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap:30px;
+	@media (max-width: 767px) {
+	grid-template-columns: 1fr;
+	gap: 10px;
+	}
+}
