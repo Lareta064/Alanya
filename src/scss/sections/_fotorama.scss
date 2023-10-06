@@ -1,0 +1,11 @@
+.fotorama{
+	.fotorama__stage{
+		margin-bottom: 20px;
+		img{
+			width: 100%;
+			height: 640px;
+			object-fit: cover;
+			border-radius: 20px;
+		}
+	}
+}
