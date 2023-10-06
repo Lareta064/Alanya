@@ -48,6 +48,32 @@ document.addEventListener("DOMContentLoaded", function (){
 		
 		animateOut: 'fadeOut',
 	});
+
+	$(function () {
+		let teamSlider = $('.team-slider');
+		teamSlider.owlCarousel({
+			loop: true,
+			autoplay: 1000,
+			items: 1,
+			animateOut: 'fadeOut',
+			onInitialized: counter, 
+			onTranslated: counter 
+		});
+
+		function counter(event) {
+			var element = event.target; 
+			var items = event.item.count; 
+			var item = event.page.index + 1; 
+			$('#team-counter').html("" + item + " /" + items)
+		}
+		$(".team-slider-prev").click(function () {
+			$('.team-slider').trigger("prev.owl.carousel", [600]);
+		});
+
+		$(".team-slider-next").click(function () {
+			teamSlider.trigger("next.owl.carousel", [600]);
+		});
+	});
 	$('.invest-projects-slider').owlCarousel({
 		items: 1.1,
 		dots: false,
