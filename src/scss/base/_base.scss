@@ -109,7 +109,7 @@ input[type="submit"] {
 		width: calc(100% - 40px);
 	}
 }
-.container-slim{
+.content-page .container{
 	width: 1120px;
 	margin-left: auto;
 	margin-right: auto;
@@ -142,6 +142,13 @@ section{
 		padding-top: 60px;
 		padding-bottom: 60px;
 		.h2{margin-bottom: 20px;}
+	}
+}
+article{
+	padding-top: 30px; padding-bottom: 30px;
+	@media (max-width: 991px) {
+	padding-top: 15px;
+		padding-bottom: 15px;
 	}
 }
 .header-slider-wrapper, .header{

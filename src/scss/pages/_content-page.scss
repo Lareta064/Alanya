@@ -1,6 +1,7 @@
 .content-page{
 	color: $sec;
-	.container-slim, .container{
+	
+	.company-presentation .container{
 		&>*+*{margin-top: 40px;}
 
 		@media (max-width: 767px) {
