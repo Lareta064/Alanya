@@ -1,0 +1,39 @@
+.support-card-block{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap:30px;
+	@media (max-width: 991px) {
+	gap:10px;
+	}
+	@media (max-width: 599px) {
+		
+		grid-template-columns:1fr;
+	}
+}
+.support-card{
+	padding: 40px 60px;
+	column-gap:20px;
+	border-radius: 20px;
+	border: 0.5px solid $sec2;
+	background: $sec4;
+	.body-3{
+		max-width: 330px;
+		color: $sec;
+	}
+	img{
+		width: 75px;
+		height: 75px;
+		object-fit: contain;
+		flex-shrink: 0;
+
+	}
+	@media (max-width:1364px) {
+		padding: 20px;
+		border-radius: 10px;
+		img{
+			width: 46px;
+			height: 46px;
+		}
+		.body-3{font-size: 12px;}
+	}
+}

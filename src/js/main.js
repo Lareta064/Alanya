@@ -181,6 +181,5 @@ document.addEventListener("DOMContentLoaded", function (){
 		thumbwidth: 157,
 		thumbheight: 94
 	});
-	/*video iframe */
 	
 });
