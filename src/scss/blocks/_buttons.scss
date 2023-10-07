@@ -14,6 +14,7 @@
 	cursor:pointer;
 	color: white;
 	font-family: $semi;
+	white-space: nowrap;
 	svg{fill: #fff;}
 	.svg-link{width: 18px; height: 18px;}
 	@media (max-width: 1199px) {

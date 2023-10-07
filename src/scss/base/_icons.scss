@@ -188,3 +188,10 @@ svg{transition: .3s;}
 	height: 23px;
 	fill: #A9ADC6;
 }
+.svg-target, .svg-fullscreen, .svg-user.svg-userId,.svg-www{
+	width: 28px;
+	height: 28px;
+	fill: $ac1;
+}
+.svg-user.svg-userId{height: 22px;}
+.svg-www{height: 26px;}
