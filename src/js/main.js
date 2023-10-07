@@ -181,5 +181,32 @@ document.addEventListener("DOMContentLoaded", function (){
 		thumbwidth: 157,
 		thumbheight: 94
 	});
-	
+	/*video iframe */
+	var playerVideoHead;
+	function onYouTubeIframeAPIReady() {
+		playerVideoHead = new YT.Player('#video-head', {
+			events: {
+				'onReady': onPlayerReady,
+				'onStateChange': onPlayerStateChange
+			}
+		});
+	}
+	togglePlayer(playerVideoHead);
+
+	function togglePlayer(player) {
+		if (typeof player.getPlayerState == "undefined") return;
+		var state = player.getPlayerState();
+
+		if (state == YT.PlayerState.PAUSED) {
+			player.playVideo();
+			console.log('123');
+		} else {
+			if (state == YT.PlayerState.PLAYING) {
+				player.pauseVideo();
+				console.log('456');
+			}
+			console.log('789');
+		}
+
+	}
 });

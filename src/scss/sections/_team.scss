@@ -1,8 +1,10 @@
 .team{
-	.h3{
+	.h3, h3{
 		max-width: 280px;;
 	}
-	position: relative;
+	.container{
+		position: relative;
+	}
 	
 	@media(max-width:1439px){
 		position: relative;
@@ -132,4 +134,4 @@
 .team-slider-col{
 	justify-content: space-between;
 }
-.fly-center>.btn-left{margin-right: 30px;}
+.fly-center>.btn-right{margin-left: 30px; margin-top: 0!important;margin-bottom: 0;}

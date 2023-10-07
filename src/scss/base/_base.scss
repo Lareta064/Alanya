@@ -146,9 +146,13 @@ section{
 }
 article{
 	padding-top: 30px; padding-bottom: 30px;
+	.h2, .h3, h2, h3{
+		margin-bottom: 40px;
+	}
 	@media (max-width: 991px) {
 	padding-top: 15px;
 		padding-bottom: 15px;
+		.h2,.h3,h2,h3 {margin-bottom: 20px;}
 	}
 }
 .header-slider-wrapper, .header{
