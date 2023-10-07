@@ -12,7 +12,7 @@ var gcmq = require("gulp-group-css-media-queries");
 const formatHtml = require('gulp-format-html');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
-const ttf2woff2 = require('gulp-ttf2woff2');
+// const ttf2woff2 = require('gulp-ttf2woff2');
 
 // Таск для сборки Gulp файлов
 gulp.task("pug", function(callback) {
@@ -62,11 +62,11 @@ gulp.task("pugUi", function (callback) {
     callback();
 });
 // Таск для компиляции SCSS в CSS
-gulp.task('ttf2woff2', async function () {
-    gulp.src(['./src/fonts/*.ttf'])
-        .pipe(ttf2woff2())
-        .pipe(gulp.dest('build/fonts/'));
-});
+// gulp.task('ttf2woff2', async function () {
+//     gulp.src(['./src/fonts/*.ttf'])
+//         .pipe(ttf2woff2())
+//         .pipe(gulp.dest('build/fonts/'));
+// });
 // Таск для компиляции SCSS в CSS
 gulp.task("scss", function(callback) {
     return gulp
@@ -103,7 +103,10 @@ gulp.task("copy:img", function(callback) {
     return gulp.src("./src/img/**/*.*").pipe(webp()).pipe(gulp.dest("./build/img/"));
     callback();
 });
-
+gulp.task("copy:fonts", function (callback) {
+    return gulp.src("./src/fonts/**/*.*").pipe(webp()).pipe(gulp.dest("./build/fonts/"));
+    callback();
+});
 gulp.task("copy:libs", function(callback) {
     return gulp.src("./src/libs/**/*.*").pipe(gulp.dest("./build/libs/"));
     callback();
@@ -122,7 +125,7 @@ gulp.task("copy:video", function(callback) {
 gulp.task("watch", function() {
     // Следим за картинками и скриптами и обновляем браузер
     watch(
-        ["./build/js/**/*.*", "./build/img/**/*.*" ,  "./build/libs/**/*.*", "./build/video/**/*.*" ],
+        ["./build/js/**/*.*", "./build/img/**/*.*", "./build/fonts/**/*.*" ,  "./build/libs/**/*.*", "./build/video/**/*.*" ],
         gulp.parallel(browserSync.reload)
        
     );
@@ -138,7 +141,8 @@ gulp.task("watch", function() {
 
     // Следим за картинками и скриптами, и копируем их в build
     
-    watch("./src/img/**/*.*",gulp.parallel("copy:img")); 
+    watch("./src/img/**/*.*", gulp.parallel("copy:img"));
+    watch("./src/fonts/**/*.*", gulp.parallel("copy:fonts")); 
     watch("./src/js/**/*.*", gulp.parallel("copy:js"));
    
     watch("./src/libs/**/*.*", gulp.parallel("copy:libs"));
@@ -173,7 +177,7 @@ gulp.task(
        
         gulp.parallel("clean:build"),
       
-        gulp.parallel("scss", "ttf2woff2", "pug","pugUi","copy:img", "copy:js", "copy:libs", "copy:video"),
+        gulp.parallel("scss", "pug","pugUi","copy:img", "copy:fonts", "copy:js", "copy:libs", "copy:video"),
         gulp.parallel("html:prettify"),
         gulp.parallel("server", "watch"),
         

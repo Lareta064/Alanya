@@ -15,9 +15,7 @@
 			left: 0;
 		}
 	}
-	@media (max-width: 1199px) {
-	padding-bottom: 70px;
-	}
+	
 	@media (max-width: 767px) {
 	.team-slider-nav{
 		right: 0;
@@ -47,6 +45,10 @@
 	@media(max-width:1439px){
 		flex-direction: column;
 		
+	}
+	@media (max-width: 991px) {
+	position: relative;
+	padding-bottom: 80px;
 	}
 }
 #team-counter{
