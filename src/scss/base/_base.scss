@@ -228,7 +228,25 @@ article{
 	}	
 	
 }
+.double-block {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
 
+	@media (max-width: 991px) {
+		gap: 10px;
+	}
+
+	@media (max-width: 599px) {
+
+		grid-template-columns: 1fr;
+	}
+}
+.single-column {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: 1fr;
+}
 .video-poster.hide {
 	display: none;
 }

@@ -1,15 +1,4 @@
-.double-block{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap:30px;
-	@media (max-width: 991px) {
-	gap:10px;
-	}
-	@media (max-width: 599px) {
-		
-		grid-template-columns:1fr;
-	}
-}
+
 .support-card{
 	padding: 40px 60px;
 	column-gap:20px;

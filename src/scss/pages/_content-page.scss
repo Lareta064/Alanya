@@ -11,6 +11,7 @@
 	ul>li{
 		position: relative;
 		padding-left: 18px;
+		span{color: $pr; }
 		&:before{
 			content: '';
 			display: block;
@@ -20,7 +21,7 @@
 			background-color: $ac1;
 			position: absolute;
 			left: 0;
-			top: 6px;
+			top: 7px;
 		}
 		&+li{margin-top: 20px;
 		@media (max-width: 767px) {

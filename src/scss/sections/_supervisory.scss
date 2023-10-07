@@ -1,0 +1,37 @@
+.special-project__block{
+	column-gap:30px;
+	align-items: flex-start;
+	img{
+		flex-shrink: 0;
+		object-fit: cover;
+	}
+}
+.special-project__text{
+
+}
+.info-card{
+	border-radius: 20px;
+	border: 1px solid $sec2;
+	background: $sec4;
+	padding: 30px;
+	color: $sec;
+	column-gap:16px;
+	svg{
+		width: 34px;
+		height: 34px;
+		fill: $ac1;
+		flex-shrink: 0;
+	}
+	.txt-upper{
+		font-family: $medi;
+		letter-spacing: 0.54px;
+		margin-bottom: 4px;
+	}
+	.txt-semi{color: $pr;}
+}
+.special-project__block>*+*{
+   margin-top: 30px;
+}
+.special-project__block>*+ul {
+	margin-top: 20px;
+}
