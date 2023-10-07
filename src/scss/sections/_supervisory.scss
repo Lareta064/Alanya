@@ -46,6 +46,7 @@
 	.txt-semi{color: $pr;}
 	@media (max-width: 991px) {
 	font-size: 14px;
+	padding: 10px 20px;
 	}
 }
 .special-project__text>*>*+*{
@@ -73,8 +74,14 @@
 	.double-block{column-gap: 10px;}
 }
 .contact-persone{
-	.txt-upper{font-family: $medi; color: $pr;}
+	.txt-upper{font-family: $medi; color: $pr; letter-spacing: 0.42px;}
 	.txt-semi{color: $sec;}
+	@media (max-width: 767px) {
+		column-gap:10px;
+	svg {
+			width: 22px;
+		}
+	}
 }
 .contact-list{
 	.info-card-item .txt-semi{
@@ -86,10 +93,17 @@
 		&:hover{
 			.txt-semi{color: $ac1;}
 		}
+		@media (max-width: 767px) {
+			column-gap: 10px;
+			svg{
+				width: 22px;
+			}
+		}
 	}
 	.info-card-item .txt-upper {
 		color: $sec;
 		font-family: $medi;
+		letter-spacing: 0.42px;
 	}
 	.info-card-item +.info-card-item{
 		margin-top: 10px;
