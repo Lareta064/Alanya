@@ -10,6 +10,7 @@
 	border: 1px solid $sec2;
 	padding: 24px 20px;
 	column-gap:10px;
+	transition: .3s;
 	img, span, svg{flex-shrink: 0;}
 	p{flex-grow: 4;}
 	p,span {
@@ -28,7 +29,12 @@
 		span{display: none;}
 		p{font-size: 12px;}
 	}
-		@media (max-width: 767px) {
-			align-items: flex-start;
-		}
+	@media (max-width: 767px) {
+		align-items: flex-start;
+	}
+	&:hover{
+		border-color: $ac1;
+		p, span{color: $ac1;	}
+		svg{fill: $ac1;}
+	}
 }
