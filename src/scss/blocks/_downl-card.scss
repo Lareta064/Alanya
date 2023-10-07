@@ -1,0 +1,17 @@
+.download-card{
+	border-radius: 20px;
+	border: 1px solid $sec2;
+	padding: 24px 20px;
+	column-gap:10px;
+	img, span, svg{flex-shrink: 0;}
+	p{flex-grow: 4;}
+	p,span {
+		
+		font-size: 16px;
+		line-height: 1.4;
+		color: $sec;
+		font-family: $semi;
+	}
+	span{font-size: 14px;}
+
+}
