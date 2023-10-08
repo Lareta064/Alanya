@@ -4,10 +4,19 @@ svg{transition: .3s;}
 	height: 24px;
 	fill: $pr;
 }
-.svg-call, .svg-pin, .svg-add{
+.svg-search,
+.svg-filter {
+	width: 15px;
+	height: 16px;
+	fill: #5162FF;
+}
+.svg-call, .svg-pin, .svg-add, .svg-filter,.svg-reload{
 	width: 20px;
 	height: 20px;
 	fill: #A9ADC6;
+}
+.svg-reload{
+	fill: #767DA2;
 }
 .svg-add{
 	fill:$pr1 ;
@@ -42,11 +51,7 @@ svg{transition: .3s;}
 	height: 18px;
 	fill: $sec;
 }
-.svg-search{
-	width: 15px;
-	height: 16px;
-	fill:#5162FF;
-}
+
 .social-group, .lang-group{
 	
 	column-gap:10px;
@@ -188,10 +193,25 @@ svg{transition: .3s;}
 	height: 23px;
 	fill: #A9ADC6;
 }
-.svg-target, .svg-fullscreen, .svg-user.svg-userId,.svg-www{
+.svg-target, .svg-fullscreen, .svg-userId.svg-userId,.svg-www{
 	width: 28px;
 	height: 28px;
 	fill: $ac1;
 }
 .svg-user.svg-userId{height: 22px;}
 .svg-www{height: 26px;}
+.svg-up{
+	width: 16px;
+	height: 20px;
+	fill: #fff;
+}
+.svg-cam{
+	width: 24px;
+	height: 16px;
+	fill:#E30613;
+}
+.svg-check{
+	width: 20px;
+	height: 14px;
+	fill: $ac1;
+}

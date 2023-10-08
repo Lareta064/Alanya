@@ -154,6 +154,7 @@ article{
 		padding-bottom: 15px;
 		.h2,.h3,h2,h3 {margin-bottom: 20px;}
 	}
+	&:last-child{padding-bottom: 0;}
 }
 .header-slider-wrapper, .header{
 	padding-left: 449px;
@@ -200,6 +201,7 @@ article{
 }
 .btn-wrapper{
 	margin-top: 40px;
+	justify-content: space-between;
 	@media (max-width: 991px) {
 		margin-top: 30px;
 	}
@@ -246,7 +248,4 @@ article{
 	display: grid;
 	gap: 10px;
 	grid-template-columns: 1fr;
-}
-.video-poster.hide {
-	display: none;
 }

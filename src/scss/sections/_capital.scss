@@ -51,7 +51,7 @@
 		width: calc(50% + 50vw - 200px);
 	}
 	@media (max-width: 1199px) {
-		width: calc(50% + 50vw - 30px);
+		width: calc(50% + 50vw - 10px);
 		scrollbar-width: none;
 		&::-webkit-scrollbar {
 			display:none;
