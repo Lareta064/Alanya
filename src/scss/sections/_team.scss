@@ -1,3 +1,73 @@
+.foto-card {
+
+	display: grid;
+	column-gap: 10px;
+	grid-template-columns: 1fr 339px;
+	color: $sec;
+	line-height: 1.4;
+
+	@media(max-width:699px) {
+		display: flex;
+		flex-direction: column-reverse;
+		row-gap: 10px;
+	}
+
+	.txt-semi {
+		font-size: 16px;
+		margin-bottom: 10px;
+		color: $pr;
+	}
+
+	p {
+		font-size: 14px;
+		flex-grow: 2;
+	}
+
+	&__text {
+		padding: 30px;
+
+		&>* {
+			width: 100%;
+		}
+
+		border-radius: 20px;
+		border: 1px solid $sec2;
+		background: white;
+
+		@media (max-width: 699px) {
+			min-height: 240px;
+			;
+			width: 320px;
+			padding: 20px;
+
+		}
+	}
+
+	.body-6 {
+		padding-top: 10px;
+		border-top: 0.5px solid $sec1;
+	}
+
+	&__pic {
+		border-radius: 20px;
+		overflow: hidden;
+		width: 325px;
+		height: 289px;
+		
+
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		@media(max-width:699px) {
+			height: 200px;
+			width: 320px;
+
+		}
+	}
+}
 .team{
 	.h3, h3{
 		max-width: 280px;;
@@ -41,6 +111,7 @@
 			width: 320px;
 
 		}
+
 	}
 	@media(max-width:1439px){
 		flex-direction: column;
@@ -82,58 +153,21 @@
 		transform: translate(50%, 0);
 	}
 }
-.team-slide{
-	
-	display: grid;
-	column-gap: 10px;
-	grid-template-columns: 1fr 339px;
-	color: $sec;
-	line-height: 1.4;
-	@media(max-width:699px){
-		display: flex;
-		flex-direction: column-reverse;
-		row-gap:10px;
-	}
-	
-	.txt-semi{
-		font-size: 16px;
-		margin-bottom: 10px;
-	}
-	p{
-		font-size: 14px;
-		flex-grow: 2;
-	}
-	.team-slide__text{
-		padding: 30px;
-		&>*{width: 100%;}
-		border-radius: 20px;
-		border: 1px solid $sec2;
-		background: white;
-		@media (max-width: 699px) {
-			min-height: 240px;;
-			width: 320px;
-			padding: 20px;
 
-		}
-	}
-	.body-6{
-		padding-top: 10px;
-		border-top: 0.5px solid $sec1;
-	}
-	.team-slide__foto{
-		border-radius: 20px;
-		overflow: hidden;
-		@media(max-width:699px) {
-			height: 354px;
-			width: 320px;
-			img{
-				height: 100%;
-				object-fit: cover;
-			}
-		}
-	}
-}
 .team-slider-col{
 	justify-content: space-between;
 }
 .fly-center>.btn-right{margin-left: 30px; margin-top: 0!important;margin-bottom: 0;}
+.owl-carousel{
+	.foto-card__pic {
+		
+		height: 448px;
+		width: 339px;
+        .txt-semi{color: $sec;}
+		@media(max-width:699px) {
+			height: 354px;
+			width: 320px;
+
+		}
+	}
+}
