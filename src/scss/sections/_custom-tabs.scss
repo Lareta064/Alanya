@@ -1,0 +1,51 @@
+.tabs-content {
+	display: none;
+	opacity: 0;
+}
+
+.tabs-content-wrapper{
+	padding-top: 45px;
+}
+.tabs-content.active{
+    display: block;
+	animation-name: opacity;
+	animation-fill-mode: forwards;
+	animation-duration: .3s;
+	animation-timing-function: ease-in;
+
+}
+.tabs-toggle{
+	border-bottom: 1px solid $sec2;
+	background:$sec4;
+	
+	.tabs-button{
+		display: flex;
+		column-gap: 20px;
+		color: $sec;
+		line-height: 1.4;
+		font-family: $semi;
+		font-size: 16px;
+		.tabs-button__item{
+			padding-top: 47px;
+			padding-bottom: 47px;
+			cursor: pointer;
+			transition: .5s;;
+			border-bottom:2px solid transparent;
+			&.active{
+				border-bottom: 2px solid $ac1;
+				color: $pr;
+			}
+		}
+
+	}
+}
+
+@keyframes opacity {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

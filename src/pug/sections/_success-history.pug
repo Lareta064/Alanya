@@ -1,0 +1,38 @@
+section.projects.pt-0
+	#projects-tabs-toggle.tabs-toggle
+		.container
+			ul.tabs-button
+				li.tabs-button__item.active(data-role="1") Истории успеха
+				li.tabs-button__item(data-role="2") Реализованные проекты
+				li.tabs-button__item(data-role="3") Проекты для инвестирования
+				li.tabs-button__item(data-role="4") Заявка на сопровождение инвестиционного проекта
+	#projects-content.tabs-content-wrapper
+		article.success-history.tabs-content.active(data-content="1")
+			.container
+				.h2 Истории успеха
+				.brand-cards-wrapper
+					//====card=====
+					.brand-card.fl-block
+						.project-card
+							.project-card__img
+								img(src="./img/brend-logo1.webp", width="245" height="101" alt="logo")
+							.project-card__footer.fly-center
+								p ООО «А.РАЙМОНД РУС»(Франция)
+								a(href="#!").project-card__link
+									svg.svg-cam
+										use(href="./img/spriteSvg.svg#svg-cam")
+
+						.brand-card__text
+							.title-24 ООО «А.РАЙМОНД РУС»(Франция)
+							p Компания «А.Раймонд РУС» запустила свой завод в Нижегородской области в 2015 году на территории городского округа город Дзержинск. Производство было запущено в кратчайшие сроки при активном содействии региональных властей. 
+							p Основные сферы деятельности предприятия – производство и продажа крепежных изделий и специализированных компонентов из пластмассы преимущественно для автомобильной промышленности России. Сегодня крепежные элементы от Компания «А.Раймонд РУС» используются практически во всех автомобилях отечественной сборки.
+		section.success-history2.tabs-content(data-content="2")
+			.container
+				p Мытищи, ул. Лётная, д.30 корпус 3444
+		section.success-history3.tabs-content(data-content="3")
+			.container
+				p Мытищи, ул. Лётная, д.30 корпус 355
+		section.success-history4.tabs-content(data-content="4")
+			.container
+				p Мытищи, ул. Лётная, д.30 корпус 3
+					

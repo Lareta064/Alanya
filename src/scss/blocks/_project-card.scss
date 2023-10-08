@@ -35,6 +35,8 @@
 			height: 28px;
 			display: inline-flex;
 			justify-content: flex-end;
+			display: flex;
+			align-items: center;
 			&:hover{
 				svg{fill:$ac1;}
 			}

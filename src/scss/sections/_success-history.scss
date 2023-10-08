@@ -1,0 +1,24 @@
+.brand-card{
+	display: flex;
+	gap:10px;
+	.project-card{flex-shrink: 0;}
+	 &__text{
+		border-radius: 20px;
+		border: 1px solid $sec2;
+		background: #FFF;
+		padding: 30px;
+		padding-bottom: 20px;
+	}
+		 &__text{
+			padding-left: 20px;
+			padding-right: 20px;
+			background-color: $sec4;
+			font-size: 14px;
+			line-height: 1.4;
+			color: $sec;
+			.title-24{
+				color: $pr;
+			}
+			&>*+*{margin-top: 10px;}
+		 }
+}
