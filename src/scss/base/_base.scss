@@ -63,9 +63,8 @@ img {
 }
 
 input,
-button,
-button:focus,
-input:focus {
+button
+{
 	outline: none;
 	border: none;
 }
@@ -174,10 +173,10 @@ article{
 	}
 
 }
- .fl-block,.flx-center,.fly-center, .fl-center, .fl-column,.flex-link{
-	display: flex;
+ .fl-block,.flx-center,.fly-center, .fl-center, .fl-column,.flex-link{display: flex;}
 	
-}
+.fly-bottom{align-items: flex-end!important;}
+
 .flx-center,.fl-center{
 	justify-content: center;
 }
@@ -206,6 +205,20 @@ article{
 	}
 }
 .pt-0{padding-top: 0;}
+.btn-wrapper {
+	justify-content: space-between;
+
+	@media (max-width: 767px) {
+		flex-direction: column-reverse;
+		align-items: center;
+		row-gap: 10px;
+	}
+}
+
+.cards-counter {
+	font-size: 18px;
+	color: $sec1
+}
 .btn-wrapper{
 	margin-top: 40px;
 	justify-content: space-between;

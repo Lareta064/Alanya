@@ -155,7 +155,7 @@ section.projects.pt-0
 	article.invest-catalogy(data-content="3")
 		.container
 			.h2 Каталог инвестиционных предложений
-			p В Каталоге инвестиционных предложений Нижегородской области представлены для инвесторов масштабные инфраструктурные проекты, требующие частного финансирования, проекты, предполагающие долевое участие инвестора в создании новых или модернизации действующих предприятий, а также готовые инвестиционные площадки по таким направлениям как промышленность, сельское хозяйство, туризм и др., а также сведения о льготных территориях, на которых возможно размещение различных объектов для нужд инвесторов, и контакты лиц, отвечающих за сопровождение проекта
+			p.body-3 В Каталоге инвестиционных предложений Нижегородской области представлены для инвесторов масштабные инфраструктурные проекты, требующие частного финансирования, проекты, предполагающие долевое участие инвестора в создании новых или модернизации действующих предприятий, а также готовые инвестиционные площадки по таким направлениям как промышленность, сельское хозяйство, туризм и др., а также сведения о льготных территориях, на которых возможно размещение различных объектов для нужд инвесторов, и контакты лиц, отвечающих за сопровождение проекта
 
 			a(href="#!").download-card.fly-center
 				img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
@@ -166,7 +166,7 @@ section.projects.pt-0
 				
 				
 			.invest-catalogy__form
-				form(action="" method="method")
+				form.catalogy-form(action="" method="method")
 					fieldset.form-fieldset
 						.form-row
 							.form-item.form-item--search
@@ -174,12 +174,57 @@ section.projects.pt-0
 								button(type="submit").flx-center
 									svg.svg-search
 										use(href="./img/spriteSvg.svg#svg-search")
-							button(type="button").btn-outline
+							button(type="button").btn-outline#advanced-search-btn
 								span Расширенный поиск
 								svg.svg-filter
 									use(href="../img/spriteSvg.svg#svg-filter")
-					fieldset.form-fieldset
-						
+					fieldset.form-fieldset#advanced-form
+						//==== form single row =====
+						.form-row
+							//===single select ====
+							.form-item
+								label.text-label Отрасль
+								.mySelect
+									.mySelect-icon
+									.mySelect-input
+										input.selectValue(type='text' readonly='' placeholder="Выберите значение")
+									.mySelect-drop
+										input.mySelect-options(type='text' readonly='' value='Значение-1')
+										input.mySelect-options(type='text' readonly='' value='Значение-2')
+										input.mySelect-options(type='text' readonly='' value='Значение-3')
+										input.mySelect-options(type='text' readonly='' value='Значение-4')
+							
+							//===single select ====
+							.form-item
+								label.text-label Район
+								.mySelect
+									.mySelect-icon
+									.mySelect-input
+										input.selectValue(type='text' readonly='' placeholder="Выберите значение")
+									.mySelect-drop
+										input.mySelect-options(type='text' readonly='' value='Значение-1')
+										input.mySelect-options(type='text' readonly='' value='Значение-2')
+										input.mySelect-options(type='text' readonly='' value='Значение-3')
+										input.mySelect-options(type='text' readonly='' value='Значение-4')
+
+						//==== form single row =====
+						.form-row.form-row--grid
+							.form-item
+								label.text-label Объем финансирования (млн руб.)
+								.form-item__group.fly-center
+									input(type="number" placeholder="Введите значение")
+									span -
+									input(type="number" placeholder="Введите значение")
+							.form-item.form-buttons
+								button(type="button").btn-outline
+									span Применить
+									svg.svg-check
+										use(href="../img/spriteSvg.svg#svg-check")
+
+								button(type="button").btn-outline.btn-clean
+									span Отменить
+									svg.svg-reload
+										use(href="../img/spriteSvg.svg#svg-reload")
 
 	section.success-history4.tabs-content(data-content="4")
 		.container
