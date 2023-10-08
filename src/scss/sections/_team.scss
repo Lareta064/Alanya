@@ -5,7 +5,9 @@
 	grid-template-columns: 1fr 339px;
 	color: $sec;
 	line-height: 1.4;
-
+    &:hover{
+		.body-6{color: $ac1;}
+	}
 	@media(max-width:699px) {
 		display: flex;
 		flex-direction: column-reverse;
@@ -17,10 +19,11 @@
 		margin-bottom: 10px;
 		color: $pr;
 	}
-
+    .body-6{color: $sec;}
 	p {
 		font-size: 14px;
 		flex-grow: 2;
+		color: $sec;
 	}
 
 	&__text {

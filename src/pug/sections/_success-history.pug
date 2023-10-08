@@ -9,7 +9,7 @@
 				li
 					a(href="#invest-catalogy") Проекты для инвестирования
 				li
-					a(href="#!") Заявка на сопровождение инвестиционного проекта
+					a(href="#aplication") Заявка на сопровождение инвестиционного проекта
 
 	section.projects
 		article.success-history#success-history
@@ -151,7 +151,7 @@
 						svg.svg-add
 							use(href="../img/spriteSvg.svg#svg-add")
 
-					.cards-counter 6 / 563
+					.cards-counter 3 / 97
 		
 		article.invest-catalogy#invest-catalogy
 			.container
@@ -165,7 +165,7 @@
 					svg.svg-downl
 						use(href="./img/spriteSvg.svg#svg-downl")
 					
-					
+				//===== search form ====	
 				.invest-catalogy__form
 					form.catalogy-form(action="" method="method")
 						fieldset.form-fieldset
@@ -222,12 +222,73 @@
 										svg.svg-check
 											use(href="../img/spriteSvg.svg#svg-check")
 
-									button(type="button").btn-outline.btn-clean
+									button(type="button").btn.btn-clean
 										span Отменить
 										svg.svg-reload
 											use(href="../img/spriteSvg.svg#svg-reload")
 
-		section.success-history4.tabs-content(data-content="4")
-			.container
-				p Мытищи, ул. Лётная, д.30 корпус 3
+				//=== cards block====
+				.double-block
+					//====card=====
+					.foto-card
+						a(href="#!").foto-card__text.fl-column
+							.txt-semi Преференциальные территории
+							p Особая экономическая зона промышленно-производственного типа «Кулибин»
+
+							.body-6 Смотреть проект
 						
+						.foto-card__pic
+							img(src="./img/catalog1.webp", width="325" height="289" alt="foto")
+
+					//====card=====
+					.foto-card
+						a(href="#!").foto-card__text.fl-column
+							.txt-semi Преференциальные территории
+							p Территория опережающего развития «САРОВ»
+
+							.body-6 Смотреть проект
+						
+						.foto-card__pic
+							img(src="./img/catalog2.webp", width="325" height="289" alt="foto")
+					
+					//====card=====
+					.foto-card
+						a(href="#!").foto-card__text.fl-column
+							.txt-semi Индустриальные парки
+							p Индустриальный парк «ЗАРЯ»
+
+							.body-6 Смотреть проект
+						
+						.foto-card__pic
+							img(src="./img/catalog3.webp", width="325" height="289" alt="foto")
+					
+					//====card=====
+					.foto-card
+						a(href="#!").foto-card__text.fl-column
+							.txt-semi Технопарки
+							p Промышленный технопарк «Машиностроение»
+
+							.body-6 Смотреть проект
+						
+						.foto-card__pic
+							img(src="./img/catalog4.webp", width="325" height="289" alt="foto")
+		
+				//===== блок с кнопкой ======
+				.btn-wrapper.fly-center
+					a(href="#!").btn-outline
+						span Загрузить еще проекты
+						svg.svg-add
+							use(href="../img/spriteSvg.svg#svg-add")
+
+					.cards-counter 4 / 12
+		
+		
+		article.application#aplication
+			.container
+				.h2 Заявка на сопровождение инвестиционного проекта
+				p Если Вы начинаете реализацию инвестиционного проекта на территории Нижегородской области, Вы можете подать заявку на сопровождение инвестиционного проекта в соответствии с Регламентом сопровождения инвестпроектов, отслеживать статус поданной заявки и получить обратную связь от органов власти по результатам ее обработки.
+
+				a(href="#!").btn-accent
+					span Подать заявку
+					svg.svg-folder
+						use(href="../img/spriteSvg.svg#svg-folder")
