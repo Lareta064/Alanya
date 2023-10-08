@@ -227,4 +227,39 @@ document.addEventListener("DOMContentLoaded", function (){
 			advForm.classList.toggle('open');
 		});
 	}
+	/**подсветка активного пункта меню*/
+	function Scroll_block() {
+		var scroll_top = $(document).scrollTop();
+		$(".right-fixed-menu a").each(function () {
+			var hash = $(this).attr("href");
+			var target = $(hash);
+			if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
+				$(".right-fixed-menu li.active").parent().removeClass("active");
+				$(this).parent().addClass("active");
+			} else {
+				$(this).parent().removeClass("active");
+			}
+		});
+	}
+
+
+	$(document).on("scroll", Scroll_block);
+
+	$("a[href^='#']").click(function (e) {
+		e.preventDefault();
+
+		$(document).off("scroll");
+		$("li.active").removeClass("active");
+		$(this).parent().addClass("active");
+		var hash = $(this).attr("href");
+		var target = $(hash);
+
+		$("html, body").animate({
+			scrollTop: target.offset().top
+		}, 500, function () {
+			window.location.hash = hash;
+			$(document).on("scroll", Scroll_block);
+		});
+
+	});
 });
