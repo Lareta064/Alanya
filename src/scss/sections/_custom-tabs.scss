@@ -1,11 +1,3 @@
-.tabs-content {
-	display: none;
-	opacity: 0;
-}
-
-.tabs-content-wrapper{
-	padding-top: 45px;
-}
 
 .projects-menu ul{
 	
@@ -34,6 +26,7 @@
 	background:$sec4;
 	position: sticky;
 	top:0;
+	z-index: 6;
 	ul{
 		display: flex;
 		column-gap: 20px;
@@ -41,13 +34,14 @@
 		line-height: 1.4;
 		font-family: $semi;
 		font-size: 16px;
-		li{
+		a{
 			padding-top: 47px;
 			padding-bottom: 47px;
 			cursor: pointer;
-			transition: .5s;;
+			transition: .5s;
+			display: block;
 			border-bottom:2px solid transparent;
-
+			color:$sec;
 			@media (max-width: 899px) {
 			     
 					padding-top: 7px;
@@ -64,7 +58,7 @@
 			list-style-type: disc;
 			padding-right: 4px;
 			}
-			li.active{
+			li.activ a{
 				border-bottom: 2px solid $ac1;
 				color: $pr;
 				@media (max-width: 1199px) {
