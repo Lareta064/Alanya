@@ -77,4 +77,10 @@
 			border-bottom: 1px solid $sec2;	}
 	}
 }
+.success-project +.success-project{
+	margin-top: 20px;
+	@media (max-width: 767px) {
+	 margin-bottom: 10px;
+	}
+}
 
