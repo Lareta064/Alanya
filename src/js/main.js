@@ -183,33 +183,6 @@ document.addEventListener("DOMContentLoaded", function (){
 	});
 
 	/*============tabs ==================*/
-	function pageTabs(tabBtn, tabContent) {
-		const menuItems = tabBtn.querySelectorAll('[data-role]');
-		const menuItemContent = tabContent.querySelectorAll('[data-content]');
-		for (let i = 0; i < menuItems.length; i++) {
-			menuItems[i].addEventListener('click', (e) => {
-				e.preventDefault();
-				for (let j = 0; j < menuItems.length; j++) {
-					if (j !== i) {
-						menuItems[j].classList.remove('active');
-					}
-					if (j == i) {
-						menuItems[j].classList.add('active');
-					}
-				}
-				const thisData = menuItems[i].getAttribute('data-role');
-				for (let block of menuItemContent) {
-					block.classList.remove('active');
-					const contentData = block.getAttribute('data-content');
-					if (thisData == contentData && menuItems[i].classList.contains('active')) {
-						block.classList.add('active');
-					}
-				}
-			});
-		}
-	}
-	const projectsContent = document.getElementById('projects-content');
-	const projectsTabsBtns = document.getElementById('projects-tabs-toggle');
-	if (projectsContent) { pageTabs(projectsTabsBtns, projectsContent); }
+
 	
 });
