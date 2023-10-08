@@ -6,6 +6,29 @@
 .tabs-content-wrapper{
 	padding-top: 45px;
 }
+
+.tabs-toggle .tabs-button{
+	
+	overflow:hidden;overflow-x: auto;
+	&::-webkit-scrollbar{
+		display: block;
+		width: 20px;
+		height: 4px;
+	}
+	&::-webkit-scrollbar-thumb{
+		width: 20px;
+		height: 4px;
+		border-radius: 10px;
+		background-color: $sec2;
+	}
+	@media (max-width: 1199px) {
+		width: calc(50% + 50vw - 160px);
+	}
+	@media (max-width: 1199px) {
+		width: calc(50% + 50vw - 15px);
+	}
+}
+
 .tabs-content.active{
     display: block;
 	animation-name: opacity;
@@ -31,13 +54,35 @@
 			cursor: pointer;
 			transition: .5s;;
 			border-bottom:2px solid transparent;
+
+			@media (max-width: 899px) {
+			     
+					padding-top: 7px;
+					padding-bottom: 7px;
+					height: 47px;
+			        
+			
+				}
+			@media (max-width: 899px) {
+			  font-size: 12px;
+			  &:last-child{
+				min-width: 180px;;
+				}
+			list-style-type: disc;
+			padding-right: 4px;
+			}
 			&.active{
 				border-bottom: 2px solid $ac1;
 				color: $pr;
+				@media (max-width: 1199px) {
+					border-bottom: 0;
+					&.active{border-bottom: 0;}
+				}
 			}
 		}
 
 	}
+	
 }
 
 @keyframes opacity {
