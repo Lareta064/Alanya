@@ -88,3 +88,10 @@
 	}
 	
 }
+.projects-page-content .sticky-menu{
+	ul li:last-child{
+		@media (max-width: 767px) {
+		width: 180px;
+		}
+	}
+}
