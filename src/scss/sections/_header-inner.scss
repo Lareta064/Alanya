@@ -1,3 +1,17 @@
+.header-inner{
+	position: relative;
+	&:before{
+		content:'';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: linear-gradient(0deg, rgba(81, 98, 255, 0.30) 0%, rgba(81, 98, 255, 0.30) 100%);
+		background-blend-mode: screen, normal;
+	}
+}
+
 .header-content{
 	height: 940px;
 	background-repeat: no-repeat;
