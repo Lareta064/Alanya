@@ -5,6 +5,8 @@
 	padding: 24px 20px;
 	column-gap:10px;
 	transition: .3s;
+	display: flex;
+	align-items: center;
 	img, span, svg{flex-shrink: 0;}
 	p{flex-grow: 4;}
 	p,span {
