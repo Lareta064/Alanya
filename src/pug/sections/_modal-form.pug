@@ -1,0 +1,28 @@
+.modal-frame-wrapper(frame-modal="modal-subscribe")
+	
+	.modal-frame.modal-frame--subscribe
+		//====крестик закрытия модалки ====
+		.icon-close(frame-close)
+
+		form(action="").fl-column-20
+			.title-24 Подписаться на новости
+			+input('Ваше имя <b>&#42;</b>')
+			+input('Email <b>&#42;</b>')
+			+input('Телефон')
+			
+			.form-confirm
+				.form-checkbox
+					label
+						input(type="checkbox" name="check-confirm")
+						span.fake-checkbox
+						.body-5 Согласие на обработку персональных данных
+			.form-item.form-buttons
+				button(type="button").btn-accent
+					span Отправить
+					svg.svg-send
+						use(href="./img/spriteSvg.svg#svg-send")
+
+				button(type="button" frame-close).btn
+					span Отменить
+					svg.svg-reload
+						use(href="./img/spriteSvg.svg#svg-reload")

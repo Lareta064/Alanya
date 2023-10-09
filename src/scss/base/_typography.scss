@@ -61,6 +61,11 @@
 	font-size: 18px;
 	
 }
+.body-5 {
+	font-size: 14px;
+	line-height: 1.4;
+	font-family: $reg;
+}
 .body-6{
 	font-size: 12px;
 	line-height: 1.4;
@@ -123,7 +128,6 @@
 
 .txt-accent{
 	
-	color: $sec;
 	line-height: 1.4;
 	padding-left: 20px;
 	border-left: 2px solid $ac1;
