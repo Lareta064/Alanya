@@ -166,6 +166,18 @@ article{
 	}
 	&:last-child{padding-bottom: 0;}
 }
+.economy-republic .container,
+.company-presentation .container {
+	&>*+* {
+		margin-top: 40px;
+	}
+
+	@media (max-width: 767px) {
+		&>*+* {
+			margin-top: 20px;
+		}
+	}
+}
 .header-slider-wrapper, .header{
 	padding-left: 449px;
 	@media(max-width:1919px) {

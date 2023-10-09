@@ -1,7 +1,15 @@
-mixin download-card(text)
-	a(href="#!").download-card
-		img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
-		p #{text}
-		span .pdf
-		svg.svg-downl
-			use(href="./img/spriteSvg.svg#svg-downl")
+mixin download-card(text, type)
+	if type
+		a(href="#!").download-card
+			img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
+			p #{text}
+			span .pdf
+			svg.svg-downl
+				use(href="./img/spriteSvg.svg#svg-downl")
+	else
+		a(href="#!").download-card
+			img(src="./img/icons/doc.webp", width="62" height="62" alt="img")
+			p #{text}
+			span .doc
+			svg.svg-downl
+				use(href="./img/spriteSvg.svg#svg-downl")

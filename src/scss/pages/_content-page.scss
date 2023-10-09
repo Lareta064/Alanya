@@ -1,13 +1,9 @@
+
+
 .content-page{
 	color: $sec;
 	// p{font-size: 18px;}
-	.company-presentation .container{
-		&>*+*{margin-top: 40px;}
-
-		@media (max-width: 767px) {
-			&>*+* {margin-top: 20px;}
-		}
-	}
+	
 	ul>li{
 		position: relative;
 		padding-left: 18px;

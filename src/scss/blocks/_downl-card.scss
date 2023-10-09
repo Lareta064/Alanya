@@ -34,3 +34,11 @@
 		svg{fill: $ac1;}
 	}
 }
+.download-cards-wrapper{
+	.download-card +.download-card
+	{margin-top: 20px;
+		@media (max-width: 767px) {
+		margin-top: 10px;
+		}
+	}
+}
