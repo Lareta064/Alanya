@@ -1,0 +1,49 @@
+[frame-modal] {
+	display: none;
+}
+
+*.visible[frame-modal] {
+	display: flex;
+	z-index: 10;
+	animation-name: opacity;
+	animation-duration: .3s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+}
+
+.modal-frame-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(169, 173, 198, .8);
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	overflow-y: auto;
+
+	.icon-close {
+		position: absolute;
+		top: 40px;
+		right: 40px;
+		transition: .3s;
+
+		&:hover {
+			opacity: .5;
+		}
+	}
+
+}
+.modal-frame{
+	position: relative;
+	
+	border-radius: 20px;
+	border: 1px solid $sec2;
+	background: $sec4;
+	box-shadow: 0px 4px 40px 0px rgba(169, 173, 198, 0.35);
+	padding: 40px 30px;
+}
+.modal-frame.modal-frame--subscribe{
+	width: 490px;
+}

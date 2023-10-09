@@ -28,22 +28,23 @@
 .capital-table{
 	overflow: hidden;
 	overflow-x: auto;
-	padding-bottom: 16px;
+	padding-bottom: 10px;
 	
-	scrollbar-width: thin;scrollbar-color: $sec2 $sec4;
+	scrollbar-width: thin;
+	scrollbar-color: $sec2 $sec4;
 	&::-webkit-scrollbar{
 		display: block;
-		height: 16px;
+		height: 8px;
 		width: 20px;
 	}
 	&::-webkit-scrollbar-thumb {
 		border-radius: 15px;
-		height: 16px;
+		height: 8px;
 		width: 20px;
 		background-color: $sec2;
 	}
 	&::-webkit-scrollbar-track{
-		height: 16px;
+		height: 8px;
 		background-color: $sec4;
 
 	}
@@ -52,6 +53,9 @@
 	}
 	@media (max-width: 1199px) {
 		width: calc(50% + 50vw - 10px);
+		
+	}
+	@media (max-width: 767px) {
 		scrollbar-width: none;
 		&::-webkit-scrollbar {
 			display:none;

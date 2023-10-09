@@ -1,0 +1,15 @@
+extends ../layouts/layout.pug
+
+block content
+	.page-grid
+		include ../sections/_main-menu
+		+header('Документы','doc-bg' )
+		include ../sections/_documents-page.pug
+		
+		
+	
+	//====footer======
+	include ../sections/_footer.pug
+	
+block variables
+	-var title = "Документы";

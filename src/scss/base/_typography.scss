@@ -1,4 +1,4 @@
-.h1, .h2, .h3,.title-24,  h1, h2, h3, h4, h5, h6{
+.h1, .h2, .h3,.h4,.title-24,  h1, h2, h3, h4, h5, h6{
 	font-family: $bold;
 	font-weight: 700;
 	color: $pr;
@@ -61,6 +61,11 @@
 	font-size: 18px;
 	
 }
+.body-5 {
+	font-size: 14px;
+	line-height: 1.4;
+	font-family: $reg;
+}
 .body-6{
 	font-size: 12px;
 	line-height: 1.4;
@@ -107,7 +112,7 @@
 		
 	}
 }
-.body-3{
+.body-3,.body-reg{
 	font-size: 18px;
 	font-weight: 600;
 	font-family: $semi;
@@ -117,13 +122,12 @@
 	}	
 	
 }
-
+.body-reg{font-family: $reg; font-weight: 400;}
 .link-medium{font-size: 14px;}
 .link-small{font-size: 12px;}
 
 .txt-accent{
 	
-	color: $sec;
 	line-height: 1.4;
 	padding-left: 20px;
 	border-left: 2px solid $ac1;

@@ -5,7 +5,7 @@
 	border-right: 1px solid $sec2;
 	height: 100vh;
 	position: fixed;
-	z-index: 5;
+	z-index: 7;
 	top: 0;
 	left: 0;
 	width: 449px;
@@ -17,7 +17,7 @@
 		transition: height .5s;
 		right: 0;
 		width: 100%;
-		z-index: 5;
+		// z-index: 5;
 		padding-bottom: 0;
 		height: 70px;
 	}
