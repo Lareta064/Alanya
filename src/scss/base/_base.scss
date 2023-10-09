@@ -166,8 +166,18 @@ article{
 	}
 	&:last-child{padding-bottom: 0;}
 }
-.economy-republic .container,
-.company-presentation .container {
+.partnership .container{
+	&>*+* {
+		margin-top: 60px;
+	}
+	@media (max-width: 767px) {
+	&>*+* {
+			margin-top: 30px;
+		}
+	}
+}
+.economy-republic .container, .partnership-block__wrapper,
+.company-presentation .container, .partnership .container {
 	&>*+* {
 		margin-top: 40px;
 	}
@@ -288,4 +298,15 @@ article{
 	display: grid;
 	gap: 10px;
 	grid-template-columns: 1fr;
+}
+.three-col-grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap:30px;
+	@media (max-width: 1599px) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media (max-width: 767px) {
+		grid-template-columns: 1fr;
+	}
 }

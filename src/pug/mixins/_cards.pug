@@ -13,3 +13,10 @@ mixin download-card(text, type)
 			span .doc
 			svg.svg-downl
 				use(href="./img/spriteSvg.svg#svg-downl")
+
+mixin simple-card(icon, text)
+	.simple-card&attributes(attributes)
+		.simple-card__icon
+			svg(class="svg-"+icon)
+				use(href="./img/spriteSvg.svg#svg-"+ icon +"")
+		.txt-medi #{text}

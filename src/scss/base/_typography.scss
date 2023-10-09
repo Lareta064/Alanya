@@ -61,6 +61,19 @@
 	font-size: 18px;
 	
 }
+.body-3,
+.body-reg,
+.body-bold {
+	font-size: 18px;
+	font-weight: 600;
+	font-family: $semi;
+	line-height: 1.4;
+
+	@media (max-width: 1199px) {
+		font-size: 14px;
+	}
+
+}
 .body-5 {
 	font-size: 14px;
 	line-height: 1.4;
@@ -71,7 +84,7 @@
 	line-height: 1.4;
 }
 .txt-upper{text-transform: uppercase;}
-.txt-bold{
+.txt-bold,.body-bold{
 	font-family: $bold;
 		font-weight: 700;
 }
@@ -112,16 +125,7 @@
 		
 	}
 }
-.body-3,.body-reg{
-	font-size: 18px;
-	font-weight: 600;
-	font-family: $semi;
-	line-height: 1.4;
-	@media (max-width: 1199px) {
-	  font-size: 14px;
-	}	
-	
-}
+
 .body-reg{font-family: $reg; font-weight: 400;}
 .link-medium{font-size: 14px;}
 .link-small{font-size: 12px;}

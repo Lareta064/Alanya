@@ -1,7 +1,7 @@
 .benefits{
 	.h3, h3{max-width: 650px;}
 }
-.benefit-card{
+.simple-card{
 	border-radius: 20px;
 	border: 0.5px solid $sec2;
 	background-color: $sec4;
@@ -39,6 +39,13 @@
 			font-size: 12px;
 			letter-spacing: 0.36px;
 		}
+	}
+}
+.simple-card.fly-center{
+	column-gap:40px;
+	.simple-card__icon{
+		width: 36px;
+		height: 36px;
 	}
 }
 .benefits-block{

@@ -1,0 +1,165 @@
+.partnership-content
+	.sticky-menu
+		.container
+			ul#sticky-menu
+				li
+					a(href="#partnership-block").active Государственно-частное партнерство
+				li
+					a(href="#projects-showcase") Витрина ГЧП-проектов
+
+				li
+					a(href="#normative") Нормативно-правовые акты
+
+	section.partnership
+		article.partnership-block.sticky-menu-section#partnership-block
+			.container
+				.h2 Государственно-частное партнерство
+				
+				//====== отдельный раздел  =====
+				.partnership-block__wrapper
+					//====card=====
+					.brand-card
+						.project-card
+							.h1 01 #[span.body-bold место]
+								
+							.project-card__footer
+								p Рейтинг регионов по уровню развития ГЧП
+
+						.brand-card__text
+							p.body-bold Нижегородская область обладает уникальным опытом в реализации проектов государственно-частного партнерства и занимает 1 место в рейтинге регионов по уровню развития ГЧП за 2022 год
+				
+					
+					p.body-reg В целях координации деятельности органов исполнительной власти Нижегородской области в сфере государственно-частного партнерства и концессии принято постановление Правительства Нижегородской области от 27.10.2016 № 722 «О подготовке и реализации проектов на основе концессионных соглашений и соглашений о государственно-частном партнерстве, а также проведении оценки эффективности проекта муниципально-частного партнерства и определении его сравнительного преимущества».
+		
+				//====== отдельный раздел  =====
+				.partnership-block__wrapper
+					.h3 Сферы применения государственно-частного партнерства:
+
+					.three-col-grid
+						+simple-card('folder', 'Здравоохранение')(class="fly-center")
+						+simple-card('folder', 'Коммунальная инфраструктура')(class="fly-center")
+						+simple-card('folder', 'Транспортная инфраструктура')(class="fly-center")
+						+simple-card('folder', 'Образование, наука, культура, спорт')(class="fly-center")
+						+simple-card('folder', 'Туристическая инфраструктура')(class="fly-center")
+						+simple-card('folder', 'Экологическая инфраструктура')(class="fly-center")
+		
+		
+		//===== Антимонопольный комплаенс ======
+		article.projects-showcase.sticky-menu-section#projects-showcase
+			.container
+				.h2 Антимонопольный комплаенс
+				.download-cards-wrapper
+					+download-card('Приказ АО КИР РСО-А N49 от 27.12.2018')
+					+download-card('Положение об организации системы внутреннего обеспечения соответствия требованиям антимонопольного законодательства в акционерном обществе «Корпорация инвестиционного развития Республики Северная Осетия-Алания»')
+					+download-card('Письмо Минэкономразвития РСО-А 38.1740 от 05.12.2018')
+					+download-card('Указ Президента РФ от 21.12.2017г. №618 Об основных направлениях государственной политики по развитию конкуренции')
+					+download-card('Распоряжение Правительства РСО-Алания от 04.09.2018г. №295-р О мерах по организации системы внутреннего обеспеченияя соответствия требованиям антимонопольного законодательства деятельности органов исполнительной власти РСО-А')
+
+
+		//========Нормативные документы========		
+		article.normative.sticky-menu-section#normative
+			.container
+				.h2 Нормативные документы
+				.download-cards-wrapper
+					+download-card('Годовой отчет за 2022г.', 'pdf')
+					+download-card('Годовой отчет АО КИР за 2021.', 'pdf')
+					+download-card('Аудиторское заключение за 2020 г.')
+					+download-card('Годовой отчет КИР за 2020 г.')
+					+download-card('Аудиторское заключение независимого аудитора за 2019г.')
+					+download-card('Указ Главы Республики Северная Осетия-Алания от 22 февраля 2017 г. N 39 О порядке принятия решения о предоставлении юридическим лицам земельных участков в аренду без проведения торгов', 'pdf')
+					+download-card('Закон Республики Северная Осетия-Алания от 15 апреля 2000 г. N 8-РЗ Об инвестиционной деятельности в Республике Северная Осетия-Алания')
+					+download-card('Приложение к распоряжению № 115-р итоги СЭР РСО-А 2019')
+		
+		//========Экономика республики========
+		article.economy-republic.sticky-menu-section#economy-republic
+			.container
+				.h2 Экономика республики
+				
+				.economy-republic__block
+					.h3 Экономика районов
+					.double-block
+						//=====card======
+						a(href="#!").download-card
+							img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
+							p Пригородный район
+							span .pdf
+							svg.svg-downl
+								use(href="./img/spriteSvg.svg#svg-downl")
+						//=====card======
+						a(href="#!").download-card
+							img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
+							p Ирафский район
+							span .pdf
+							svg.svg-downl
+								use(href="./img/spriteSvg.svg#svg-downl")
+
+						//=====card======
+						a(href="#!").download-card
+							img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
+							p Дигорский район
+							span .pdf
+							svg.svg-downl
+								use(href="./img/spriteSvg.svg#svg-downl")
+						//=====card======
+						a(href="#!").download-card
+							img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
+							p Моздокский район
+							span .pdf
+							svg.svg-downl
+								use(href="./img/spriteSvg.svg#svg-downl")
+
+						//=====card======
+						a(href="#!").download-card
+							img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
+							p Ардонский район
+							span .pdf
+							svg.svg-downl
+								use(href="./img/spriteSvg.svg#svg-downl")
+						//=====card======
+						a(href="#!").download-card
+							img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
+							p Кировский район
+							span .pdf
+							svg.svg-downl
+								use(href="./img/spriteSvg.svg#svg-downl")
+
+						//=====card======
+						a(href="#!").download-card
+							img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
+							p Владикавказ
+							span .pdf
+							svg.svg-downl
+								use(href="./img/spriteSvg.svg#svg-downl")
+						//=====card======
+						a(href="#!").download-card
+							img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
+							p Правобережный район
+							span .pdf
+							svg.svg-downl
+								use(href="./img/spriteSvg.svg#svg-downl")
+						//=====card======
+						a(href="#!").download-card
+							img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
+							p Алагирский район
+							span .pdf
+							svg.svg-downl
+								use(href="./img/spriteSvg.svg#svg-downl")
+
+				//========Природные ресурсы РСО-А =======
+				.economy-republic__block
+					.h3 Природные ресурсы РСО-А
+					.download-cards-wrapper
+
+						+download-card('Нераспределенный фонд РСО-А_1.')
+						+download-card('Минеральные воды РСО-А (бальнеологические группы)_1.')
+						+download-card('Месторождения минеральных вод РСО-А_1.')
+						+download-card('Лечебно-оздоровительные местности РСО-А (1).')
+						
+
+				//========Доступная инфраструктура =======
+				.economy-republic__block
+					.h3 Доступная инфраструктура для размещения производственных и иных объектов инвесторов
+					.download-cards-wrapper
+						+download-card('Отчет о деятельности Бизнес инкубатора ИТ-парк Алания за 2015 год', 'pdf')
+						+download-card('Отчет ГБУ Бизнес-инкубатор ИТ Парк Алания за 2014 год', 'pdf')
+						+download-card('Справка Министерства туризма, предпринимательства и инвестиционной политики РСО-Алания по Бизнес инкубатору', 'pdf')
