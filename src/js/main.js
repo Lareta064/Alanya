@@ -242,23 +242,45 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 	}
 
+	jQuery(($) => {
 
-	$(document).on("scroll", Scroll_block);
+		const section = $(".sticky-menu-section");
+		const nav = $("#sticky-menu");
+		const navHeight = nav.outerHeight(); // получаем высоту навигации
 
-	$("a[href^='#']").click(function (e) {
-		e.preventDefault();
+		// поворот экрана
+		window.addEventListener("orientationchange", () => {
+			navHeight = nav.outerHeight();
+		}, false);
 
-		$(document).off("scroll");
-		$("li.active").removeClass("active");
-		$(this).parent().addClass("active");
-		var hash = $(this).attr("href");
-		var target = $(hash);
+		$(window).on("scroll", () => {
+			const position = $(this).scrollTop();
 
-		$("html, body").animate({
-			scrollTop: target.offset().top
-		}, 500, function () {
-			window.location.hash = hash;
-			$(document).on("scroll", Scroll_block);
+			section.each(function () {
+				const top = $(this).offset().top - navHeight - 5,
+					bottom = top + $(this).outerHeight();
+
+				if (position >= top && position <= bottom) {
+					nav.find("a").removeClass("active");
+					section.removeClass("active");
+					
+					$(this).addClass("active");
+					var tid = $(this).attr('id');
+					console.log(tid);
+					nav.find('a[href="#' + tid +'"]').addClass("active");
+					
+				}
+			});
+		});
+
+		nav.find("a").on("click", function () {
+			const id = $(this).attr("href");
+
+			$("html, body").animate({
+				scrollTop: $(id).offset().top - navHeight
+			}, 487);
+
+			return false;
 		});
 
 	});

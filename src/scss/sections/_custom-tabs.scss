@@ -1,5 +1,5 @@
 
-.projects-menu ul{
+.sticky-menu ul{
 	
 	overflow:hidden;overflow-x: auto;
 	&::-webkit-scrollbar{
@@ -21,7 +21,7 @@
 	}
 }
 
-.projects-menu{
+.sticky-menu{
 	position: relative;
 	background:$sec4;
 	position: sticky;
@@ -58,6 +58,7 @@
 			@media (max-width: 899px) {
 				padding-top: 7px;
 				padding-bottom: 7px;
+				border-bottom:0;
 				
 				}
 			@media (max-width: 899px) {
@@ -74,7 +75,7 @@
 				
 			}
 							
-			li.active a{
+			li a.active{
 				border-bottom: 2px solid $ac1;
 				color: $pr;
 				@media (max-width: 1199px) {

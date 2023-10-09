@@ -107,7 +107,7 @@
 		
 	}
 }
-.body-3{
+.body-3,.body-reg{
 	font-size: 18px;
 	font-weight: 600;
 	font-family: $semi;
@@ -117,7 +117,7 @@
 	}	
 	
 }
-
+.body-reg{font-family: $reg; font-weight: 400;}
 .link-medium{font-size: 14px;}
 .link-small{font-size: 12px;}
 
