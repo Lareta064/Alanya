@@ -19,7 +19,10 @@
 	gap:10px;
 	
 	.project-card{
-		
+		.project-card__head{
+			padding-bottom: 20px;
+			&>*+*{margin-top: 30px;}
+		}
 		flex-shrink: 0; height: auto;
 		@media (max-width: 1599px) {
 			width: 320px;

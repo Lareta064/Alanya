@@ -27,3 +27,12 @@ mixin calc-radio(type, nameItem, icon, name)
 				svg.svg-icon_1
 					use(href="./img/spriteSvg.svg#svg-icon_"+ icon +"")
 			.body-5 #{name}
+
+mixin calc-check(type, nameItem, icon, name)
+	.form-checkbox
+		label.fl-column
+			input(type=""+ type name="name_"+ nameItem)
+			.form-item__pic
+				svg.svg-icon_1
+					use(href="./img/spriteSvg.svg#svg-icon_"+ icon +"")
+			.body-5 #{name}

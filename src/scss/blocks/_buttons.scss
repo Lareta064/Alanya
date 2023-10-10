@@ -78,3 +78,29 @@
 			}
 		}
 }
+.circle-button{
+	width: 20px;
+	height: 20px;
+	border:1px solid $sec;
+	background-color: #fff;
+	border-radius: 50%;
+	flex-shrink:0;
+	&:hover{border: 1px solid $ac1;}
+	&.active{
+		position: relative;
+		border: 1px solid $ac1;
+		&:after{
+			
+			content:'';
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			background-color: $ac1;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+		}
+	}
+}

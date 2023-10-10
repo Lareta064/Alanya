@@ -32,47 +32,113 @@
 				form.calculator-form
 					
 					//==== form-block  Тип организации =====
-					.calculator-form__group
+					.calculator-form__group.flex-center
 						.large-card
 							.project-card
-								.body-bold  Тип организации
+								.project-card__head
+									.body-bold  Тип организации
 									
 								.project-card__footer
 									p Выберите тип организации
 
 							.large-card__text
-								.form-radio
+								.form-checkbox
 									label.fl-column
-										input(type="radio" name="name_1")
+										input(type="checkbox" name="name_1")
 										.form-item__pic
 											svg.svg-icon_1
 												use(href="./img/spriteSvg.svg#svg-icon_1")
 										.body-5 Микропредприятие
-								+calc-radio('radio', '1', 2,'Малое предприятие')
-								+calc-radio('radio', '1', 3,'Среднее предприятие')
-								+calc-radio('radio', '1', 4,'Крупное предприятие')
+								+calc-check('checkbox', '2', 2,'Малое предприятие')
+								+calc-check('checkbox', '3', 3,'Среднее предприятие')
+								+calc-check('checkbox', '4', 4,'Крупное предприятие')
 					
 					//==== form-block Тип поддержки =====
-					.calculator-form__group
+					.calculator-form__group.flex-center
 						.large-card
 							.project-card
-								.body-bold  Тип поддержки
+								.project-card__head
+									.body-bold  Тип поддержки
 									
 								.project-card__footer
 									p Выберите тип поддержки
 
 							.large-card__text
 								
-								+calc-radio('radio', '2', 5,'Консультационная')
-								+calc-radio('radio', '2', 6,'Налоговая')
-								+calc-radio('radio', '2', 7,'Кредиты и займы')
-								+calc-radio('radio', '2', 8,'Субсидия')
-								+calc-radio('radio', '2', 9,'Имущественная')
-								+calc-radio('radio', '2', 10,'Образовательная')
+								+calc-check('checkbox', '5', 5,'Консультационная')
+								+calc-check('checkbox', '6', 6,'Налоговая')
+								+calc-check('checkbox', '7', 7,'Кредиты и займы')
+								+calc-check('checkbox', '8', 8,'Субсидия')
+								+calc-check('checkbox', '9', 9,'Имущественная')
+								+calc-check('checkbox', '10', 10,'Образовательная')
+								
+					
+					//==== Отрасль реализации инвестиционного проекта =====
+					.calculator-form__group
+
+						.large-card.switch-block
+							.project-card
+								.project-card__head
+									.body-bold  Отрасль реализации инвестиционного проекта
+									
+									//==== переключатель отрасль / оквэд
+									label.switch-item.switch-toggle
+										p Отрасль
+										input(type="checkbox" )
+										.switch-item__toggle
+											span
+											span
+										p ОКВЭД
+								
+								    
+									//==== переключатель отраслей, которые отображаются по 9 штук в правой колонке внутри .industry-grid__block =====
+									.categories-page-toggle
+										button.circle-button.active
+										button.circle-button
+										button.circle-button
 								
 								
+								.project-card__footer
+									p Выберите тип организации
 
-
+							
+							.large-card__text
+								.switch-content_of.active
+									.industry-grid__block
+										+calc-check('checkbox', '5', 5,'Консультационная')
+										+calc-check('checkbox', '6', 6,'Налоговая')
+										+calc-check('checkbox', '7', 7,'Кредиты и займы')
+										+calc-check('checkbox', '8', 8,'Субсидия')
+										+calc-check('checkbox', '9', 9,'Имущественная')
+										+calc-check('checkbox', '10', 10,'Образовательная')
+										+calc-check('checkbox', '8', 8,'Субсидия')
+										+calc-check('checkbox', '9', 9,'Имущественная')
+										+calc-check('checkbox', '10', 10,'Образовательная')
+								
+								
+								.switch-content_on
+									p block 222
+								
+							script.
+								const switchBlocks = document.querySelectorAll('.switch-block');
+								if(switchBlocks.length > 0){
+									for(let item of switchBlocks){
+										const switchToggle = item.querySelector('input');
+										const switchContentOf = item.querySelector('.switch-content_of');
+										const switchContentOn = item.querySelector('.switch-content_on');
+										item.addEventListener('click', ()=>{
+											if(!switchToggle.checked){
+												switchContentOf.classList.add('active');
+												switchContentOn.classList.remove('active');
+											}else{
+												switchContentOf.classList.remove('active');
+												switchContentOn.classList.add('active');
+											}
+										})
+									}
+									
+								}
+					
 					
 					p.body-reg В целях координации деятельности органов исполнительной власти Нижегородской области в сфере государственно-частного партнерства и концессии принято постановление Правительства Нижегородской области от 27.10.2016 № 722 «О подготовке и реализации проектов на основе концессионных соглашений и соглашений о государственно-частном партнерстве, а также проведении оценки эффективности проекта муниципально-частного партнерства и определении его сравнительного преимущества».
 		

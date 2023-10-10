@@ -67,6 +67,7 @@ input.valid, input:focus{border: 1px solid $sec1;}
   position: relative;
   display: inline-flex;
   align-items: center;
+  column-gap:12px;
   height: 20px;
   white-space: nowrap;
   cursor:pointer;
@@ -78,25 +79,33 @@ input.valid, input:focus{border: 1px solid $sec1;}
     left: 0;
     opacity: 0;
   }
-
+  .switch-item__toggle{
+    position: relative;
+    height: 24px;
+  }
   span {
     display: inline-block;
   }
-
-  input+span {
-    width: 52px;
-    height: 32px;
+  p{color: $sec; 
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+    line-height: 1.4;
+    font-family: $reg;
+  }
+  .switch-item__toggle span:first-child {
+    width: 40px;
+    height: 24px;
     
     background-color: $sec;
     // border: 1px solid #9BADCA;
     border-radius: 32px;
-    margin-right: 12px;
+   
 
   }
 
-  span+span {
-    width: 28px;
-    height: 28px;
+    .switch-item__toggle span+span {
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-color: white;
     position: absolute;
@@ -106,13 +115,13 @@ input.valid, input:focus{border: 1px solid $sec1;}
     transition: .3s;
   }
 
-  input:checked+span+span {
-    left: 22px;
+  input:checked+.switch-item__toggle > span+span {
+    left: 18px;
     z-index: 2;
     background-color: white;
   }
 
-  input:checked+span {
+  input:checked+.switch-item__toggle > span {
     background-color: $ac2;
   }
 
@@ -224,9 +233,11 @@ input.valid, input:focus{border: 1px solid $sec1;}
       background-color: $sec2;
       border-radius: 12px;
       transition: .5s;
+      flex-shrink: 0;
       svg{
         fill: $sec;
         transition: .5s;
+
       }
     }
 }
