@@ -44,122 +44,139 @@
 						+simple-card('folder', 'Экологическая инфраструктура')(class="fly-center")
 		
 		
+				//====== отдельный раздел  =====
+				.partnership-block__wrapper
+		
+					.h3 В результате многолетнего сотрудничества Правительства Нижегородской области и частного бизнеса реализованы следующие крупные инфраструктурные проекты:
+					.content-list
+						ul
+							li Строительство физкультурно-оздоровительных центров
+							li Строительство ледовых дворцов
+							li Строительство объектов размещения отходов
+							li Создание системы фотовидеофиксации нарушений правил дорожного движения (более 1000 камер по области)
+							li Создание системы весогабаритного контроля
+							li Реконструкция региональной автоматизированной системы централизованного оповещения населения
+
+					//===== текст в рамке =====
+					.txt-warning
+						.txt-bold В настоящее время проводится проработка возможности реализации на основе государственно-частного партнёрства и концессионных соглашений ещё 9 проектов в сфере спорта, дорожного строительства и т.д.
+						.txt-semi Орган исполнительной власти Нижегородской области, уполномоченный в сфере государственно-частного партнёрства и концессии — министерство экономического развития и инвестиций Нижегородской области.
+		
+					//===== Контакты ======
+					.special-project__contacts
+						.title-24 Контакты
+						.double-block
+							//==== persone card ======
+							.contact-persone.fl-block.info-card
+								.info-card__icon
+									svg.svg-userId
+										use(href="./img/spriteSvg.svg#svg-userId")
+								
+								.info-card__text
+									.txt-upper Управление государственно-частного партнерства и концессий министерства экономического развития и инвестиций Нижегородской области
+									
+							
+							//==== contacts card ======
+							.contact-list.info-card
+								//=== contact-item==
+								a(href="tel:+78314690360").info-card-item.fl-block
+									.info-card__icon
+										svg.svg-call
+											use(href="./img/spriteSvg.svg#svg-call")
+									
+									.info-card__text
+										.txt-upper Телефон
+										.txt-semi +7 (831) 469-03-60
+
+								//=== contact-item==
+								a(href="mailto:abv@minec.kreml.nnov.ru").info-card-item.fl-block
+									.info-card__icon
+										svg.svg-mail
+											use(href="./img/spriteSvg.svg#svg-mail")
+									
+									.info-card__text
+										.txt-upper E-mail
+										.txt-semi abv@minec.kreml.nnov.ru
+		
+					p.body-reg Подробнее о государственно-частном партнерстве и концессионных соглашениях в регионе можно узнать на сайте #[a(href="#!").link Министерства экономического развития и инвестиций Нижегородской области]
+		
 		//===== Антимонопольный комплаенс ======
 		article.projects-showcase.sticky-menu-section#projects-showcase
 			.container
-				.h2 Антимонопольный комплаенс
-				.download-cards-wrapper
-					+download-card('Приказ АО КИР РСО-А N49 от 27.12.2018')
-					+download-card('Положение об организации системы внутреннего обеспечения соответствия требованиям антимонопольного законодательства в акционерном обществе «Корпорация инвестиционного развития Республики Северная Осетия-Алания»')
-					+download-card('Письмо Минэкономразвития РСО-А 38.1740 от 05.12.2018')
-					+download-card('Указ Президента РФ от 21.12.2017г. №618 Об основных направлениях государственной политики по развитию конкуренции')
-					+download-card('Распоряжение Правительства РСО-Алания от 04.09.2018г. №295-р О мерах по организации системы внутреннего обеспеченияя соответствия требованиям антимонопольного законодательства деятельности органов исполнительной власти РСО-А')
+				.h2 Витрина ГЧП-проектов
+				
+				
+				form.showcase-form(action="" method="method")
+					fieldset.form-fieldset
+						.form-row
+							//===single select ====
+							.form-item
+								label.text-label Стадия реализации
+								.mySelect
+									.mySelect-icon
+									.mySelect-input
+										input.selectValue(type='text' readonly='' placeholder="Выберите значение")
+									.mySelect-drop
+										input.mySelect-options(type='text' readonly='' value='Значение-1')
+										input.mySelect-options(type='text' readonly='' value='Значение-2')
+										input.mySelect-options(type='text' readonly='' value='Значение-3')
+										input.mySelect-options(type='text' readonly='' value='Значение-4')
+							
+							//===single select ====
+							.form-item
+								label.text-label Отрасль
+								.mySelect
+									.mySelect-icon
+									.mySelect-input
+										input.selectValue(type='text' readonly='' placeholder="Выберите значение")
+									.mySelect-drop
+										input.mySelect-options(type='text' readonly='' value='Значение-1')
+										input.mySelect-options(type='text' readonly='' value='Значение-2')
+										input.mySelect-options(type='text' readonly='' value='Значение-3')
+										input.mySelect-options(type='text' readonly='' value='Значение-4')
+							
+							//===single select ====
+							.form-item
+								label.text-label Форма участия
+								.mySelect
+									.mySelect-icon
+									.mySelect-input
+										input.selectValue(type='text' readonly='' placeholder="Выберите значение")
+									.mySelect-drop
+										input.mySelect-options(type='text' readonly='' value='Значение-1')
+										input.mySelect-options(type='text' readonly='' value='Значение-2')
+										input.mySelect-options(type='text' readonly='' value='Значение-3')
+										input.mySelect-options(type='text' readonly='' value='Значение-4')
+							
+							.form-btn
+								button(type="button").btn-outline
+									span Поиск
+									svg.svg-check
+										use(href="./img/spriteSvg.svg#svg-check")
+				
+				.invest-catalogy__cards
+					+foto-card('Концессионное соглашение', 'Имущественный комплекс наземного электрического транспорта общего пользования', 'img1')
+					+foto-card('Концессионное соглашение', 'IT-кампус',  'img2')
+					+foto-card('Концессионное соглашение', 'Универсальный спортивный комплекс с искусственным льдом', 'img3')
+					+foto-card('Концессионное соглашение', 'Единый образовательный комплекс', 'img4')
+				
+				//===== блок с кнопкой ======
+				.btn-wrapper.fly-center
+					a(href="#!").btn-outline
+						span Загрузить еще проекты
+						svg.svg-add
+							use(href="./img/spriteSvg.svg#svg-add")
 
-
+					.cards-counter 4 / 12		
+		
+		
 		//========Нормативные документы========		
 		article.normative.sticky-menu-section#normative
 			.container
-				.h2 Нормативные документы
+				.h2 Нормативно-правовые акты в сфере государственно-частного партнерства
 				.download-cards-wrapper
-					+download-card('Годовой отчет за 2022г.', 'pdf')
-					+download-card('Годовой отчет АО КИР за 2021.', 'pdf')
-					+download-card('Аудиторское заключение за 2020 г.')
-					+download-card('Годовой отчет КИР за 2020 г.')
-					+download-card('Аудиторское заключение независимого аудитора за 2019г.')
-					+download-card('Указ Главы Республики Северная Осетия-Алания от 22 февраля 2017 г. N 39 О порядке принятия решения о предоставлении юридическим лицам земельных участков в аренду без проведения торгов', 'pdf')
-					+download-card('Закон Республики Северная Осетия-Алания от 15 апреля 2000 г. N 8-РЗ Об инвестиционной деятельности в Республике Северная Осетия-Алания')
-					+download-card('Приложение к распоряжению № 115-р итоги СЭР РСО-А 2019')
-		
-		//========Экономика республики========
-		article.economy-republic.sticky-menu-section#economy-republic
-			.container
-				.h2 Экономика республики
-				
-				.economy-republic__block
-					.h3 Экономика районов
-					.double-block
-						//=====card======
-						a(href="#!").download-card
-							img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
-							p Пригородный район
-							span .pdf
-							svg.svg-downl
-								use(href="./img/spriteSvg.svg#svg-downl")
-						//=====card======
-						a(href="#!").download-card
-							img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
-							p Ирафский район
-							span .pdf
-							svg.svg-downl
-								use(href="./img/spriteSvg.svg#svg-downl")
-
-						//=====card======
-						a(href="#!").download-card
-							img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
-							p Дигорский район
-							span .pdf
-							svg.svg-downl
-								use(href="./img/spriteSvg.svg#svg-downl")
-						//=====card======
-						a(href="#!").download-card
-							img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
-							p Моздокский район
-							span .pdf
-							svg.svg-downl
-								use(href="./img/spriteSvg.svg#svg-downl")
-
-						//=====card======
-						a(href="#!").download-card
-							img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
-							p Ардонский район
-							span .pdf
-							svg.svg-downl
-								use(href="./img/spriteSvg.svg#svg-downl")
-						//=====card======
-						a(href="#!").download-card
-							img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
-							p Кировский район
-							span .pdf
-							svg.svg-downl
-								use(href="./img/spriteSvg.svg#svg-downl")
-
-						//=====card======
-						a(href="#!").download-card
-							img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
-							p Владикавказ
-							span .pdf
-							svg.svg-downl
-								use(href="./img/spriteSvg.svg#svg-downl")
-						//=====card======
-						a(href="#!").download-card
-							img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
-							p Правобережный район
-							span .pdf
-							svg.svg-downl
-								use(href="./img/spriteSvg.svg#svg-downl")
-						//=====card======
-						a(href="#!").download-card
-							img(src="./img/icons/pdf.webp", width="62" height="62" alt="img")
-							p Алагирский район
-							span .pdf
-							svg.svg-downl
-								use(href="./img/spriteSvg.svg#svg-downl")
-
-				//========Природные ресурсы РСО-А =======
-				.economy-republic__block
-					.h3 Природные ресурсы РСО-А
-					.download-cards-wrapper
-
-						+download-card('Нераспределенный фонд РСО-А_1.')
-						+download-card('Минеральные воды РСО-А (бальнеологические группы)_1.')
-						+download-card('Месторождения минеральных вод РСО-А_1.')
-						+download-card('Лечебно-оздоровительные местности РСО-А (1).')
-						
-
-				//========Доступная инфраструктура =======
-				.economy-republic__block
-					.h3 Доступная инфраструктура для размещения производственных и иных объектов инвесторов
-					.download-cards-wrapper
-						+download-card('Отчет о деятельности Бизнес инкубатора ИТ-парк Алания за 2015 год', 'pdf')
-						+download-card('Отчет ГБУ Бизнес-инкубатор ИТ Парк Алания за 2014 год', 'pdf')
-						+download-card('Справка Министерства туризма, предпринимательства и инвестиционной политики РСО-Алания по Бизнес инкубатору', 'pdf')
+					+download-card('Федеральный закон от 21.07.2005 № 115-ФЗ «О концессионных соглашениях»', 'pdf')
+					+download-card('Федеральный закон от 13.07.2015 № 224-ФЗ «О государственно-частном партнерстве, муниципально-частном партнерстве в Российской Федерации и внесении изменений в отдельные законодательные акты Российской Федерации»', 'pdf')
+					+download-card('Приказ Минэкономразвития России от 30.11.2015 № 894 «Об утверждении Методики оценки эффективности проекта государственно-частного партнерства, проекта муниципально-частного партнерства и определения их сравнительного преимущества»')
+					+download-card('Закон Нижегородской области от 31.08.2016 № 134-З «О государственно-частном партнерстве в Нижегородской области»', 'pdf')
+					+download-card('Постановление Правительства Нижегородской области от 27.10.2016 № 722 «О подготовке и реализации проектов на основе концессионных соглашений и соглашений о государственно-частном партнерстве, а также проведении оценки эффективности проекта муниципально-частного партнерства и определении его сравнительного преимущества»', 'pdf')

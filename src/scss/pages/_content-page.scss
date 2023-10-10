@@ -39,6 +39,36 @@
 }
 
 }
+.content-list{
+	ul>li {
+			position: relative;
+			padding-left: 18px;
+	
+			span {
+				color: $pr;
+			}
+	
+			&:before {
+				content: '';
+				display: block;
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background-color: $ac1;
+				position: absolute;
+				left: 0;
+				top: 7px;
+			}
+	
+			&+li {
+				margin-top: 20px;
+	
+				@media (max-width: 767px) {
+					margin-top: 10px;
+				}
+			}
+		}
+}
 .video {
 	position: relative;
 	padding-bottom: 56.25%;

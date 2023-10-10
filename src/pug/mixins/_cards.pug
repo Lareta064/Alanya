@@ -20,3 +20,15 @@ mixin simple-card(icon, text)
 			svg(class="svg-"+icon)
 				use(href="./img/spriteSvg.svg#svg-"+ icon +"")
 		.txt-medi #{text}
+
+mixin foto-card(text1, text2, img)
+	//====card=====
+	.foto-card
+		a(href="#!").foto-card__text.fl-column
+			.txt-semi #{text1}
+			p #{text2}
+
+			.body-6 Смотреть проект
+		
+		.foto-card__pic
+			img(src="./img/"+ img +".webp", width="325" height="289" alt="foto")

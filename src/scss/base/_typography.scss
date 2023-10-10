@@ -158,5 +158,15 @@
 		width: 40px;
 		height: 40px;
 		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	@media (max-width: 767px) {
+		padding: 20px;
+		padding-top:62px;
+		&:after{
+			width: 32px;
+			height: 32px;
+			top: 20px;
+		}
 	}
 }

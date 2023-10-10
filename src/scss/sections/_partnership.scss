@@ -14,3 +14,20 @@
 
 	}
 }
+.showcase-form{
+	.form-item{flex-grow: 1;}
+		
+	.form-btn{padding-top: 24px;}
+	.form-row{
+		@media (max-width: 1199px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		.form-btn {
+				padding-top: 0;
+			}
+		}
+		@media (max-width: 767px) {
+		grid-template-columns: 1fr;
+		}
+	}
+}

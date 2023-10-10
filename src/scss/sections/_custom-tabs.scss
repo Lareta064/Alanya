@@ -74,6 +74,8 @@
 			}		 	
 						 	
 			li {
+				&:before{display: none!important;}
+				& + li{margin-top: 0!important;}
 				@media (max-width: 767px) {
 				a{
 					position: relative;

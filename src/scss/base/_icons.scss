@@ -226,3 +226,19 @@ svg{transition: .3s;}
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+.svg-medical,
+[class^="svg-benefit"]{
+	width: 38px;
+	height: 38px;
+	fill:#A9ADC6;
+}
+[class^="svg-icon_"]{
+	fill:#767DA2;
+	width: 39px;
+	height: 34px;
+}
+.svg-icon_2,.svg-icon_8{height: 34px;}
+.svg-icon_11,
+.svg-icon_5 {
+	width: 34px;
+}

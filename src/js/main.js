@@ -228,18 +228,17 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 	}
 	/**подсветка активного пункта меню*/
-	const stickyMenu = document.querySelector('#sticky-menu');
-	if (stickyMenu){
-		const stickyMenuLi = document.querySelectorAll('li');
-		for (let item of stickyMenuLi){
-			const itemLinkLength = item.querySelector('a').innerText.length;
-			if (itemLinkLength > 19){
-				item.classList.add(	'w-150');
-			}
-			
-
-		}
-	}
+	// const stickyMenu = document.querySelector('#sticky-menu');
+	// if (stickyMenu){
+	// 	const stickyMenuLi = document.querySelectorAll('li');
+	// 	for (let item of stickyMenuLi){
+	// 		const itemLinkLength = item.querySelector('a').textContent.length;
+	// 		console.log(itemLinkLength);
+	// 		if (itemLinkLength > 19){
+	// 			item.classList.add(	'w-150');
+	// 		}
+	// 	}
+	// }
 
 	jQuery(($) => {
 
@@ -264,9 +263,7 @@ document.addEventListener("DOMContentLoaded", function (){
 					section.removeClass("active");
 					
 					$(this).addClass("active");
-					var tid = $(this).attr('id');
-					console.log(tid);
-					nav.find('a[href="#' + tid +'"]').addClass("active");
+					nav.find('a[href="#' + $(this).attr('id') +'"]').addClass("active");
 					
 				}
 			});
