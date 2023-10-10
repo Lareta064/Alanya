@@ -171,6 +171,13 @@ input.valid, input:focus{border: 1px solid $sec1;}
       border: 1px solid $ac2;
 
     }
+    input[type="checkbox"]:checked+.form-item__pic {
+      background-color: $ac1;
+
+      svg {
+        fill: white;
+      }
+    }
   }
 
 
@@ -200,6 +207,28 @@ input.valid, input:focus{border: 1px solid $sec1;}
     border: 1px solid $ac2;
 
   }
+    input[type="radio"]:checked+ .form-item__pic{
+      background-color: $ac1;
+      svg{fill: white;}
+    }
+    
+}
+.form-radio, .form-checkbox{
+  .body-5{width: 100%; margin-top: 5px;}
+  .form-item__pic{
+      width: 62px;
+      height: 62px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $sec2;
+      border-radius: 12px;
+      transition: .5s;
+      svg{
+        fill: $sec;
+        transition: .5s;
+      }
+    }
 }
 .drop-block{
   position: relative;

@@ -1,12 +1,12 @@
-.partnership-block{
-	.brand-card{
+.partnership-block,.calculator-form{
+	.large-card{
 		.project-card{
 			width: 315px;
 			@media (max-width: 767px) {
 			width: 100%;
 			}
 		}
-		.brand-card__text{
+		.large-card__text{
 			display: flex;
 			align-items: center;
 		}

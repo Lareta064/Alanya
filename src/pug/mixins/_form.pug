@@ -19,3 +19,11 @@ mixin switch(text)
 		span
 		if text != ''
 			p #{text}
+mixin calc-radio(type, nameItem, icon, name)
+	.form-radio
+		label.fl-column
+			input(type=""+ type name="name_"+ nameItem)
+			.form-item__pic
+				svg.svg-icon_1
+					use(href="./img/spriteSvg.svg#svg-icon_"+ icon +"")
+			.body-5 #{name}

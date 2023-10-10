@@ -1,0 +1,20 @@
+.calculator-form__group{
+	.large-card{
+		min-height: 148px;
+	}
+	.large-card__text{
+		justify-content: center;
+		column-gap:30px;
+		&>*+*{margin-top: 0;}
+		.form-checkbox, .form-radio{
+			min-width: 135px;
+			.fl-column{
+				text-align: center;
+			}
+		}
+	}
+	.project-card .body-bold{color: $ac1; flex-grow:1;}
+}
+.calculator-form{
+	&>*+*{margin-top: 20px;}
+}
