@@ -1,0 +1,193 @@
+.calculate-content
+	.sticky-menu
+		.container
+			ul#sticky-menu
+				li
+					a(href="#partnership-block").active Калькулятор мер поддержки
+				li
+					a(href="#projects-showcase") Региональные меры
+
+				li
+					a(href="#normative") Федеральные меры
+				li
+					a(href="#partnership-block") Совместная поддержка
+				li
+					a(href="#projects-showcase") Льготное финансирование
+
+				li
+					a(href="#normative") Для институтов развития
+				li
+					a(href="#normative") Нефинансовые меры
+				li
+					a(href="#normative") Законодательство
+
+	section.calculate
+		article.partnership-block.sticky-menu-section#partnership-block
+			.container
+				.h2 Государственно-частное партнерство
+				
+				//====== отдельный раздел  =====
+				.partnership-block__wrapper
+					//====card=====
+					.brand-card
+						.project-card
+							.h1 01 #[span.body-bold место]
+								
+							.project-card__footer
+								p Рейтинг регионов по уровню развития ГЧП
+
+						.brand-card__text
+							p.body-bold Нижегородская область обладает уникальным опытом в реализации проектов государственно-частного партнерства и занимает 1 место в рейтинге регионов по уровню развития ГЧП за 2022 год
+				
+					
+					p.body-reg В целях координации деятельности органов исполнительной власти Нижегородской области в сфере государственно-частного партнерства и концессии принято постановление Правительства Нижегородской области от 27.10.2016 № 722 «О подготовке и реализации проектов на основе концессионных соглашений и соглашений о государственно-частном партнерстве, а также проведении оценки эффективности проекта муниципально-частного партнерства и определении его сравнительного преимущества».
+		
+				//====== отдельный раздел  =====
+				.partnership-block__wrapper
+					.h3 Сферы применения государственно-частного партнерства:
+
+					.three-col-grid
+						+simple-card('folder', 'Здравоохранение')(class="fly-center")
+						+simple-card('folder', 'Коммунальная инфраструктура')(class="fly-center")
+						+simple-card('folder', 'Транспортная инфраструктура')(class="fly-center")
+						+simple-card('folder', 'Образование, наука, культура, спорт')(class="fly-center")
+						+simple-card('folder', 'Туристическая инфраструктура')(class="fly-center")
+						+simple-card('folder', 'Экологическая инфраструктура')(class="fly-center")
+		
+		
+				//====== отдельный раздел  =====
+				.partnership-block__wrapper
+		
+					.h3 В результате многолетнего сотрудничества Правительства Нижегородской области и частного бизнеса реализованы следующие крупные инфраструктурные проекты:
+					.content-list
+						ul
+							li Строительство физкультурно-оздоровительных центров
+							li Строительство ледовых дворцов
+							li Строительство объектов размещения отходов
+							li Создание системы фотовидеофиксации нарушений правил дорожного движения (более 1000 камер по области)
+							li Создание системы весогабаритного контроля
+							li Реконструкция региональной автоматизированной системы централизованного оповещения населения
+
+					//===== текст в рамке =====
+					.txt-warning
+						.txt-bold В настоящее время проводится проработка возможности реализации на основе государственно-частного партнёрства и концессионных соглашений ещё 9 проектов в сфере спорта, дорожного строительства и т.д.
+						.txt-semi Орган исполнительной власти Нижегородской области, уполномоченный в сфере государственно-частного партнёрства и концессии — министерство экономического развития и инвестиций Нижегородской области.
+		
+					//===== Контакты ======
+					.special-project__contacts
+						.title-24 Контакты
+						.double-block
+							//==== persone card ======
+							.contact-persone.fl-block.info-card
+								.info-card__icon
+									svg.svg-userId
+										use(href="./img/spriteSvg.svg#svg-userId")
+								
+								.info-card__text
+									.txt-upper Управление государственно-частного партнерства и концессий министерства экономического развития и инвестиций Нижегородской области
+									
+							
+							//==== contacts card ======
+							.contact-list.info-card
+								//=== contact-item==
+								a(href="tel:+78314690360").info-card-item.fl-block
+									.info-card__icon
+										svg.svg-call
+											use(href="./img/spriteSvg.svg#svg-call")
+									
+									.info-card__text
+										.txt-upper Телефон
+										.txt-semi +7 (831) 469-03-60
+
+								//=== contact-item==
+								a(href="mailto:abv@minec.kreml.nnov.ru").info-card-item.fl-block
+									.info-card__icon
+										svg.svg-mail
+											use(href="./img/spriteSvg.svg#svg-mail")
+									
+									.info-card__text
+										.txt-upper E-mail
+										.txt-semi abv@minec.kreml.nnov.ru
+		
+					p.body-reg Подробнее о государственно-частном партнерстве и концессионных соглашениях в регионе можно узнать на сайте #[a(href="#!").link Министерства экономического развития и инвестиций Нижегородской области]
+		
+		//===== Антимонопольный комплаенс ======
+		article.projects-showcase.sticky-menu-section#projects-showcase
+			.container
+				.h2 Витрина ГЧП-проектов
+				
+				
+				form.showcase-form(action="" method="method")
+					fieldset.form-fieldset
+						.form-row
+							//===single select ====
+							.form-item
+								label.text-label Стадия реализации
+								.mySelect
+									.mySelect-icon
+									.mySelect-input
+										input.selectValue(type='text' readonly='' placeholder="Выберите значение")
+									.mySelect-drop
+										input.mySelect-options(type='text' readonly='' value='Значение-1')
+										input.mySelect-options(type='text' readonly='' value='Значение-2')
+										input.mySelect-options(type='text' readonly='' value='Значение-3')
+										input.mySelect-options(type='text' readonly='' value='Значение-4')
+							
+							//===single select ====
+							.form-item
+								label.text-label Отрасль
+								.mySelect
+									.mySelect-icon
+									.mySelect-input
+										input.selectValue(type='text' readonly='' placeholder="Выберите значение")
+									.mySelect-drop
+										input.mySelect-options(type='text' readonly='' value='Значение-1')
+										input.mySelect-options(type='text' readonly='' value='Значение-2')
+										input.mySelect-options(type='text' readonly='' value='Значение-3')
+										input.mySelect-options(type='text' readonly='' value='Значение-4')
+							
+							//===single select ====
+							.form-item
+								label.text-label Форма участия
+								.mySelect
+									.mySelect-icon
+									.mySelect-input
+										input.selectValue(type='text' readonly='' placeholder="Выберите значение")
+									.mySelect-drop
+										input.mySelect-options(type='text' readonly='' value='Значение-1')
+										input.mySelect-options(type='text' readonly='' value='Значение-2')
+										input.mySelect-options(type='text' readonly='' value='Значение-3')
+										input.mySelect-options(type='text' readonly='' value='Значение-4')
+							
+							.form-btn
+								button(type="button").btn-outline
+									span Поиск
+									svg.svg-check
+										use(href="./img/spriteSvg.svg#svg-check")
+				
+				.invest-catalogy__cards
+					+foto-card('Концессионное соглашение', 'Имущественный комплекс наземного электрического транспорта общего пользования', 'img1')
+					+foto-card('Концессионное соглашение', 'IT-кампус',  'img2')
+					+foto-card('Концессионное соглашение', 'Универсальный спортивный комплекс с искусственным льдом', 'img3')
+					+foto-card('Концессионное соглашение', 'Единый образовательный комплекс', 'img4')
+				
+				//===== блок с кнопкой ======
+				.btn-wrapper.fly-center
+					a(href="#!").btn-outline
+						span Загрузить еще проекты
+						svg.svg-add
+							use(href="./img/spriteSvg.svg#svg-add")
+
+					.cards-counter 4 / 12		
+		
+		
+		//========Нормативные документы========		
+		article.normative.sticky-menu-section#normative
+			.container
+				.h2 Нормативно-правовые акты в сфере государственно-частного партнерства
+				.download-cards-wrapper
+					+download-card('Федеральный закон от 21.07.2005 № 115-ФЗ «О концессионных соглашениях»', 'pdf')
+					+download-card('Федеральный закон от 13.07.2015 № 224-ФЗ «О государственно-частном партнерстве, муниципально-частном партнерстве в Российской Федерации и внесении изменений в отдельные законодательные акты Российской Федерации»', 'pdf')
+					+download-card('Приказ Минэкономразвития России от 30.11.2015 № 894 «Об утверждении Методики оценки эффективности проекта государственно-частного партнерства, проекта муниципально-частного партнерства и определения их сравнительного преимущества»')
+					+download-card('Закон Нижегородской области от 31.08.2016 № 134-З «О государственно-частном партнерстве в Нижегородской области»', 'pdf')
+					+download-card('Постановление Правительства Нижегородской области от 27.10.2016 № 722 «О подготовке и реализации проектов на основе концессионных соглашений и соглашений о государственно-частном партнерстве, а также проведении оценки эффективности проекта муниципально-частного партнерства и определении его сравнительного преимущества»', 'pdf')

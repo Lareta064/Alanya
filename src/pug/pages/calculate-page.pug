@@ -1,0 +1,15 @@
+extends ../layouts/layout.pug
+
+block content
+	.page-grid
+		include ../sections/_main-menu
+		+header('Для бизнеса','partners-bg' )
+		include ../sections/_calculate.pug
+		
+		
+	
+	//====footer======
+	include ../sections/_footer.pug
+	
+block variables
+	-var title = "Калькуллятор";
