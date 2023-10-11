@@ -105,3 +105,8 @@
 		
 	}
 }
+.form-item-okved{
+	display: flex;
+	column-gap:10px;
+	.mySelect{flex-grow: 1;}
+}

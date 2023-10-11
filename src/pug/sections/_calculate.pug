@@ -84,7 +84,7 @@
 									//==== переключатель отрасль / оквэд
 									label.switch-item.switch-toggle
 										p Отрасль
-										input(type="checkbox" )
+										input(type="checkbox" checked)
 										.switch-item__toggle
 											span
 											span
@@ -117,8 +117,26 @@
 								
 								
 								.switch-content_on
-									p block 222
-								
+									
+									.form-item.form-item-okved
+										.mySelect
+											
+											.mySelect-input
+												input.selectValue(type='text' readonly='' placeholder="ОКВЭД")
+											
+											//==== кнопка, открывающая drop список=====
+											button.mySelect-icon
+											
+											//====  drop список=====
+											.mySelect-drop
+												//===== Если нет значений, отображается тег <p> с текстом  Нет данных
+												p Нет данных
+												// input.mySelect-options(type='text' readonly='' value='Значение')
+												
+										
+										//==== кнопка, открывающая список кодов ОКВЭД в модальном окне=====
+										button.mini-btn 111
+
 							script.
 								const switchBlocks = document.querySelectorAll('.switch-block');
 								if(switchBlocks.length > 0){
@@ -126,6 +144,13 @@
 										const switchToggle = item.querySelector('input');
 										const switchContentOf = item.querySelector('.switch-content_of');
 										const switchContentOn = item.querySelector('.switch-content_on');
+										if(!switchToggle.checked){
+											switchContentOf.classList.add('active');
+											switchContentOn.classList.remove('active');
+										}else{
+											switchContentOf.classList.remove('active');
+											switchContentOn.classList.add('active');
+										}
 										item.addEventListener('click', ()=>{
 											if(!switchToggle.checked){
 												switchContentOf.classList.add('active');
