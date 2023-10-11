@@ -1,38 +1,74 @@
 .calculator-form__group{
 	.large-card{
 		min-height: 148px;
+		.project-card{
+			@media (max-width: 991px) {width: 100%; max-width: 100%;}
+		}
 		.project-card__footer{margin-top: auto;}
+		@media (max-width: 991px) {
+		  display: grid;
+		  grid-template-columns:  1fr ;
+		}
+		@media (max-width: 767px) {
+			position: relative;
+			
+		}
 	}
 	.large-card__text{
 		padding: 30px;
 		column-gap:30px;
+		row-gap:30px;
+		flex-wrap: wrap;
 		&>*+*{margin-top: 0;}
 		.form-checkbox, .form-radio{
 			min-width: 135px;
-			.body-5{padding-left: 10px; text-align: left;}
+			
 		}
-		
+		.body-5{padding-left: 10px; text-align: left;}
+		@media (max-width: 767px) {
+			column-gap: 10px;
+			row-gap: 10px;
+			padding: 20px;
+		}
 	}
+
 	.project-card .body-bold{color: $ac1; flex-grow:1;}
 }
 .calculator-form__group.flex-center{
 	.large-card__text {
-			justify-content: center;
-		.form-checkbox,
-			.form-radio {
-				min-width: 135px;
-		
-				.fl-column {
-					text-align: center;
-					.body-5 {
-							padding-left: 0;
-						}
-				}
+		@media (max-width: 1599px) {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			align-items: flex-start;
+		}
+		@media (max-width: 1279px) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: 1199px) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+		@media (max-width: 767px) {
+			grid-template-columns: 1fr 1fr;
+		}
+		.form-checkbox,.form-radio{min-width: 135px; }
+		.fl-column {
+			text-align: center;
+			align-items: center;
+
+			.body-5 {
+				padding-left: 0;
+				text-align: center;
 			}
 		}
+	}
 }
 .calculator-form{
 	&>*+*{margin-top: 40px;}
+	@media (max-width: 767px) {
+	&>*+* {
+			margin-top: 20px;
+		}
+	}
 	
 }
 .switch-content_on, .switch-content_of{
@@ -46,10 +82,26 @@
 	.fl-column{
 		flex-direction: row;
 	}
-	
+	@media (max-width: 1439px) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media (max-width: 767px) {
+		grid-template-columns: 1fr;
+		gap: 10px;
+	}
 }
 .categories-page-toggle{
 	display: flex;
 	align-items:center;
 	column-gap: 10px;
+	@media (max-width: 767px) {
+		position: absolute;
+		right: 15px;
+		top: 230px;
+		flex-direction: column;
+		margin-top: 0!important;
+		row-gap: 10px;
+		z-index: 2;
+		
+	}
 }

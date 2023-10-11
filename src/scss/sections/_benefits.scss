@@ -46,6 +46,12 @@
 	.simple-card__icon{
 		width: 36px;
 		height: 36px;
+		display: flex;
+		align-items: center;
+		@media (max-width: 991px) {
+		width: 24px;height: 24px;
+		}
+		
 	}
 }
 .benefits-block{
