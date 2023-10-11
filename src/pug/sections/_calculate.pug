@@ -258,7 +258,112 @@
 								.calculator-page 1/2
 					
 					
-					p.body-reg В целях координации деятельности органов исполнительной власти Нижегородской области в сфере государственно-частного партнерства и концессии принято постановление Правительства Нижегородской области от 27.10.2016 № 722 «О подготовке и реализации проектов на основе концессионных соглашений и соглашений о государственно-частном партнерстве, а также проведении оценки эффективности проекта муниципально-частного партнерства и определении его сравнительного преимущества».
+					.okved-modal
+						.okved-modal__title.fly-center
+							.h2 Выбор вида экономической деятельности
+							.icon-close(frame-close)
+
+						.okved-modal__top.fly-center
+							button(type="button").btn.disable
+								span Снять все коды
+								svg.svg-cross
+									use(href="./img/spriteSVG.svg#svg-cross")
+							.okved-modal__input
+								.form-item
+									input.form-input(type="text" placeholder="код")
+					
+						.okved-modal__accordion
+							
+							.acor-container
+								//=========== single block =============
+								.acor-item
+									input#acor1(type='checkbox' name='acor' )
+									label(for='acor1').acor-item__header
+										.okved-item
+											label.form-checkbox
+												input(type="checkbox" name="" checked )
+												span.fake-checkbox
+												span.okved-num A
+											.okved-name  Сельское, Лесное Хозяйство, Охота, Рыболовство и Рыбоводство
+										
+									.acor-body
+										//======== подуровень 1=======
+										ul.okved-list.visible
+											//======== строка первого подуровня ======
+											li
+												.okved-item.okved-sub-item
+													label.form-checkbox
+														input(type="checkbox" name="" checked )
+														span.fake-checkbox
+														span.okved-num 01
+													.okved-name  Растениеводство и животноводство, охота и предоставление соответствующих услуг в этих областях
+					
+												//======== подуровень 2=======
+												ul.okved-list.okved-list__1
+													//======== строка второго подуровня ======
+													li
+														.okved-item.okved-sub-item
+															label.form-checkbox
+																input(type="checkbox" name="" checked )
+																span.fake-checkbox
+																span.okved-num 01.1
+															.okved-name  Выращивание однолетних культур
+														//======== подуровень 3=======
+														ul.okved-list.okved-list__2
+														
+															//======== строка 3 подуровня ======
+															li
+																.okved-item.okved-sub-item
+																	label.form-checkbox
+																		input(type="checkbox" name="" checked )
+																		span.fake-checkbox
+																		span.okved-num 01.11
+																	.okved-name  Выращивание зерновых (кроме риса), зернобобовых культур и семян масличных культур
+														
+																//======== подуровень 4=======
+																ul.okved-list.okved-list__3
+																	//======== строка 4 подуровня ======
+																	li
+																		.okved-item.okved-sub-item
+																			label.form-checkbox
+																				input(type="checkbox" name="" checked )
+																				span.fake-checkbox
+																				span.okved-num 01.11.1
+																			.okved-name  Выращивание зерновых культур
+																
+																		//======== подуровень 5=======
+																		ul.okved-list.okved-list__4
+																			//======== строка 5 подуровня ======
+																			li
+																				.okved-item.okved-sub-item
+																					label.form-checkbox
+																						input(type="checkbox" name="" checked )
+																						span.fake-checkbox
+																						span.okved-num 01.11.11
+																					.okved-name  Выращивание пшеницы	
+											
+											
+											
+											//======== строка первого подуровня ======
+											li
+												.okved-item.okved-sub-item
+													label.form-checkbox
+														input(type="checkbox" name="" checked )
+														span.fake-checkbox
+														span.okved-num 01
+													.body-3.okved-name  Сельское, Лесное Хозяйство, Охота, Рыболовство и Рыбоводство
+
+							script.
+								const okvedItems = document.querySelectorAll('.okved-sub-item');
+								if(okvedItems.length > 0){
+									for(let item of okvedItems)
+									item.addEventListener('click', function(){
+										this.nextElementSibling.classList.toggle('visible');
+										this.classList.add('open');
+									})
+								}
+					
+					
 		
 				//====== отдельный раздел  =====
 				.partnership-block__wrapper

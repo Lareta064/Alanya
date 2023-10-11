@@ -215,3 +215,67 @@
 }
 
 .calculator-page {margin-left: 10px;}
+
+.okved-modal{
+	padding: 30px;
+	.h2{margin-bottom: 0;}
+	.okved-modal__accordion{
+
+		border-top: 1px solid $sec2;
+		border-bottom: 1px solid $sec2;
+		padding: 30px 0;
+	}
+	.okved-modal__top,.okved-modal__title{
+		justify-content: space-between;
+	}
+	.okved-modal__input{
+		width: 280px;
+	}
+}
+.okved-modal__accordion{
+	.acor-item__header{}
+	.form-checkbox{
+		width: 40px;
+		flex-direction: column-reverse;
+		row-gap:10px;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.fake-checkbox{margin-right: 0;}
+	}
+	.okved-item{
+		display: flex;
+		align-items: center;
+		column-gap:10px;
+	}
+	.okved-name{
+		font-size: 16px;
+		line-height: 1.4;
+		
+	}
+	.okved-item .form-checkbox:before{display: none;}
+	.acor-container input:checked+label+.acor-body{
+		padding: 20px;
+		border-radius: 20px;
+		border: 1px solid $sec2;
+		
+	}
+	.okved-list{
+		display: none;
+		
+		&.visible{display: block;}
+		.okved-sub-item{
+			padding-top: 10px;
+			padding-bottom: 20px;
+			border-bottom:1px solid $sec2;
+				
+		
+		}
+	}
+	.okved-list__1 .form-checkbox{margin-left: 30px;}
+	.okved-list__2 .form-checkbox {	margin-left: 60px;}
+	.okved-list__3 .form-checkbox {margin-left: 90px;}
+	.okved-list__4 .form-checkbox {margin-left: 120px;}
+	
+}
