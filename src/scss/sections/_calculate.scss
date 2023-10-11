@@ -62,8 +62,8 @@
 		}
 	}
 }
-.calculator-form{
-	&>*+*{margin-top: 40px;}
+.calculator-form-page{
+	&>*+*{margin-top: 30px;}
 	@media (max-width: 767px) {
 	&>*+* {
 			margin-top: 20px;
@@ -202,4 +202,16 @@
 		}
 	}
 	.clean-selectValue.visible{display: flex;}
+
 }
+.calculator-form-footer {
+	border-radius: 20px;
+	border: 1px solid $sec2;
+	background: $sec4;
+	padding: 30px;
+	margin-top: 20px;
+	justify-content: space-between;
+	[class^='btn']{width: auto;}
+}
+
+.calculator-page {margin-left: 10px;}
