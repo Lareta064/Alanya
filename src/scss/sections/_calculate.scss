@@ -233,7 +233,7 @@
 	}
 }
 .okved-modal__accordion{
-	.acor-item__header{}
+	
 	.form-checkbox{
 		width: 40px;
 		flex-direction: column-reverse;
@@ -252,13 +252,23 @@
 	.okved-name{
 		font-size: 16px;
 		line-height: 1.4;
+		padding-right: 16px;
+		flex-grow:1;
+		cursor:pointer;
 		
 	}
 	.okved-item .form-checkbox:before{display: none;}
 	.acor-container input:checked+label+.acor-body{
-		padding: 20px;
-		border-radius: 20px;
-		border: 1px solid $sec2;
+		padding: 0;
+		padding-bottom: 20px;
+		.border-block{
+			padding: 20px;
+			padding-bottom: 0;
+			border-radius: 20px;
+			border: 1px solid $sec2;
+			&>.okved-sub-item{border-bottom:0;}
+		}
+		.border-block +.border-block{margin-top: 20px;}
 		
 	}
 	.okved-list{
@@ -268,12 +278,24 @@
 		.okved-sub-item{
 			padding-top: 10px;
 			padding-bottom: 20px;
-			border-bottom:1px solid $sec2;
+			&.open svg{
+				fill: $ac1;
+				transform: rotate(180deg);
+			}
 				
 		
 		}
 	}
-	.okved-list__1 .form-checkbox{margin-left: 30px;}
+	.okved-list__1 .form-checkbox{
+		margin-left: 30px;
+		
+	}
+	.okved-list__1>li .okved-sub-item,
+	.okved-list__2>li .okved-sub-item,
+	.okved-list__3>li .okved-sub-item,
+	.okved-list__4>li .okved-sub-item {
+		border-top: 1px solid $sec2;
+	}
 	.okved-list__2 .form-checkbox {	margin-left: 60px;}
 	.okved-list__3 .form-checkbox {margin-left: 90px;}
 	.okved-list__4 .form-checkbox {margin-left: 120px;}
