@@ -110,3 +110,96 @@
 	column-gap:10px;
 	.mySelect{flex-grow: 1;}
 }
+.mySelect.mySelect-okved{
+	.selectValue{
+		display: flex;
+		align-items: center;
+		column-gap:10px;
+		height: 54px;
+		border-radius: 12px;
+		border: 1px solid $sec2;
+		padding-left: 16px;
+		padding-right: 16px;
+		background-color: #fff;
+		flex-grow:1;
+	}
+	.mySelect-icon{
+		position: relative;
+		top:auto;
+		bottom: auto;
+		right: auto;
+		left: auto;
+		transform:rotate(0);
+		
+	}
+	.mySelect-input{
+		display: flex;
+		column-gap:10px;
+		flex-grow:1;
+		
+	}
+	
+	.okved-num	{
+		width: 100px;
+		flex-shrink: 0;
+		@media(max-width:1599px){
+			width: 70px;
+		}
+	}
+	.mySelect-drop{
+		max-height: 274px;
+		bottom: -10px;
+		border-radius: 12px;
+		li{
+			min-height: 54px;
+			display: flex;
+			align-items: center;
+		}
+
+	}
+	.mySelect-drop label{
+		padding-left: 16px;
+		padding-right: 16px;
+		min-height: 44px;
+		align-items: flex-start;
+		p, span{font-size: 16px;}
+		
+	}
+	.mySelect-okved__row{
+		display: flex;
+		column-gap: 10px;
+		@media(max-width:1599px) {
+			flex-direction: column-reverse;
+			row-gap:10px;
+		}
+	}
+	.mySelect-okved-group{
+		flex-grow:1;
+	}
+	.mySelect-okved-btns{
+		display: flex;
+		column-gap:10px;
+		@media(max-width:1599px) {
+			justify-content: flex-end;
+			@media (max-width: 767px) {
+			justify-content: flex-start;
+			flex-shrink:1;
+			}
+		}
+	}
+
+	.clean-selectValue {
+		display: none;
+		padding-left: 15px;
+		padding-right: 15px;
+		min-width: 54px;
+		height: 54px;
+		span{
+			display: none;
+			@media(max-width:1599px){
+				display: block;
+			}
+		}
+	}
+	.clean-selectValue.visible{display: flex;}
+}

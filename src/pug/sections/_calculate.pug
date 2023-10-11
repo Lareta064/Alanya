@@ -119,23 +119,102 @@
 								.switch-content_on
 									
 									.form-item.form-item-okved
-										.mySelect
-											
-											.mySelect-input
-												input.selectValue(type='text' readonly='' placeholder="ОКВЭД")
-											
-											//==== кнопка, открывающая drop список=====
-											button.mySelect-icon
+										
+										.mySelect.mySelect-okved
+											.mySelect-okved__row
+												.mySelect-input
+													.mySelect-okved-group
+														//===== выбранные коды =======
+														.selectValue
+															
+															//===== single number ===== =======
+															.tag
+																span 05
+																span
+																	svg.svg-cross
+																		use(href="../img/spriteSvg.svg#svg-cross")
+															//===== single number ===== =======
+															.tag
+																span 05
+																span
+																	svg.svg-cross
+																		use(href="../img/spriteSvg.svg#svg-cross")
+															
+															
+															//===== total ===== =======
+															span.total-tags  +25
+															
+													//==== кнопка, открывающая drop список=====
+													button.mySelect-icon.mini-btn
+														svg.svg-down
+															use(href="./img/spriteSvg.svg#svg-down")
+												
+												.mySelect-okved-btns
+													//==== кнопка, очистить выбранные данные =====
+													button.btn.clean-selectValue.visible
+														span Очистить все
+														svg.svg-close
+															use(href="./img/spriteSvg.svg#svg-close")
+													
+													//==== кнопка, открывающая список кодов ОКВЭД в модальном окне=====
+													button.mini-btn 111
 											
 											//====  drop список=====
 											.mySelect-drop
 												//===== Если нет значений, отображается тег <p> с текстом  Нет данных
-												p Нет данных
-												// input.mySelect-options(type='text' readonly='' value='Значение')
 												
+												ul
+													
+													li
+														
+														p Нет данных
+													li
+														.form-checkbox.okved-item
+															label
+																input(type="checkbox" name="" checked )
+																span.fake-checkbox
+																span.okved-num 05
+																p.okved-name Добыча угля
+													li
+														.form-checkbox.okved-item
+															label
+																input(type="checkbox" name="" checked )
+																span.fake-checkbox
+																span.okved-num 06
+																p.okved-name Добыча сырой нефти и природного газа
+													li
+														.form-checkbox.okved-item
+															label
+																input(type="checkbox" name="")
+																span.fake-checkbox
+																span.okved-num B
+																p.okved-name Добыча полезных ископаемых
+													li
+														.form-checkbox.okved-item
+															label
+																input(type="checkbox" name="")
+																span.fake-checkbox
+																span.okved-num 03.1
+																p.okved-name Рыболовство
 										
-										//==== кнопка, открывающая список кодов ОКВЭД в модальном окне=====
-										button.mini-btn 111
+													li
+														.form-checkbox.okved-item
+															label
+																input(type="checkbox" name="")
+																span.fake-checkbox
+																span.okved-num 03.2
+																p.okved-name Рыболовство
+										
+													li
+														.form-checkbox.okved-item
+															label
+																input(type="checkbox" name="")
+																span.fake-checkbox
+																span.okved-num 01.1
+																p.okved-name Выращивание однолетних культур
+										
+										
+
 
 							script.
 								const switchBlocks = document.querySelectorAll('.switch-block');
