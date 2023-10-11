@@ -237,7 +237,7 @@
 	.form-checkbox{
 		width: 40px;
 		flex-direction: column-reverse;
-		row-gap:10px;
+		row-gap:2px;
 		padding: 0;
 		display: flex;
 		justify-content: center;
@@ -257,10 +257,16 @@
 		cursor:pointer;
 		
 	}
+
 	.okved-item .form-checkbox:before{display: none;}
+	.acor-container input:checked + label{
+		font-family: $medi;
+		span{color: $ac1;}
+	}
+		.acor-container input:checked +span +span{color: $ac1;}
 	.acor-container input:checked+label+.acor-body{
 		padding: 0;
-		padding-bottom: 20px;
+		padding-bottom: 30px;
 		.border-block{
 			padding: 20px;
 			padding-bottom: 0;
@@ -268,7 +274,7 @@
 			border: 1px solid $sec2;
 			&>.okved-sub-item{border-bottom:0;}
 		}
-		.border-block +.border-block{margin-top: 20px;}
+		.border-block +.border-block{margin-top: 16px;}
 		
 	}
 	.okved-list{
