@@ -217,25 +217,55 @@
 .calculator-page {margin-left: 10px;}
 
 .okved-modal{
-	padding: 30px;
+	
+	.modal-frame{overflow: hidden; padding: 0;background-color: #fff;}
 	.h2{margin-bottom: 0;}
-	.okved-modal__accordion{
-
-		border-top: 1px solid $sec2;
-		border-bottom: 1px solid $sec2;
-		padding: 30px 0;
-	}
+	
 	.okved-modal__top,.okved-modal__title{
 		justify-content: space-between;
+	}
+	.okved-modal__title {
+		margin-bottom: 30px;
+	}
+	.okved-modal__header{
+		padding: 40px 40px 0;
+		background-color: #fff;
+	}
+	.okved-modal__top{
+		padding-bottom: 30px;
+		border-bottom:1px solid $sec2;
 	}
 	.okved-modal__input{
 		width: 280px;
 	}
 }
 .okved-modal__accordion{
-	
+	height: calc(100% - 330px);
+	margin-top: -2px;
+	overflow: hidden;
+	overflow-y: auto;
+	padding-left: 40px;
+	padding-right: 20px;
+	margin-right: 20px;
+	scrollbar-width: thin;scrollbar-color: $sec2, transparent ;
+	&::-webkit-scrollbar{
+		width: 6px;
+		height: 30px;
+		border-radius: 20px;
+	}
+	&::-webkit-scrollbar-thumb {
+		width: 6px;
+		height: 20px;
+		background-color: $sec2;
+		border-radius: 6px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: transparent;
+	}
 	.form-checkbox{
-		width: 40px;
+		min-width: 40px;
+		width: fit-content;
 		flex-direction: column-reverse;
 		row-gap:2px;
 		padding: 0;
@@ -263,9 +293,11 @@
 		font-family: $medi;
 		span{color: $ac1;}
 	}
-		.acor-container input:checked +span +span{color: $ac1;}
+	
+	.acor-container input:checked +span +span{color: $ac1;}
 	.acor-container input:checked+label+.acor-body{
 		padding: 0;
+		padding-right: 30px;
 		padding-bottom: 30px;
 		.border-block{
 			padding: 20px;
@@ -306,4 +338,24 @@
 	.okved-list__3 .form-checkbox {margin-left: 90px;}
 	.okved-list__4 .form-checkbox {margin-left: 120px;}
 	
+}
+.modal-frame-wrapper.okved-modal{
+	align-items: flex-start;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	.modal-frame{
+		height: calc(100vh - 80px);
+		position: relative;
+		.okved-modal__footer{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 4;
+			padding: 30px 40px 40px;
+			background-color: #fff;
+			box-shadow: 0px -4px 20px 0px rgba(169, 173, 198, 0.30);
+		}
+		
+	}
 }

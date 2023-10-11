@@ -329,4 +329,46 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 	}
 
+   //===============страница калькулятора =================
+	const switchBlocks = document.querySelectorAll('.switch-block');
+	if (switchBlocks.length > 0) {
+		for (let item of switchBlocks) {
+			const switchToggle = item.querySelector('input');
+			const switchContentOf = item.querySelector('.switch-content_of');
+			const switchContentOn = item.querySelector('.switch-content_on');
+			if (!switchToggle.checked) {
+				switchContentOf.classList.add('active');
+				switchContentOn.classList.remove('active');
+			} else {
+				switchContentOf.classList.remove('active');
+				switchContentOn.classList.add('active');
+			}
+			item.addEventListener('click', () => {
+				if (!switchToggle.checked) {
+					switchContentOf.classList.add('active');
+					switchContentOn.classList.remove('active');
+				} else {
+					switchContentOf.classList.remove('active');
+					switchContentOn.classList.add('active');
+				}
+			})
+		}
+
+	}
+	const okvedItems = document.querySelectorAll('.okved-sub-item');
+	if (okvedItems.length > 0) {
+		for (let item of okvedItems)
+			item.addEventListener('click', function () {
+				if (this.nextElementSibling) {
+					if (this.classList.contains('open')) {
+						this.nextElementSibling.classList.remove('visible');
+						this.classList.remove('open');
+					} else {
+						this.nextElementSibling.classList.add('visible');
+						this.classList.add('open');
+					}
+				}
+
+			})
+	}
 });
