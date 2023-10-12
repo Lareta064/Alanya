@@ -244,7 +244,151 @@
 								
 								.calculator-page 1/2
 					
+					
+				.okved-modal
+					//=====TOP======
+					.okved-modal__header
+						//======title row ======
+						.okved-modal__title.fly-center
+							.h2 Выбор вида экономической деятельности
+							button.icon-close(frame-close)
+						
+						//===== row=================
+						.okved-modal__top.fly-center
+							button(type="button").btn.okved-modal-clean
+								span Снять все коды
+								svg.svg-cross
+									use(href="./img/spriteSVG.svg#svg-cross")
+							.okved-modal__input
+								.form-item
+									input.form-input(type="text" placeholder="код")
+					
+					.okved-modal__body
+						//=== level 1 ========
+						ul.okved-list
+							//============level 1 Item ===================
+							li.livel_1.okved-sub-item
+								.okved-list__header.py-30
+									label.form-checkbox
+										input(type="checkbox" name="" )
+										span.fake-checkbox
+										span.okved-num A
+									
+									.okved-list__text
+										.okved-name  Сельское, Лесное Хозяйство, Охота, Рыболовство и Рыбоводство
+										
+										//====иконка галочка ========
+										.okved-list__icon
+											svg.svg-down
+												use(href="./img/spriteSvg.svg#svg-down")
+									
+								//=== level 2 ========
+								ul.okved-sublist
+									li.okved-sublist__block.okved-sub-item
+										.okved-list__header.py-20
+											label.form-checkbox
+												input(type="checkbox" name="" )
+												span.fake-checkbox
+												span.okved-num 01
+											
+											.okved-list__text
+												.okved-name  Растениеводство и животноводство, охота и предоставление соответствующих услуг в этих областях
+												//====иконка галочка ========
+												.okved-list__icon
+													svg.svg-down
+														use(href="./img/spriteSvg.svg#svg-down")
+									
+										//=== level 3 ========
+										ul.okved-sublist
+											li.okved-sublist__block.okved-sub-item
+												.okved-list__header.py-20
+													label.form-checkbox
+														input(type="checkbox" name="" )
+														span.fake-checkbox
+														span.okved-num 01.1
+													
+													.okved-list__text
+														.okved-name  Растениеводство и животноводство, охота и предоставление соответствующих услуг в этих областях
+														//====иконка галочка ========
+														.okved-list__icon
+															svg.svg-down
+																use(href="./img/spriteSvg.svg#svg-down")
+					
+												//=== level 4 ========
+												ul.okved-sublist
+													li.okved-sublist__block.okved-sub-item
+														.okved-list__header.py-20
+															label.form-checkbox
+																input(type="checkbox" name="" )
+																span.fake-checkbox
+																span.okved-num 01.11
+															
+															.okved-list__text
+																.okved-name  Растениеводство и животноводство, охота и предоставление соответствующих услуг в этих областях
+																//====иконка галочка ========
+																.okved-list__icon
+																	svg.svg-down
+																		use(href="./img/spriteSvg.svg#svg-down")
+
+														//=== level 5 ========
+														ul.okved-sublist
+															li.okved-sublist__block
+																.okved-list__header.py-20
+																	label.form-checkbox
+																		input(type="checkbox" name="" )
+																		span.fake-checkbox
+																		span.okved-num 01.11.1
+																	
+																	.okved-list__text
+																		.okved-name  Растениеводство и животноводство, охота и предоставление соответствующих услуг в этих областях
+																		//====иконка галочка ========
+																		.okved-list__icon
+																			svg.svg-down
+																				use(href="./img/spriteSvg.svg#svg-down")
+
+
+							
+							//============level 1 Item ===================
+							li.livel_1.okved-sub-item
+								.okved-list__header.py-30
+									label.form-checkbox
+										input(type="checkbox" name="" )
+										span.fake-checkbox
+										span.okved-num B
+									
+									.okved-list__text.fly-center
+										.okved-name  Добыча полезных ископаемых
+										
+										//====иконка галочка ========
+										.okved-list__icon
+											svg.svg-down
+												use(href="./img/spriteSvg.svg#svg-down")
+					
+								//=== level 2 ========
+								ul.okved-sublist
+									li.okved-sublist__block
+										.okved-list__header.py-20
+											label.form-checkbox
+												input(type="checkbox" name="" )
+												span.fake-checkbox
+												span.okved-num 01
+											
+											.okved-list__header
+												.okved-name  Растениеводство и животноводство, охота и предоставление соответствующих услуг в этих областях
+											//====иконка галочка ========
+											.okved-list__icon
+												svg.svg-down
+													use(href="./img/spriteSvg.svg#svg-down")
+					
+					
+					
+					
+					
+					
+					
 					//==========ОКВЭД МОДАЛЬНОЕ ОКНО ========================
+					
+					
 					.modal-frame-wrapper.okved-modal(frame-modal="modal-okved")
 						.modal-frame
 							.okved-modal__header

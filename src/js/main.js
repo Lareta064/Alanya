@@ -355,7 +355,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 
 	}
-	const okvedItems = document.querySelectorAll('.okved-sub-item');
+	const okvedItems = document.querySelectorAll('.okved-list__header');
 	if (okvedItems.length > 0) {
 		for (let item of okvedItems)
 			item.addEventListener('click', function () {
