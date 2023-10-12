@@ -262,15 +262,25 @@
 		
 		@media (max-width: 767px) {
 		  width: 100%;
+		  padding: 20px;
 		}
 	}
 	.okved-modal__header{
-		padding-top: 40px;
+		//  padding-top: 40px;
 		padding-bottom: 30px;
 		border-bottom: 1px solid $sec2;
+		@media (max-width: 767px) {
+			padding-bottom: 20px;
+		}
 	}
 	.okved-modal__top{
 		justify-content: space-between;
+		@media (max-width: 991px) {
+		.okved-modal__input{
+			margin-left: 10px;
+			flex-grow: 1;
+		}
+		}
 	}
 	.icon-close{
 		width: 20px;
@@ -278,19 +288,33 @@
 		justify-content: center;
 		align-items: center;
 		background-size: cover;
+		position: relative;
+		top: auto;
+		right: auto;
+		@media (max-width: 767px) {
+		top: auto;
+			right: auto;
+		}
 	}
 	.okved-modal__title{
 		.h2{
 			margin-bottom: 0;
 			padding-right: 40px;
+			flex-grow:1;
 			@media (max-width: 767px) {
 			  font-size: 16px;
 			}
 		}
 		margin-bottom: 30px;
+		@media (max-width: 767px) {
+		margin-bottom: 10px;
+		}
 	}
 	.okved-modal__body{
 		padding-right: 20px;
+		@media (max-width: 767px) {
+			padding-right: 10px;
+		}
 	}
 	.scroll-wrapper{
 		overflow: hidden;
@@ -300,6 +324,9 @@
 		flex-grow: 1;
 	    scrollbar-width: thin;
 		scrollbar-color: $sec2 transparent;
+		@media (max-width: 767px) {
+			margin-bottom: 70px;
+		}
 
 		&::-webkit-scrollbar {
 			display: block;
@@ -333,15 +360,25 @@
 		bottom: 0;
 		background-color: #fff;
 		border-radius: 0 0 20px 20px;
+		@media (max-width: 767px) {
+		   padding: 20px;
+		}
 	}
 }
 .py-30{
 	padding-top: 30px;
 	padding-bottom: 0;
+	@media (max-width: 767px) {
+	padding-top: 12px;
+	}
 }
 .py-20 {
 	padding-top: 20px;
 	padding-bottom: 20px;
+	@media (max-width: 767px) {
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
 	
 }
 .okved-list{
@@ -377,8 +414,15 @@
 		font-size: 16px;
 		line-height: 1.4;
 		flex-grow: 1;
-		
-		&.body-3{font-size: 18px;}
+		@media (max-width: 767px) {
+			font-size: 14px;
+		}
+		&.body-3{
+			font-size: 18px;
+			@media (max-width: 767px) {
+			font-size: 14px;
+			}
+		}
 	}
 	.okved-list__header{
 		display: flex;
@@ -410,6 +454,10 @@
 		.okved-list__header{
 			padding-left: 10px;
 			padding-right: 20px;
+			@media (max-width: 767px) {
+				padding-left: 5;
+				padding-right: 10px;
+			}
 		}
 		.okved-name{padding-right: 12px;}
 
@@ -459,6 +507,33 @@
 	.okved-sublist__level-6 {
 		.okved-list__header {
 			padding-left: 120px;
+		}
+	}
+}
+@media (max-width: 767px) {
+.okved-list .okved-sublist {
+		.okved-sublist__level-3 {
+			.okved-list__header {
+				padding-left: 10px;
+			}
+		}
+
+		.okved-sublist__level-4 {
+			.okved-list__header {
+				padding-left: 20px;
+			}
+		}
+
+		.okved-sublist__level-5 {
+			.okved-list__header {
+				padding-left: 30px;
+			}
+		}
+
+		.okved-sublist__level-6 {
+			.okved-list__header {
+				padding-left: 40px;
+			}
 		}
 	}
 }
