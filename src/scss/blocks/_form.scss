@@ -241,7 +241,12 @@ input.valid, input:focus{border: 1px solid $sec1;}
         transition: .5s;
 
       }
+     @media (max-width: 767px) {
+        width: 52px;
+        height: 52px;
+     }     
     }
+
 }
 .drop-block{
   position: relative;

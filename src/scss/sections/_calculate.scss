@@ -19,6 +19,8 @@
 		column-gap:30px;
 		row-gap:30px;
 		flex-wrap: wrap;
+		position: relative;
+		
 		&>*+*{margin-top: 0;}
 		.form-checkbox, .form-radio{
 			min-width: 135px;
@@ -29,6 +31,7 @@
 			column-gap: 10px;
 			row-gap: 10px;
 			padding: 20px;
+			
 		}
 	}
 
@@ -90,6 +93,8 @@
 		gap: 10px;
 		position: relative;
 		label{padding-right: 20px;}
+		height: 278px;
+		overflow: hidden;
 		
 	}
 }
@@ -99,13 +104,19 @@
 	column-gap: 10px;
 	@media (max-width: 767px) {
 		position: absolute;
-		right: -5px;
-		top: 0;
+		right: 10px;
+		top: 20px;
 		flex-direction: column;
 		margin-top: 0!important;
 		row-gap: 10px;
 		z-index: 2;
 		
+	}
+}
+.industry-grid__block{
+	.categories-page-toggle{
+		right: 0px;
+		top: 0;
 	}
 }
 .form-item-okved{

@@ -60,6 +60,13 @@
 									.project-card__head
 										.body-bold  Тип поддержки
 										
+										//==== переключатель  блоков с отраслями по 6 штук на десктоп версии  в правой колонке внутри  =====
+										.categories-page-toggle.flex-768
+											button.circle-button.active
+											button.circle-button
+											button.circle-button
+									
+									
 									.project-card__footer
 										p Выберите тип поддержки
 
@@ -72,6 +79,11 @@
 									+calc-check('checkbox', '9', 9,'Имущественная')
 									+calc-check('checkbox', '10', 10,'Образовательная')
 									
+									// =====Если элементов больше, чем 6 , то добавляется юлок с кнопками -переключения страниц с элементами.
+									.categories-page-toggle.flex-mobile
+										button.circle-button.active
+										button.circle-button
+										button.circle-button
 						
 						//==== Отрасль реализации инвестиционного проекта =====
 						.calculator-form__group
