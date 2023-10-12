@@ -1,3 +1,4 @@
+/**кастомный плейсхолдер в форме */
 const formItems = document.querySelectorAll('.form-item');
 if (formItems.length >0){
 	for (item of formItems){
