@@ -158,6 +158,7 @@
 		flex-shrink: 0;
 		@media(max-width:1599px){
 			width: 70px;
+			
 		}
 	}
 	.mySelect-drop{
@@ -261,6 +262,9 @@
 	}
 	.okved-modal__title {
 		margin-bottom: 30px;
+		@media (max-width: 767px) {
+			margin-bottom: 10px;
+		}
 	}
 	.okved-modal__header{
 		padding: 40px 40px 0;
@@ -272,6 +276,9 @@
 	.okved-modal__top{
 		padding-bottom: 30px;
 		border-bottom:1px solid $sec2;
+		@media (max-width: 767px) {
+			padding-bottom: 20px;
+		}
 	}
 	.okved-modal__input{
 		width: 280px;
@@ -310,12 +317,27 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		.fake-checkbox{margin-right: 0;}
+		.fake-checkbox{
+			margin-right: 0;
+			@media (max-width: 767px) {
+			font-size: 14px!important;
+			}
+		}
 	}
 	.okved-item{
 		display: flex;
 		align-items: center;
 		column-gap:10px;
+		.okved-num{
+			@media (max-width: 767px) {
+			font-size: 14px!important;
+			}
+		}
+		
+		.acor-item__icon{
+			align-self: flex-start;
+		}
+		
 	}
 	.okved-name{
 		font-size: 16px;
@@ -323,6 +345,9 @@
 		padding-right: 16px;
 		flex-grow:1;
 		cursor:pointer;
+		@media (max-width: 767px) {
+			font-size: 14px;
+		}
 		
 	}
 
@@ -405,5 +430,16 @@
 			display: none;
 			
 		}
+	}
+}
+@media (max-width: 767px) {
+	.okved-modal__accordion{
+		padding-left: 20px;
+		padding-right: 0;
+	}	
+	.okved-modal__accordion	.acor-container .acor-item__header{
+		padding-top: 12px;
+		padding-bottom: 12px;
+		padding-right: 25px;
 	}
 }
