@@ -245,69 +245,54 @@
 								.calculator-page 1/2
 					
 					
-				.okved-modal
-					//=====TOP======
-					.okved-modal__header
-						//======title row ======
-						.okved-modal__title.fly-center
-							.h2 Выбор вида экономической деятельности
-							button.icon-close(frame-close)
-						
-						//===== row=================
-						.okved-modal__top.fly-center
-							button(type="button").btn.okved-modal-clean
-								span Снять все коды
-								svg.svg-cross
-									use(href="./img/spriteSVG.svg#svg-cross")
-							.okved-modal__input
-								.form-item
-									input.form-input(type="text" placeholder="код")
-					
-					.okved-modal__body
-						//=== level 1 ========
-						ul.okved-list
-							//============level 1 Item ===================
-							li.livel_1.okved-sub-item
-								.okved-list__header.py-30
-									label.form-checkbox
-										input(type="checkbox" name="" )
-										span.fake-checkbox
-										span.okved-num A
-									
-									.okved-list__text
-										.okved-name.body-3  Сельское, Лесное Хозяйство, Охота, Рыболовство и Рыбоводство
-										
-										//====иконка галочка ========
-										.okved-list__icon
-											svg.svg-down
-												use(href="./img/spriteSvg.svg#svg-down")
+					.modal-frame-wrapper.okved-modal(frame-modal="modal-okved")
+						.modal-frame
+							//=====TOP======
+							.okved-modal__header
+								//======title row ======
+								.okved-modal__title.fly-center
+									.h2 Выбор вида экономической деятельности
+									button.icon-close(frame-close)
 								
-								//========= Подкатегории ОКВЭД ========
-								.livel_1-drop
-									//=== level 2 ========
-									ul.okved-sublist.okved-sublist__level-2
-										li.okved-sublist__block.okved-sub-item
-											.okved-list__header.py-20
-												label.form-checkbox
-													input(type="checkbox" name="" )
-													span.fake-checkbox
-													span.okved-num 01
+								//===== row=================
+								.okved-modal__top.fly-center
+									button(type="button").btn.okved-modal-clean
+										span Снять все коды
+										svg.svg-cross
+											use(href="./img/spriteSVG.svg#svg-cross")
+									.okved-modal__input
+										.form-item
+											input.form-input(type="text" placeholder="Код")
+							
+							.okved-modal__body
+								//=== level 1 ========
+								ul.okved-list
+									//============level 1 Item ===================
+									li.livel_1.okved-sub-item
+										.okved-list__header.py-30
+											label.form-checkbox
+												input(type="checkbox" name="" )
+												span.fake-checkbox
+												span.okved-num A
+											
+											.okved-list__text
+												.okved-name.body-3  Сельское, Лесное Хозяйство, Охота, Рыболовство и Рыбоводство
 												
-												.okved-list__text
-													.okved-name  Растениеводство и животноводство, охота и предоставление соответствующих услуг в этих областях
-													//====иконка галочка ========
-													.okved-list__icon
-														svg.svg-down
-															use(href="./img/spriteSvg.svg#svg-down")
+												//====иконка галочка ========
+												.okved-list__icon
+													svg.svg-down
+														use(href="./img/spriteSvg.svg#svg-down")
 										
-											//=== level 3 ========
-											ul.okved-sublist.okved-sublist__level-3
+										//========= Подкатегории ОКВЭД ========
+										.livel_1-drop
+											//=== level 2 ========
+											ul.okved-sublist.okved-sublist__level-2
 												li.okved-sublist__block.okved-sub-item
 													.okved-list__header.py-20
 														label.form-checkbox
 															input(type="checkbox" name="" )
 															span.fake-checkbox
-															span.okved-num 01.1
+															span.okved-num 01
 														
 														.okved-list__text
 															.okved-name  Растениеводство и животноводство, охота и предоставление соответствующих услуг в этих областях
@@ -315,15 +300,15 @@
 															.okved-list__icon
 																svg.svg-down
 																	use(href="./img/spriteSvg.svg#svg-down")
-						
-													//=== level 4 ========
-													ul.okved-sublist.okved-sublist__level-4
+												
+													//=== level 3 ========
+													ul.okved-sublist.okved-sublist__level-3
 														li.okved-sublist__block.okved-sub-item
 															.okved-list__header.py-20
 																label.form-checkbox
 																	input(type="checkbox" name="" )
 																	span.fake-checkbox
-																	span.okved-num 01.11
+																	span.okved-num 01.1
 																
 																.okved-list__text
 																	.okved-name  Растениеводство и животноводство, охота и предоставление соответствующих услуг в этих областях
@@ -331,15 +316,15 @@
 																	.okved-list__icon
 																		svg.svg-down
 																			use(href="./img/spriteSvg.svg#svg-down")
-
-															//=== level 5 ========
-															ul.okved-sublist.okved-sublist__level-5
-																li.okved-sublist__block
+								
+															//=== level 4 ========
+															ul.okved-sublist.okved-sublist__level-4
+																li.okved-sublist__block.okved-sub-item
 																	.okved-list__header.py-20
 																		label.form-checkbox
 																			input(type="checkbox" name="" )
 																			span.fake-checkbox
-																			span.okved-num 01.11.1
+																			span.okved-num 01.11
 																		
 																		.okved-list__text
 																			.okved-name  Растениеводство и животноводство, охота и предоставление соответствующих услуг в этих областях
@@ -348,356 +333,92 @@
 																				svg.svg-down
 																					use(href="./img/spriteSvg.svg#svg-down")
 
+																	//=== level 5 ========
+																	ul.okved-sublist.okved-sublist__level-5
+																		li.okved-sublist__block
+																			.okved-list__header.py-20
+																				label.form-checkbox
+																					input(type="checkbox" name="" )
+																					span.fake-checkbox
+																					span.okved-num 01.11.1
+																				
+																				.okved-list__text
+																					.okved-name  Растениеводство и животноводство, охота и предоставление соответствующих услуг в этих областях
+																					//====иконка галочка ========
+																					.okved-list__icon
+																						svg.svg-down
+																							use(href="./img/spriteSvg.svg#svg-down")
 
-							
-							//============level 1 Item ===================
-							li.livel_1.okved-sub-item
-								.okved-list__header.py-30
-									label.form-checkbox
-										input(type="checkbox" name="" )
-										span.fake-checkbox
-										span.okved-num B
+
 									
-									.okved-list__text.fly-center
-										.okved-name.body-3  Добыча полезных ископаемых
-										
-										//====иконка галочка ========
-										.okved-list__icon
-											svg.svg-down
-												use(href="./img/spriteSvg.svg#svg-down")
-								
-								//========= Подкатегории ОКВЭД ========
-								.livel_1-drop
-									//=== level 2 ========
-									ul.okved-sublist.okved-sublist__level-2
-										li.okved-sublist__block
-											.okved-list__header.py-20
-												label.form-checkbox
-													input(type="checkbox" name="" )
-													span.fake-checkbox
-													span.okved-num 05
-												
-												.okved-list__text
-													.okved-name  Добыча угля
-													//====иконка галочка ========
-													.okved-list__icon
-														svg.svg-down
-															use(href="./img/spriteSvg.svg#svg-down")
-						
-									//=== level 2 ========
-									ul.okved-sublist.okved-sublist__level-2
-										li.okved-sublist__block
-											.okved-list__header.py-20
-												
-												//=====checkbox======
-												label.form-checkbox
-													input(type="checkbox" name="" )
-													span.fake-checkbox
-													span.okved-num 06
-												
-												.okved-list__text
-													.okved-name  Добыча сырой нефти и природного газа
-													//====иконка галочка ========
-													.okved-list__icon
-														svg.svg-down
-															use(href="./img/spriteSvg.svg#svg-down")
-						
-									//=== level 2 ========
-									ul.okved-sublist.okved-sublist__level-2
-										li.okved-sublist__block
-											.okved-list__header.py-20
-												label.form-checkbox
-													input(type="checkbox" name="" )
-													span.fake-checkbox
-													span.okved-num 07
-												
-												.okved-list__text
-													.okved-name  Добыча металлических руд
-													//====иконка галочка ========
-													.okved-list__icon
-														svg.svg-down
-															use(href="./img/spriteSvg.svg#svg-down")
-					
-					
-					
-					//==========ОКВЭД МОДАЛЬНОЕ ОКНО ========================
-					
-					
-					.modal-frame-wrapper.okved-modal(frame-modal="modal-okved")
-						.modal-frame
-							.okved-modal__header
-								.okved-modal__title.fly-center
-									.h2 Выбор вида экономической деятельности
-									button.icon-close(frame-close)
-
-								.okved-modal__top.fly-center
-									button(type="button").btn.okved-modal-clean
-										span Снять все коды
-										svg.svg-cross
-											use(href="./img/spriteSVG.svg#svg-cross")
-									.okved-modal__input
-										.form-item
-											input.form-input(type="text" placeholder="код")
-						
-							.okved-modal__accordion
-								.acor-container
-									//=========== ACCORDION ITEM ====================
-									.acor-item
-										input#acor1(type='checkbox' name='acor' )
-										label(for='acor1').acor-item__header
-											.okved-item
-												label.form-checkbox
-													input(type="checkbox" name="" checked )
-													span.fake-checkbox
-													span.okved-num A
-												.okved-name.txt-bold  Сельское, Лесное Хозяйство, Охота, Рыболовство и Рыбоводство
+									//============level 1 Item ===================
+									li.livel_1.okved-sub-item
+										.okved-list__header.py-30
+											label.form-checkbox
+												input(type="checkbox" name="" )
+												span.fake-checkbox
+												span.okved-num B
 											
-										.acor-body
-											//======== подуровень 1=======
-											ul.okved-list.visible
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
+											.okved-list__text.fly-center
+												.okved-name.body-3  Добыча полезных ископаемых
+												
+												//====иконка галочка ========
+												.okved-list__icon
+													svg.svg-down
+														use(href="./img/spriteSvg.svg#svg-down")
+										
+										//========= Подкатегории ОКВЭД ========
+										.livel_1-drop
+											//=== level 2 ========
+											ul.okved-sublist.okved-sublist__level-2
+												li.okved-sublist__block
+													.okved-list__header.py-20
 														label.form-checkbox
 															input(type="checkbox" name="" )
 															span.fake-checkbox
-															span.okved-num 01
-														.okved-name  Растениеводство и животноводство, охота и предоставление соответствующих услуг в этих областях
+															span.okved-num 05
 														
-														//=== иконка галочка =======
-														.acor-item__icon
-															svg.svg-down
-																use(href="./img/spriteSvg.svg#svg-down")
-
-						
-													//======== подуровень 2=======
-													ul.okved-list.okved-list__1
-														//======== строка второго подуровня ======
-														li
-															.okved-item.okved-sub-item
-																label.form-checkbox
-																	input(type="checkbox" name=""  )
-																	span.fake-checkbox
-																	span.okved-num 01.1
-																.okved-name  Выращивание однолетних культур
-																
-																//=== иконка галочка =======
-																.acor-item__icon
-																	svg.svg-down
-																		use(href="./img/spriteSvg.svg#svg-down")
-															//======== подуровень 3=======
-															ul.okved-list.okved-list__2
-															
-																//======== строка 3 подуровня ======
-																li
-																	.okved-item.okved-sub-item
-																		label.form-checkbox
-																			input(type="checkbox" name="" )
-																			span.fake-checkbox
-																			span.okved-num 01.11
-																		.okved-name  Выращивание зерновых (кроме риса), зернобобовых культур и семян масличных культур
-																		
-																		//=== иконка галочка =======
-																		.acor-item__icon
-																			svg.svg-down
-																				use(href="./img/spriteSvg.svg#svg-down")
-																	//======== подуровень 4=======
-																	ul.okved-list.okved-list__3
-																		//======== строка 4 подуровня ======
-																		li
-																			.okved-item.okved-sub-item
-																				label.form-checkbox
-																					input(type="checkbox" name="")
-																					span.fake-checkbox
-																					span.okved-num 01.11.1
-																				.okved-name  Выращивание зерновых культур
-																	
-																				//=== иконка галочка =======
-																				.acor-item__icon
-																					svg.svg-down
-																						use(href="./img/spriteSvg.svg#svg-down")
-																			
-																			//======== подуровень 5=======
-																			ul.okved-list.okved-list__4
-																				//======== строка 5 подуровня ======
-																				li
-																					.okved-item.okved-sub-item
-																						label.form-checkbox
-																							input(type="checkbox" name="")
-																							span.fake-checkbox
-																							span.okved-num 01.11.11
-																						.okved-name  Выращивание пшеницы
-										
-									//=========== ACCORDION ITEM ====================
-									.acor-item
-										input#acor2(type='checkbox' name='acor' )
-										label(for='acor2').acor-item__header
-											.okved-item
-												label.form-checkbox
-													input(type="checkbox" name=""  checked)
-													span.fake-checkbox
-													span.okved-num B
-												.okved-name.txt-bold  Добыча полезных ископаемых
-											
-										.acor-body
-											//======== подуровень 1=======
-											ul.okved-list.visible
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
+														.okved-list__text
+															.okved-name  Добыча угля
+															//====иконка галочка ========
+															.okved-list__icon
+																svg.svg-down
+																	use(href="./img/spriteSvg.svg#svg-down")
+								
+											//=== level 2 ========
+											ul.okved-sublist.okved-sublist__level-2
+												li.okved-sublist__block
+													.okved-list__header.py-20
+														
+														//=====checkbox======
 														label.form-checkbox
-															input(type="checkbox" name=""  )
-															span.fake-checkbox
-															span.okved-num 05
-														.okved-name  Добыча угля
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
-														label.form-checkbox
-															input(type="checkbox" name=""  )
+															input(type="checkbox" name="" )
 															span.fake-checkbox
 															span.okved-num 06
-														.okved-name  Добыча сырой нефти и природного газа
-
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
+														
+														.okved-list__text
+															.okved-name  Добыча сырой нефти и природного газа
+															//====иконка галочка ========
+															.okved-list__icon
+																svg.svg-down
+																	use(href="./img/spriteSvg.svg#svg-down")
+								
+											//=== level 2 ========
+											ul.okved-sublist.okved-sublist__level-2
+												li.okved-sublist__block
+													.okved-list__header.py-20
 														label.form-checkbox
-															input(type="checkbox" name=""  )
+															input(type="checkbox" name="" )
 															span.fake-checkbox
 															span.okved-num 07
-														.okved-name  Добыча металлических руд
-									
-									//=========== ACCORDION ITEM ====================
-									.acor-item
-										input#acor3(type='checkbox' name='acor' )
-										label(for='acor3').acor-item__header
-											.okved-item
-												label.form-checkbox
-													input(type="checkbox" name=""  )
-													span.fake-checkbox
-													span.okved-num C
-												.okved-name.txt-bold  Обрабатывающие производства
-											
-										.acor-body
-											//======== подуровень 1=======
-											ul.okved-list.visible
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
-														label.form-checkbox
-															input(type="checkbox" name=""  )
-															span.fake-checkbox
-															span.okved-num 05
-														.okved-name  Добыча угля
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
-														label.form-checkbox
-															input(type="checkbox" name=""  )
-															span.fake-checkbox
-															span.okved-num 06
-														.okved-name  Добыча сырой нефти и природного газа
-
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
-														label.form-checkbox
-															input(type="checkbox" name=""  )
-															span.fake-checkbox
-															span.okved-num 07
-														.okved-name  Добыча металлических руд
-
-									//=========== ACCORDION ITEM ====================
-									.acor-item
-										input#acor4(type='checkbox' name='acor' )
-										label(for='acor4').acor-item__header
-											.okved-item
-												label.form-checkbox
-													input(type="checkbox" name=""  )
-													span.fake-checkbox
-													span.okved-num D
-												.okved-name.txt-bold  Обеспечение электрической энергией, газом и паром; кондиционирование воздуха
-											
-										.acor-body
-											//======== подуровень 1=======
-											ul.okved-list.visible
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
-														label.form-checkbox
-															input(type="checkbox" name=""  )
-															span.fake-checkbox
-															span.okved-num 05
-														.okved-name  Добыча угля													
-								
-									//=========== ACCORDION ITEM ====================
-									.acor-item
-										input#acor5(type='checkbox' name='acor' )
-										label(for='acor5').acor-item__header
-											.okved-item
-												label.form-checkbox
-													input(type="checkbox" name=""  )
-													span.fake-checkbox
-													span.okved-num E
-												.okved-name.txt-bold  Водоснабжение; водоотведение, организация сбора и утилизации отходов, деятельность по ликвидации загрязнений
-											
-										.acor-body
-											//======== подуровень 1=======
-											ul.okved-list.visible
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
-														label.form-checkbox
-															input(type="checkbox" name=""  )
-															span.fake-checkbox
-															span.okved-num 05
-														.okved-name  Добыча угля
-									//=========== ACCORDION ITEM ====================
-									.acor-item
-										input#acor5(type='checkbox' name='acor' )
-										label(for='acor5').acor-item__header
-											.okved-item
-												label.form-checkbox
-													input(type="checkbox" name=""  )
-													span.fake-checkbox
-													span.okved-num E
-												.okved-name.txt-bold  Водоснабжение; водоотведение, организация сбора и утилизации отходов, деятельность по ликвидации загрязнений
-											
-										.acor-body
-											//======== подуровень 1=======
-											ul.okved-list.visible
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
-														label.form-checkbox
-															input(type="checkbox" name=""  )
-															span.fake-checkbox
-															span.okved-num 05
-														.okved-name  Добыча угля
-									//=========== ACCORDION ITEM ====================
-									.acor-item
-										input#acor5(type='checkbox' name='acor' )
-										label(for='acor5').acor-item__header
-											.okved-item
-												label.form-checkbox
-													input(type="checkbox" name=""  )
-													span.fake-checkbox
-													span.okved-num E
-												.okved-name.txt-bold  Водоснабжение; водоотведение, организация сбора и утилизации отходов, деятельность по ликвидации загрязнений
-											
-										.acor-body
-											//======== подуровень 1=======
-											ul.okved-list.visible
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
-														label.form-checkbox
-															input(type="checkbox" name=""  )
-															span.fake-checkbox
-															span.okved-num 05
-														.okved-name  Добыча угля						
-								
+														
+														.okved-list__text
+															.okved-name  Добыча металлических руд
+															//====иконка галочка ========
+															.okved-list__icon
+																svg.svg-down
+																	use(href="./img/spriteSvg.svg#svg-down")
+					
 							//======= footer модального окна ====================
 							.okved-modal__footer
 								button.btn-accent
