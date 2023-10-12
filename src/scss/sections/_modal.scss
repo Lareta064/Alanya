@@ -28,13 +28,18 @@
 		top: 40px;
 		right: 40px;
 		transition: .3s;
-
+		width: 34px;
+		height: 34px;
+        cursor:pointer;
 		&:hover {
 			opacity: .5;
 		}
+		@media (max-width: 767px) {
+			top: 30px;
+			right:20px;
+		}
 	}
-
-}
+}	
 .modal-frame{
 	position: relative;
 	

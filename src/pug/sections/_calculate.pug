@@ -90,8 +90,8 @@
 											p ОКВЭД
 									
 										
-										//==== переключатель отраслей, которые отображаются по 9 штук в правой колонке внутри .industry-grid__block =====
-										.categories-page-toggle
+										//==== переключатель  отраслей на десктоп версии , которые отображаются по 9 штук в правой колонке внутри .industry-grid__block =====
+										.categories-page-toggle.flex-768
 											button.circle-button.active
 											button.circle-button
 											button.circle-button
@@ -115,7 +115,11 @@
 											+calc-check('checkbox', '9', 9,'Имущественная')
 											+calc-check('checkbox', '10', 10,'Образовательная')
 									
-									
+											//==== переключатель отраслей на мобильной версии , которые отображаются по 9 штук в правой колонке внутри .industry-grid__block =====
+											.categories-page-toggle.flex-mobile
+												button.circle-button.active
+												button.circle-button
+												button.circle-button
 									//=======контент для ОКВЭД========
 									.switch-content_on
 										.form-item.form-item-okved
@@ -237,7 +241,7 @@
 									button.icon-close(frame-close)
 
 								.okved-modal__top.fly-center
-									button(type="button").btn.disable
+									button(type="button").btn.okved-modal-clean
 										span Снять все коды
 										svg.svg-cross
 											use(href="./img/spriteSVG.svg#svg-cross")

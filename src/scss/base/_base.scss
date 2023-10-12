@@ -271,7 +271,21 @@ article{
 		display: none !important;
 	}
 }
+.flex-mobile {
+	display: none !important;
 
+	@media (max-width: 767px) {
+		display: flex !important;
+	}
+}
+
+.flex-768 {
+	display: flex !important;
+
+	@media (max-width: 767px) {
+		display: none !important;
+	}
+}
 .page-grid{
 	
 	position: relative;
