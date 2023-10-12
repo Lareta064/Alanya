@@ -308,6 +308,7 @@
 		}
 	}
 	.livel_1{padding-bottom: 20px;}
+	.livel_1-drop.visible .okved-sublist.okved-sublist__level-2{display: block;}
 	.livel_1 +.livel_1{
 		border-top:1px solid $sec2;}
 	.okved-sublist__block{
@@ -337,7 +338,8 @@
 	.open.okved-list__header{
 		.okved-num, .okved-name{color: $ac1;}
 	}
-	.okved-sublist{display: none;}.okved-sublist.visible {
+	.okved-sublist{display: none;}
+	.okved-sublist.visible,.livel_1-drop.visible {
 		display: block;
 		.open.okved-list__header {
 			position: relative;
