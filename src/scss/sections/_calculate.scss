@@ -225,6 +225,10 @@
 	.clean-selectValue.visible{display: flex;}
 
 }
+.calculator-form-page{
+	display: none;
+	&.visible{display: block;}
+}
 .calculator-form-footer {
 	border-radius: 20px;
 	border: 1px solid $sec2;
@@ -243,9 +247,10 @@
 	@media (max-width: 767px) {
 		padding: 20px;
 	}
+	.fly-center{column-gap:10px;}
 }
 
-.calculator-page {margin-left: 10px;}
+
 
 .okved-modal{
 	padding-top: 40px;
@@ -581,31 +586,6 @@
 	border: none;
 	transition: .2s ease-in-out;
 }
-
-// .range-input::-webkit-slider-thumb:hover {
-// 	box-shadow: 0 0 0 10px rgba(255, 85, 0, .1)
-// }
-
-// .range-input:active::-webkit-slider-thumb {
-// 	box-shadow: 0 0 0 13px rgba(255, 85, 0, .2)
-// }
-
-// .range-input:focus::-webkit-slider-thumb {
-// 	box-shadow: 0 0 0 13px rgba(255, 85, 0, .2)
-// }
-
-// .range-input::-moz-range-thumb:hover {
-// 	box-shadow: 0 0 0 10px rgba(255, 85, 0, .1)
-// }
-
-// .range-input:active::-moz-range-thumb {
-// 	box-shadow: 0 0 0 13px rgba(255, 85, 0, .2)
-// }
-
-// .range-input:focus::-moz-range-thumb {
-// 	box-shadow: 0 0 0 13px rgba(255, 85, 0, .2)
-// }
-
 
 .range-slider {
 	flex: 1;

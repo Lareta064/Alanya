@@ -160,3 +160,21 @@
 				item.style.background = `linear-gradient(to right, #B2B9FF ${progress}%, #ccc ${progress}%)`;
 				})
 
+	//====== calculator  form  page footer =====
+	.calculator-form-footer.fl-block
+		button.btn.mini-btn#prev-page(type="button")
+			svg.svg-left
+				use(href="./img/spriteSvg.svg#svg-left")
+		
+		.fly-center
+			button.btn(type="button")
+				span Сбросить фильтры
+				svg.svg-reload
+					use(href="./img/spriteSvg.svg#svg-reload")
+		
+			button.btn-accent(type="button")
+				span Найти
+				svg.svg-search
+					use(href="./img/spriteSvg.svg#svg-search")
+
+			.calculator-page 2/2

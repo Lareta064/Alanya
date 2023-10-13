@@ -280,6 +280,21 @@ document.addEventListener("DOMContentLoaded", function (){
 
 			})
 	}
+/*===переход между страницами формы калькулятора ====== */
+	const calculatorPages = document.querySelectorAll('.calculator-form-page');
+	if (calculatorPages.length > 0){
+		const NextPageBtn = document.querySelector('#next-page');
+		const PrevPageBtn = document.querySelector('#prev-page');
+		NextPageBtn.addEventListener('click',()=>{
+			calculatorPages[0].classList.remove('visible');
+			calculatorPages[1].classList.add('visible');
+		});
 
+		PrevPageBtn.addEventListener('click', () => {
+			calculatorPages[1].classList.remove('visible');
+			calculatorPages[0].classList.add('visible');
+		});
+	}
+	
 
 });

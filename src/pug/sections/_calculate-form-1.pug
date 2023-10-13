@@ -1,5 +1,5 @@
-//============= СТР 1 ============
-.calculator-form-page
+//============= СТР 1  У формы три страницы, первая страница отображается, вторая bи третья скрыты. Переход между страницами осуществляется через клик по кнопкам в нижней части, клик обрабатывется скриптом.  По клику на кнопку добавляется класс visible  ============
+.calculator-form-page.visible
 	//==== form-block  Тип организации =====
 	.calculator-form__group.flex-center
 		.large-card
@@ -198,7 +198,7 @@
 												span.okved-num 01.1
 												p.okved-name Выращивание однолетних культур
 				
-	
+	//======= calculator  form  page footer =============
 	.calculator-form-footer.fl-block
 		button.btn(type="button")
 			span Очистить фильтры
@@ -206,7 +206,7 @@
 				use(href="./img/spriteSvg.svg#svg-reload")
 		
 		.fly-center
-			button.btn-accent(type="button")
+			button.btn-accent#next-page(type="button")
 				span Далее
 				svg.chevron-right
 					use(href="./img/spriteSvg.svg#chevron-right")
