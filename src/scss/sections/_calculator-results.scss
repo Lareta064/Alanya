@@ -1,7 +1,15 @@
+.calculator-search-results__header{
+	justify-content: space-between;
+	column-gap:30px;
+}
 .calculator-search-tabs__title{
 	display: flex;
 	align-items: center;
 	column-gap:10px;
+	margin-bottom: 40px;
+	@media (max-width: 767px) {
+	margin-bottom: 30px;
+	}
 }
 .tabs-btns{
 	ul{
