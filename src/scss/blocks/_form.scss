@@ -91,6 +91,10 @@ input.valid, input:focus{border: 1px solid $sec1;}
     text-transform: uppercase;
     line-height: 1.4;
     font-family: $reg;
+    font-size: 16px;
+    @media (max-width: 767px) {
+    font-size: 14px;
+    }
   }
   .switch-item__toggle span:first-child {
     width: 40px;

@@ -15,7 +15,7 @@
 	color: white;
 	font-family: $semi;
 	white-space: nowrap;
-	svg{fill: #fff; width: 20px;height: 20px;}
+	svg{fill: #fff; width: 20px;height: 20px; flex-shrink:0;}
 	.svg-link{width: 18px; height: 18px;}
 	@media (max-width: 1199px) {
 	  height: 46px;
@@ -113,4 +113,17 @@
 	align-items: center;
 	border:1px solid $sec;
 	flex-shrink:0;
+}
+.btn-xs-short{
+	
+	@media (max-width: 767px) {
+		width: 54px;
+		height: 54px;
+		
+		span {display: none;
+		}
+	}
+			
+		
+	
 }
