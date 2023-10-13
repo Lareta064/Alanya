@@ -2,15 +2,32 @@
 .calculator-form-page
 	.form-fieldset
 		.calculator-form-range
-			#slide-test-1
-				#range-1.range
-					input#input-range-1(type='range' min='1' max='7' steps='1' value='1')
-				ul#labels-range-1.range-labels
-					li.active.selected(data-stop='0') 0
+			.range
+				.range-slider
 					
-					li(data-stop='100') 100
-					li(data-stop='200') 200
-					li(data-stop='300') 300
-					li(data-stop='400') 400
-					li(data-stop='500') 500
-					li(data-stop='600') 600
+					input#range1.range-input(type='range' min='0' max='5000' value='0' step='10')
+					.sliderticks
+						span 0
+						span от 10
+						span от 25
+						span от 50
+						span от 100
+						span от 250
+						span от 500
+						span от 750
+						span от 1 млрд
+						span от 1.5 млрд			
+						span от 5 млрд			
+			script.
+				const sliderEl1 = document.querySelector("#range1")
+				
+
+				sliderEl1.addEventListener("input", (event) => {
+				const tempSliderValue = event.target.value; 
+				
+				
+				const progress = (tempSliderValue / sliderEl1.max) * 100;
+				
+				sliderEl1.style.background = `linear-gradient(to right, #B2B9FF ${progress}%, #ccc ${progress}%)`;
+				})
+
