@@ -637,5 +637,26 @@
 .range {
 	display: flex;
 	align-items: center;
-	margin-bottom: 1rem;
+	
+	margin-top: 60px;
+}
+
+.calculator-range-block{
+	.form-fieldset__title{
+		margin-bottom: 30px;
+		.body-bold{
+			color: $ac1;
+			flex-grow:1;
+			padding-right: 16px;
+		}
+	}
+}
+.form-item.form-item--range{
+	input{padding-right: 85px;}
+	.body-6{
+		position: absolute;
+		right: 16px;
+		top:18px;
+
+	}
 }

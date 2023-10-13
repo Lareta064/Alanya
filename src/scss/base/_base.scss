@@ -229,6 +229,14 @@ article{
 	  margin-bottom: 10px;
 	}
 }
+.gap-30{
+	&>*+*{
+		margin-top: 30px;
+		@media (max-width: 767px) {
+		margin-top: 20px;
+		}
+	}
+}
 .mb-40{
 	margin-bottom: 40px;
 @media (max-width: 991px) {
