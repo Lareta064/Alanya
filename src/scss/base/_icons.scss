@@ -247,11 +247,12 @@ svg{transition: .3s;}
 	width: 34px;
 }
 
-.svg-right{
+.svg-right, .svg-left{
 	width: 20px;
-	height: 12px;
+	height: 16px;
 	fill:white;
 }
+.svg-left{fill:#5162FF;}
 .svg-list{
 	width: 20px;
 	height: 12px;
