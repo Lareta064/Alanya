@@ -554,7 +554,6 @@
 	}
 }
 
-
 /* range */
 .range-input {
 	-webkit-appearance: none;
@@ -613,7 +612,6 @@
 	}
 }
 
-
 .range {
 	display: flex;
 	align-items: center;
@@ -639,4 +637,8 @@
 		top:18px;
 
 	}
+}
+
+.calculator-form-restart{
+	justify-content: space-between;
 }

@@ -1,5 +1,5 @@
 //============= СТР 2 ============
-.calculator-form-page.gap-30
+.calculator-form-page.gap-30(data-page="page_2")
 	//======== Объем вложений ============
 	.form-fieldset
 		.calculator-range-block.switch-block
@@ -145,6 +145,7 @@
 					input(type="text" placeholder="Введите число")
 					span.body-6 млн руб.			
 			
+			//======скрипт для шкалы диапазона ========
 			script.
 				
 				/*=== for input Range =====*/
@@ -162,7 +163,7 @@
 
 	//====== calculator  form  page footer =====
 	.calculator-form-footer.fl-block
-		button.btn.mini-btn#prev-page(type="button")
+		button.btn.mini-btn(type="button" data-btn = "page_1")
 			svg.svg-left
 				use(href="./img/spriteSvg.svg#svg-left")
 		
@@ -172,7 +173,7 @@
 				svg.svg-reload
 					use(href="./img/spriteSvg.svg#svg-reload")
 		
-			button.btn-accent(type="button")
+			button.btn-accent(type="button"  data-btn = "page_3")
 				span Найти
 				svg.svg-search
 					use(href="./img/spriteSvg.svg#svg-search")

@@ -281,19 +281,27 @@ document.addEventListener("DOMContentLoaded", function (){
 			})
 	}
 /*===переход между страницами формы калькулятора ====== */
-	const calculatorPages = document.querySelectorAll('.calculator-form-page');
+	const calculatorPages  = document.querySelectorAll('[data-page]');
 	if (calculatorPages.length > 0){
-		const NextPageBtn = document.querySelector('#next-page');
-		const PrevPageBtn = document.querySelector('#prev-page');
-		NextPageBtn.addEventListener('click',()=>{
-			calculatorPages[0].classList.remove('visible');
-			calculatorPages[1].classList.add('visible');
-		});
-
-		PrevPageBtn.addEventListener('click', () => {
-			calculatorPages[1].classList.remove('visible');
-			calculatorPages[0].classList.add('visible');
-		});
+		const pageBtns = document.querySelectorAll('[data-btn]');
+		console.log(pageBtns);
+		for (let item of pageBtns){
+			item.addEventListener('click', function(){
+				console.log(item.dataset);
+				const btnData = item.getAttribute('data-btn');
+				
+				for (let i = 0; i < calculatorPages.length; i++){
+					calculatorPages[i].classList.remove('visible');
+				}
+				for (let page of calculatorPages ){
+					const pageData = page.getAttribute('data-page');
+					if (btnData == pageData){
+						page.classList.add('visible');
+					}
+				}
+			});
+		}
+		
 	}
 	
 
