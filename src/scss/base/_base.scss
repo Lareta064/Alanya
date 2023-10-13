@@ -237,6 +237,9 @@ article{
 		}
 	}
 }
+.gap-10{
+	&>*+*{margin-top: 10px!important;}
+}
 .mb-40{
 	margin-bottom: 40px;
 @media (max-width: 991px) {
