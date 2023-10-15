@@ -1,0 +1,15 @@
+extends ../layouts/layout.pug
+
+block content
+	.page-grid
+		include ../sections/_main-menu
+		+header('Контакты','contacts-bg' )
+		
+		//====== карточки новостей ======
+		include ../sections/_contacts.pug
+	
+	//====footer======
+	include ../sections/_footer.pug
+	
+block variables
+	-var title = "Контакты";
