@@ -57,7 +57,7 @@ html(lang="ru")
 				font-style: normal;
 				font-display: swap;
 			}
-	body(class=(bodyCl !=="" ? bodyCl : ''))
+	body#top(class=(bodyCl !=="" ? bodyCl : ''))
 		
 		block content
 		
@@ -66,6 +66,11 @@ html(lang="ru")
 		//========================	Модальные окна имеют атрибут  frame-modal и по умолчанию имеют dispaly:none; Элемент, по клику на который оно отображается, имеет атрибут frame-btn.  По клику на frame-btn, frame-modal добавляется класс visible с dispaly:flex; ==========
 		
 		include ../sections/_modal-form.pug
+		
+		//======back top ======
+		a(href="#top")#back-top.back-top.fl-center
+			svg.svg-left
+				use(href="./img/spriteSvg.svg#svg-left")
 		//=============== jquery ===================
 		script(src="./libs/jquery/jquery-3.0.0.min.js")
 		

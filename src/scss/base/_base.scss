@@ -24,6 +24,8 @@ body {
 	font-family: $reg;
 	font-size: 16px;
 	line-height: 1.3;
+	
+	
 	-webkit-font-smoothing: antialiased;
 	@media (max-width: 767px) {
 	  line-height: 1.4;
@@ -344,5 +346,28 @@ article{
 	}
 	@media (max-width: 767px) {
 		grid-template-columns: 1fr;
+	}
+}
+.back-top{
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background-color: $ac1;
+	transition: .5s;
+	svg{
+		fill:white;
+		transform: rotate(90deg);
+	}
+	position: fixed;
+	left: 500px;
+	bottom: 40px;
+	&:hover{opacity: .8;}
+	@media (max-width: 1919px) {
+		bottom: 20px;
+		left: 330px;
+	}
+	@media (max-width: 1199px) {
+	bottom: 20px;
+	left: 30px;
 	}
 }
