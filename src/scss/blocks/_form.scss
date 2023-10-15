@@ -58,15 +58,16 @@ input,textarea{
   outline: none;
 }
 .fake-placeholder + input{padding-top:17px;}
-input.error{border: 1px solid $er;}
-input.disable, input.disable~*{
+textarea.error, input.error{border: 1px solid $er;}
+textarea.disable , input.disable~*{
   opacity: 0.3;
 }
-
+textarea.error~p,
 input.error ~ p {
  color: $er;
 }
-input.valid, input:focus{border: 1px solid $sec1;}
+input.valid, textarea.valid, input:focus,
+textarea:focus{border: 1px solid $sec1;}
 
 .fake-placeholder.active{
   top: 4px; font-size: 12px;

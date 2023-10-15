@@ -37,3 +37,12 @@
 		.gradient-box{width: fit-content; min-width: 290px;}
 	}
 }
+
+.header.header-inner{
+	.gradient-box{max-width: 1235px;}
+	.gradient-block__group, .gradient-block{
+		width: 100%;
+		max-width: 1235px;;
+	}
+	
+}

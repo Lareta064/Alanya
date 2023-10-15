@@ -1,6 +1,9 @@
 .contacts{position: relative;
 	height: 950px;
 	width: 100%;
+	@media (max-width: 767px) {
+		height: auto;
+	}
 }
 .contacts-map{
 	filter: grayscale(1);
@@ -9,10 +12,20 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
+	
+	
+	@media (max-width: 767px) {
+		position: relative;
+		height: 800px;
+	}
 }
 .contacts-content{
 	position: relative;
 	z-index: 2;
+	
+	@media (max-width: 767px) {
+		height: 545px;
+	}
 }
 .contacts-form{
 	border-radius: 20px;
@@ -26,5 +39,26 @@
 		padding-top: 0;
 		padding-left: 0;
 		padding-right: 0;
+		border-bottom:0 ;
+	}
+	@media (max-width: 767px) {
+		position: absolute;
+		bottom:60px;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 30px 20px;
+		width: 87%;
+	}
+	
+}
+.gradient-box__text{
+	.body-3{
+		font-family: $bold;
+		margin-bottom: 20px;
+	}ul{
+		li{font-size: 14px; font-family: $reg; margin-top: 10px;}
+		li a{
+			color: white;
+		}
 	}
 }

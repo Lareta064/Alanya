@@ -206,6 +206,9 @@ article{
 .fl-column-20{
 	 row-gap:20px;
 	&>*{width: 100%;}
+	@media (max-width: 767px) {
+		row-gap: 10px;
+	}
 }
 
 .fly-bottom{align-items: flex-end!important;}
