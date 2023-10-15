@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	const calculatorPages  = document.querySelectorAll('[data-page]');
 	if (calculatorPages.length > 0){
 		const pageBtns = document.querySelectorAll('[data-btn]');
-		console.log(pageBtns);
+		
 		for (let item of pageBtns){
 			item.addEventListener('click', function(){
 				console.log(item.dataset);
