@@ -54,8 +54,9 @@ document.addEventListener("DOMContentLoaded", function (){
 	$(function () {
 		let teamSlider = $('.team-slider');
 		teamSlider.owlCarousel({
-			loop: true,
-			autoplay: 1000,
+			// loop: true,
+			autoplay: true,
+			autoplaySpeed: 700,
 			items: 1,
 			animateOut: 'fadeOut',
 			onInitialized: counter, 
