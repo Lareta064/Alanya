@@ -23,10 +23,11 @@
 
 	}
 	&__date{
-		column-gap: 12px;
+		column-gap: 24px;
 		align-items: flex-start;
 		span{
 			font-size: 18px;
+			
 			color: $sec1;font-family: $bold;font-weight: bold;
 			@media (max-width: 991px) {
 				font-size: 14px;
@@ -55,6 +56,10 @@
 		}
 	}
 	&__text{
+		padding-left: 30px;
+		@media (max-width: 1439px) {
+			padding-left: 0;
+		}
 		.body-3{
 			margin-bottom: 20px; color: $pr;
 			transition: .5s;

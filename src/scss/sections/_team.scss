@@ -73,13 +73,15 @@
 }
 .team{
 	.h3, h3{
-		max-width: 280px;;
+		max-width: 280px;
+		padding-top: 10px;
 	}
 	.container{
 		position: relative;
 	}
 	
 	@media(max-width:1439px){
+		.h3,h3{padding-top: 0;}
 		position: relative;
 		
 		.team-slider-nav{
@@ -128,7 +130,7 @@
 #team-counter{
 	position: absolute;
 	z-index: 5;
-	top: 50%;
+	top: 285px;
 	right:317px;
 	// transform: translate(0, -50%);
 	font-size: 14px;
@@ -140,13 +142,9 @@
 	background-color: $ac1;
 	text-align: center;
 	line-height: 54px;
-	// @media (max-width: 699px) {
-	// 		top: 52%;
-	// 		right: 320px;
-	// 		transform: translate(0, 0);
-	// 	}
+	
 	@media (max-width: 699px) {
-			top: 52%;
+			top: 51%;
 			right: 320px;
 			transform: translate(0, 0);
 		}
@@ -164,7 +162,7 @@
 .owl-carousel{
 	.foto-card__pic {
 		
-		height: 448px;
+		height: 428px;
 		width: 339px;
         .txt-semi{color: $sec;}
 		@media(max-width:699px) {
