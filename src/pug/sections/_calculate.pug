@@ -3,26 +3,26 @@
 		.container
 			ul#sticky-menu
 				li
-					a(href="#calculator").active Калькулятор мер поддержки
+					a(href="#calculator").active Калькулятор мер&nbsp;поддержки
 				li
-					a(href="#") Региональные меры
+					a(href="#regional-measures") Региональные меры
 
 				li
-					a(href="#") Федеральные меры
+					a(href="#federal-measures") Федеральные меры
 				li
-					a(href="#") Совместная поддержка
+					a(href="#joint-support") Совместная поддержка
 				li
-					a(href="#") Льготное финансирование
+					a(href="#additionally-support") Льготное финансирование
 
 				li
-					a(href="#") Для институтов развития
+					a(href="#develop-institutions") Для&nbsp;институтов развития
 				li
-					a(href="#") Нефинансовые меры
+					a(href="#non-financial") Нефинансовые меры
 				li
-					a(href="#") Законодательство
+					a(href="#norms") Законодательство
 
-	section.calculate-page__content
-		article.calculator.sticky-menu-section#calculator
+	section.calculate-page__content#calculator
+		article.calculator.sticky-menu-section
 			.container
 				.h2 Калькулятор мер поддержки
 				
@@ -30,649 +30,156 @@
 				
 				//====== FORM ==========================
 				form.calculator-form
-					.calculator-form-page
-						//==== form-block  Тип организации =====
-						.calculator-form__group.flex-center
-							.large-card
-								.project-card
-									.project-card__head
-										.body-bold  Тип организации
-										
-									.project-card__footer
-										p Выберите тип организации
+					include _calculate-form-1
+					include _calculate-form-2
+					include _calculate-form-modal
+					include _calculate-form-3
+	include ./_regional-measures
+	
 
-								.large-card__text
-									.form-checkbox
-										label.fl-column
-											input(type="checkbox" name="name_1")
-											.form-item__pic
-												svg.svg-icon_1
-													use(href="./img/spriteSvg.svg#svg-icon_1")
-											.body-5 Микропредприятие
-									+calc-check('checkbox', '2', 2,'Малое предприятие')
-									+calc-check('checkbox', '3', 3,'Среднее предприятие')
-									+calc-check('checkbox', '4', 4,'Крупное предприятие')
-						
-						//==== form-block Тип поддержки =====
-						.calculator-form__group.flex-center
-							.large-card
-								.project-card
-									.project-card__head
-										.body-bold  Тип поддержки
-										
-										//==== переключатель  блоков с отраслями по 6 штук на десктоп версии  в правой колонке внутри  =====
-										.categories-page-toggle.flex-768
-											button.circle-button.active
-											button.circle-button
-											button.circle-button
-									
-									
-									.project-card__footer
-										p Выберите тип поддержки
-
-								.large-card__text
-									
-									+calc-check('checkbox', '5', 5,'Консультационная')
-									+calc-check('checkbox', '6', 6,'Налоговая')
-									+calc-check('checkbox', '7', 7,'Кредиты и займы')
-									+calc-check('checkbox', '8', 8,'Субсидия')
-									+calc-check('checkbox', '9', 9,'Имущественная')
-									+calc-check('checkbox', '10', 10,'Образовательная')
-									
-									// =====Если элементов больше, чем 6 , то добавляется юлок с кнопками -переключения страниц с элементами.
-									.categories-page-toggle.flex-mobile
-										button.circle-button.active
-										button.circle-button
-										button.circle-button
-						
-						//==== Отрасль реализации инвестиционного проекта =====
-						.calculator-form__group
-							.large-card.switch-block
-								.project-card
-									.project-card__head
-										.body-bold  Отрасль реализации инвестиционного проекта
-										
-										//==== переключатель отрасль / оквэд
-										label.switch-item.switch-toggle
-											p Отрасль
-											input(type="checkbox" checked)
-											.switch-item__toggle
-												span
-												span
-											p ОКВЭД
-									
-										
-										//==== переключатель  отраслей на десктоп версии , которые отображаются по 9 штук в правой колонке внутри .industry-grid__block =====
-										.categories-page-toggle.flex-768
-											button.circle-button.active
-											button.circle-button
-											button.circle-button
-									
-									
-									.project-card__footer
-										p Выберите тип организации
-
-								
-								.large-card__text
-									//=======контент для ОТРАСЛЬ ========
-									.switch-content_of.active
-										.industry-grid__block
-											+calc-check('checkbox', '5', 5,'Консультационная')
-											+calc-check('checkbox', '6', 6,'Налоговая')
-											+calc-check('checkbox', '7', 7,'Кредиты и займы')
-											+calc-check('checkbox', '8', 8,'Субсидия')
-											+calc-check('checkbox', '9', 9,'Имущественная')
-											+calc-check('checkbox', '10', 10,'Образовательная')
-											+calc-check('checkbox', '8', 8,'Субсидия')
-											+calc-check('checkbox', '9', 9,'Имущественная')
-											+calc-check('checkbox', '10', 10,'Образовательная')
-									
-											//==== переключатель отраслей на мобильной версии , которые отображаются по 9 штук в правой колонке внутри .industry-grid__block =====
-											.categories-page-toggle.flex-mobile
-												button.circle-button.active
-												button.circle-button
-												button.circle-button
-									//=======контент для ОКВЭД========
-									.switch-content_on
-										.form-item.form-item-okved
-											
-											.mySelect.mySelect-okved
-												.mySelect-okved__row
-													.mySelect-input
-														.mySelect-okved-group
-															//===== выбранные коды =======
-															.selectValue
-																
-																//===== single number ===== =======
-																.tag
-																	span 05
-																	span
-																		svg.svg-cross
-																			use(href="../img/spriteSvg.svg#svg-cross")
-																//===== single number ===== =======
-																.tag
-																	span 05
-																	span
-																		svg.svg-cross
-																			use(href="../img/spriteSvg.svg#svg-cross")
-																
-																
-																//===== total ===== =======
-																span.total-tags  +25
-																
-														//==== кнопка, открывающая drop список=====
-														button.mySelect-icon.mini-btn
-															svg.svg-down
-																use(href="./img/spriteSvg.svg#svg-down")
-													
-													.mySelect-okved-btns
-														//==== кнопка, очистить выбранные данные =====
-														button.btn.clean-selectValue.visible
-															span Очистить все
-															svg.svg-close
-																use(href="./img/spriteSvg.svg#svg-close")
-														
-														//==== кнопка, открывающая список кодов ОКВЭД в модальном окне=====
-														button.mini-btn(frame-btn="modal-okved") 111
-												
-												//====  drop список=====
-												.mySelect-drop
-													//===== Если нет значений, отображается тег <p> с текстом  Нет данных
-													
-													ul
-														
-														li
-															
-															p Нет данных
-														li
-															.form-checkbox.okved-item
-																label
-																	input(type="checkbox" name="" checked )
-																	span.fake-checkbox
-																	span.okved-num 05
-																	p.okved-name Добыча угля
-														li
-															.form-checkbox.okved-item
-																label
-																	input(type="checkbox" name="" checked )
-																	span.fake-checkbox
-																	span.okved-num 06
-																	p.okved-name Добыча сырой нефти и природного газа
-														li
-															.form-checkbox.okved-item
-																label
-																	input(type="checkbox" name="")
-																	span.fake-checkbox
-																	span.okved-num B
-																	p.okved-name Добыча полезных ископаемых
-														li
-															.form-checkbox.okved-item
-																label
-																	input(type="checkbox" name="")
-																	span.fake-checkbox
-																	span.okved-num 03.1
-																	p.okved-name Рыболовство
-											
-														li
-															.form-checkbox.okved-item
-																label
-																	input(type="checkbox" name="")
-																	span.fake-checkbox
-																	span.okved-num 03.2
-																	p.okved-name Рыболовство
-											
-														li
-															.form-checkbox.okved-item
-																label
-																	input(type="checkbox" name="")
-																	span.fake-checkbox
-																	span.okved-num 01.1
-																	p.okved-name Выращивание однолетних культур
-									
-						
-						.calculator-form-footer.fl-block
-							button.btn(type="button")
-								span Очистить фильтры
-								svg.svg-reload
-									use(href="./img/spriteSvg.svg#svg-reload")
-							
-							.fly-center
-								button.btn-accent(type="button")
-									span Далее
-									svg.chevron-right
-										use(href="./img/spriteSvg.svg#chevron-right")
-								
-								.calculator-page 1/2
 					
-					//==========ОКВЭД МОДАЛЬНОЕ ОКНО ========================
-					.modal-frame-wrapper.okved-modal(frame-modal="modal-okved")
-						.modal-frame
-							.okved-modal__header
-								.okved-modal__title.fly-center
-									.h2 Выбор вида экономической деятельности
-									button.icon-close(frame-close)
+					
+					
+	//- 				.three-col-grid
+	//- 					+simple-card('folder', 'Здравоохранение')(class="fly-center")
+	//- 					+simple-card('folder', 'Коммунальная инфраструктура')(class="fly-center")
+	//- 					+simple-card('folder', 'Транспортная инфраструктура')(class="fly-center")
+	//- 					+simple-card('folder', 'Образование, наука, культура, спорт')(class="fly-center")
+	//- 					+simple-card('folder', 'Туристическая инфраструктура')(class="fly-center")
+	//- 					+simple-card('folder', 'Экологическая инфраструктура')(class="fly-center")
+	//- 		//====== отдельный раздел  =====
+	//- 		.partnership-block__wrapper
+	
+	//- 			.h3 В результате многолетнего сотрудничества Правительства Нижегородской области и частного бизнеса реализованы следующие крупные инфраструктурные проекты:
+	//- 			.content-list
+	//- 				ul
+	//- 					li Строительство физкультурно-оздоровительных центров
+	//- 					li Строительство ледовых дворцов
+	//- 					li Строительство объектов размещения отходов
+	//- 					li Создание системы фотовидеофиксации нарушений правил дорожного движения (более 1000 камер по области)
+	//- 					li Создание системы весогабаритного контроля
+	//- 					li Реконструкция региональной автоматизированной системы централизованного оповещения населения
 
-								.okved-modal__top.fly-center
-									button(type="button").btn.okved-modal-clean
-										span Снять все коды
-										svg.svg-cross
-											use(href="./img/spriteSVG.svg#svg-cross")
-									.okved-modal__input
-										.form-item
-											input.form-input(type="text" placeholder="код")
+	//- 			//===== текст в рамке =====
+	//- 			.txt-warning
+	//- 				.txt-bold В настоящее время проводится проработка возможности реализации на основе государственно-частного партнёрства и концессионных соглашений ещё 9 проектов в сфере спорта, дорожного строительства и т.д.
+	//- 				.txt-semi Орган исполнительной власти Нижегородской области, уполномоченный в сфере государственно-частного партнёрства и концессии — министерство экономического развития и инвестиций Нижегородской области.
+	
+	//- 			//===== Контакты ======
+	//- 			.special-project__contacts
+	//- 				.title-24 Контакты
+	//- 				.double-block
+	//- 					//==== persone card ======
+	//- 					.contact-persone.fl-block.info-card
+	//- 						.info-card__icon
+	//- 							svg.svg-userId
+	//- 								use(href="./img/spriteSvg.svg#svg-userId")
+							
+	//- 						.info-card__text
+	//- 							.txt-upper Управление государственно-частного партнерства и концессий министерства экономического развития и инвестиций Нижегородской области
+								
 						
-							.okved-modal__accordion
-								.acor-container
-									//=========== ACCORDION ITEM ====================
-									.acor-item
-										input#acor1(type='checkbox' name='acor' )
-										label(for='acor1').acor-item__header
-											.okved-item
-												label.form-checkbox
-													input(type="checkbox" name="" checked )
-													span.fake-checkbox
-													span.okved-num A
-												.okved-name.txt-bold  Сельское, Лесное Хозяйство, Охота, Рыболовство и Рыбоводство
-											
-										.acor-body
-											//======== подуровень 1=======
-											ul.okved-list.visible
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
-														label.form-checkbox
-															input(type="checkbox" name="" )
-															span.fake-checkbox
-															span.okved-num 01
-														.okved-name  Растениеводство и животноводство, охота и предоставление соответствующих услуг в этих областях
-														
-														//=== иконка галочка =======
-														.acor-item__icon
-															svg.svg-down
-																use(href="./img/spriteSvg.svg#svg-down")
+	//- 					//==== contacts card ======
+	//- 					.contact-list.info-card
+	//- 						//=== contact-item==
+	//- 						a(href="tel:+78314690360").info-card-item.fl-block
+	//- 							.info-card__icon
+	//- 								svg.svg-call
+	//- 									use(href="./img/spriteSvg.svg#svg-call")
+								
+	//- 							.info-card__text
+	//- 								.txt-upper Телефон
+	//- 								.txt-semi +7 (831) 469-03-60
 
+	//- 						//=== contact-item==
+	//- 						a(href="mailto:abv@minec.kreml.nnov.ru").info-card-item.fl-block
+	//- 							.info-card__icon
+	//- 								svg.svg-mail
+	//- 									use(href="./img/spriteSvg.svg#svg-mail")
+								
+	//- 							.info-card__text
+	//- 								.txt-upper E-mail
+	//- 								.txt-semi abv@minec.kreml.nnov.ru
+	
+	//- 			p.body-reg Подробнее о государственно-частном партнерстве и концессионных соглашениях в регионе можно узнать на сайте #[a(href="#!").link Министерства экономического развития и инвестиций Нижегородской области]
+	
+	//- //===== Антимонопольный комплаенс ======
+	//- article.projects-showcase.sticky-menu-section#projects-showcase
+	//- 	.container
+	//- 		.h2 Витрина ГЧП-проектов
+			
+			
+	//- 		form.showcase-form(action="" method="method")
+	//- 			fieldset.form-fieldset
+	//- 				.form-row
+	//- 					//===single select ====
+	//- 					.form-item
+	//- 						label.text-label Стадия реализации
+	//- 						.mySelect
+	//- 							.mySelect-icon
+	//- 							.mySelect-input
+	//- 								input.selectValue(type='text' readonly='' placeholder="Выберите значение")
+	//- 							.mySelect-drop
+	//- 								input.mySelect-options(type='text' readonly='' value='Значение-1')
+	//- 								input.mySelect-options(type='text' readonly='' value='Значение-2')
+	//- 								input.mySelect-options(type='text' readonly='' value='Значение-3')
+	//- 								input.mySelect-options(type='text' readonly='' value='Значение-4')
 						
-													//======== подуровень 2=======
-													ul.okved-list.okved-list__1
-														//======== строка второго подуровня ======
-														li
-															.okved-item.okved-sub-item
-																label.form-checkbox
-																	input(type="checkbox" name=""  )
-																	span.fake-checkbox
-																	span.okved-num 01.1
-																.okved-name  Выращивание однолетних культур
-																
-																//=== иконка галочка =======
-																.acor-item__icon
-																	svg.svg-down
-																		use(href="./img/spriteSvg.svg#svg-down")
-															//======== подуровень 3=======
-															ul.okved-list.okved-list__2
-															
-																//======== строка 3 подуровня ======
-																li
-																	.okved-item.okved-sub-item
-																		label.form-checkbox
-																			input(type="checkbox" name="" )
-																			span.fake-checkbox
-																			span.okved-num 01.11
-																		.okved-name  Выращивание зерновых (кроме риса), зернобобовых культур и семян масличных культур
-																		
-																		//=== иконка галочка =======
-																		.acor-item__icon
-																			svg.svg-down
-																				use(href="./img/spriteSvg.svg#svg-down")
-																	//======== подуровень 4=======
-																	ul.okved-list.okved-list__3
-																		//======== строка 4 подуровня ======
-																		li
-																			.okved-item.okved-sub-item
-																				label.form-checkbox
-																					input(type="checkbox" name="")
-																					span.fake-checkbox
-																					span.okved-num 01.11.1
-																				.okved-name  Выращивание зерновых культур
-																	
-																				//=== иконка галочка =======
-																				.acor-item__icon
-																					svg.svg-down
-																						use(href="./img/spriteSvg.svg#svg-down")
-																			
-																			//======== подуровень 5=======
-																			ul.okved-list.okved-list__4
-																				//======== строка 5 подуровня ======
-																				li
-																					.okved-item.okved-sub-item
-																						label.form-checkbox
-																							input(type="checkbox" name="")
-																							span.fake-checkbox
-																							span.okved-num 01.11.11
-																						.okved-name  Выращивание пшеницы
-										
-									//=========== ACCORDION ITEM ====================
-									.acor-item
-										input#acor2(type='checkbox' name='acor' )
-										label(for='acor2').acor-item__header
-											.okved-item
-												label.form-checkbox
-													input(type="checkbox" name=""  checked)
-													span.fake-checkbox
-													span.okved-num B
-												.okved-name.txt-bold  Добыча полезных ископаемых
-											
-										.acor-body
-											//======== подуровень 1=======
-											ul.okved-list.visible
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
-														label.form-checkbox
-															input(type="checkbox" name=""  )
-															span.fake-checkbox
-															span.okved-num 05
-														.okved-name  Добыча угля
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
-														label.form-checkbox
-															input(type="checkbox" name=""  )
-															span.fake-checkbox
-															span.okved-num 06
-														.okved-name  Добыча сырой нефти и природного газа
+	//- 					//===single select ====
+	//- 					.form-item
+	//- 						label.text-label Отрасль
+	//- 						.mySelect
+	//- 							.mySelect-icon
+	//- 							.mySelect-input
+	//- 								input.selectValue(type='text' readonly='' placeholder="Выберите значение")
+	//- 							.mySelect-drop
+	//- 								input.mySelect-options(type='text' readonly='' value='Значение-1')
+	//- 								input.mySelect-options(type='text' readonly='' value='Значение-2')
+	//- 								input.mySelect-options(type='text' readonly='' value='Значение-3')
+	//- 								input.mySelect-options(type='text' readonly='' value='Значение-4')
+						
+	//- 					//===single select ====
+	//- 					.form-item
+	//- 						label.text-label Форма участия
+	//- 						.mySelect
+	//- 							.mySelect-icon
+	//- 							.mySelect-input
+	//- 								input.selectValue(type='text' readonly='' placeholder="Выберите значение")
+	//- 							.mySelect-drop
+	//- 								input.mySelect-options(type='text' readonly='' value='Значение-1')
+	//- 								input.mySelect-options(type='text' readonly='' value='Значение-2')
+	//- 								input.mySelect-options(type='text' readonly='' value='Значение-3')
+	//- 								input.mySelect-options(type='text' readonly='' value='Значение-4')
+						
+	//- 					.form-btn
+	//- 						button(type="button").btn-outline
+	//- 							span Поиск
+	//- 							svg.svg-check
+	//- 								use(href="./img/spriteSvg.svg#svg-check")
+			
+	//- 		.invest-catalogy__cards
+	//- 			+foto-card('Концессионное соглашение', 'Имущественный комплекс наземного электрического транспорта общего пользования', 'img1')
+	//- 			+foto-card('Концессионное соглашение', 'IT-кампус',  'img2')
+	//- 			+foto-card('Концессионное соглашение', 'Универсальный спортивный комплекс с искусственным льдом', 'img3')
+	//- 			+foto-card('Концессионное соглашение', 'Единый образовательный комплекс', 'img4')
+			
+	//- 		//===== блок с кнопкой ======
+	//- 		.btn-wrapper.fly-center
+	//- 			a(href="#!").btn-outline
+	//- 				span Загрузить еще проекты
+	//- 				svg.svg-add
+	//- 					use(href="./img/spriteSvg.svg#svg-add")
 
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
-														label.form-checkbox
-															input(type="checkbox" name=""  )
-															span.fake-checkbox
-															span.okved-num 07
-														.okved-name  Добыча металлических руд
-									
-									//=========== ACCORDION ITEM ====================
-									.acor-item
-										input#acor3(type='checkbox' name='acor' )
-										label(for='acor3').acor-item__header
-											.okved-item
-												label.form-checkbox
-													input(type="checkbox" name=""  )
-													span.fake-checkbox
-													span.okved-num C
-												.okved-name.txt-bold  Обрабатывающие производства
-											
-										.acor-body
-											//======== подуровень 1=======
-											ul.okved-list.visible
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
-														label.form-checkbox
-															input(type="checkbox" name=""  )
-															span.fake-checkbox
-															span.okved-num 05
-														.okved-name  Добыча угля
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
-														label.form-checkbox
-															input(type="checkbox" name=""  )
-															span.fake-checkbox
-															span.okved-num 06
-														.okved-name  Добыча сырой нефти и природного газа
-
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
-														label.form-checkbox
-															input(type="checkbox" name=""  )
-															span.fake-checkbox
-															span.okved-num 07
-														.okved-name  Добыча металлических руд
-
-									//=========== ACCORDION ITEM ====================
-									.acor-item
-										input#acor4(type='checkbox' name='acor' )
-										label(for='acor4').acor-item__header
-											.okved-item
-												label.form-checkbox
-													input(type="checkbox" name=""  )
-													span.fake-checkbox
-													span.okved-num D
-												.okved-name.txt-bold  Обеспечение электрической энергией, газом и паром; кондиционирование воздуха
-											
-										.acor-body
-											//======== подуровень 1=======
-											ul.okved-list.visible
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
-														label.form-checkbox
-															input(type="checkbox" name=""  )
-															span.fake-checkbox
-															span.okved-num 05
-														.okved-name  Добыча угля													
-								
-									//=========== ACCORDION ITEM ====================
-									.acor-item
-										input#acor5(type='checkbox' name='acor' )
-										label(for='acor5').acor-item__header
-											.okved-item
-												label.form-checkbox
-													input(type="checkbox" name=""  )
-													span.fake-checkbox
-													span.okved-num E
-												.okved-name.txt-bold  Водоснабжение; водоотведение, организация сбора и утилизации отходов, деятельность по ликвидации загрязнений
-											
-										.acor-body
-											//======== подуровень 1=======
-											ul.okved-list.visible
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
-														label.form-checkbox
-															input(type="checkbox" name=""  )
-															span.fake-checkbox
-															span.okved-num 05
-														.okved-name  Добыча угля
-									//=========== ACCORDION ITEM ====================
-									.acor-item
-										input#acor5(type='checkbox' name='acor' )
-										label(for='acor5').acor-item__header
-											.okved-item
-												label.form-checkbox
-													input(type="checkbox" name=""  )
-													span.fake-checkbox
-													span.okved-num E
-												.okved-name.txt-bold  Водоснабжение; водоотведение, организация сбора и утилизации отходов, деятельность по ликвидации загрязнений
-											
-										.acor-body
-											//======== подуровень 1=======
-											ul.okved-list.visible
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
-														label.form-checkbox
-															input(type="checkbox" name=""  )
-															span.fake-checkbox
-															span.okved-num 05
-														.okved-name  Добыча угля
-									//=========== ACCORDION ITEM ====================
-									.acor-item
-										input#acor5(type='checkbox' name='acor' )
-										label(for='acor5').acor-item__header
-											.okved-item
-												label.form-checkbox
-													input(type="checkbox" name=""  )
-													span.fake-checkbox
-													span.okved-num E
-												.okved-name.txt-bold  Водоснабжение; водоотведение, организация сбора и утилизации отходов, деятельность по ликвидации загрязнений
-											
-										.acor-body
-											//======== подуровень 1=======
-											ul.okved-list.visible
-												//======== строка первого подуровня ======
-												li.border-block
-													.okved-item.okved-sub-item
-														label.form-checkbox
-															input(type="checkbox" name=""  )
-															span.fake-checkbox
-															span.okved-num 05
-														.okved-name  Добыча угля						
-								
-							//======= footer модального окна ====================
-							.okved-modal__footer
-								button.btn-accent
-									span Применить
-									svg.svg-check
-										use(href="./img/spriteSVG.svg#svg-check")
-		
-				//====== отдельный раздел  =====
-				.partnership-block__wrapper
-					.h3 Сферы применения государственно-частного партнерства:
-
-					.three-col-grid
-						+simple-card('folder', 'Здравоохранение')(class="fly-center")
-						+simple-card('folder', 'Коммунальная инфраструктура')(class="fly-center")
-						+simple-card('folder', 'Транспортная инфраструктура')(class="fly-center")
-						+simple-card('folder', 'Образование, наука, культура, спорт')(class="fly-center")
-						+simple-card('folder', 'Туристическая инфраструктура')(class="fly-center")
-						+simple-card('folder', 'Экологическая инфраструктура')(class="fly-center")
-		
-		
-				//====== отдельный раздел  =====
-				.partnership-block__wrapper
-		
-					.h3 В результате многолетнего сотрудничества Правительства Нижегородской области и частного бизнеса реализованы следующие крупные инфраструктурные проекты:
-					.content-list
-						ul
-							li Строительство физкультурно-оздоровительных центров
-							li Строительство ледовых дворцов
-							li Строительство объектов размещения отходов
-							li Создание системы фотовидеофиксации нарушений правил дорожного движения (более 1000 камер по области)
-							li Создание системы весогабаритного контроля
-							li Реконструкция региональной автоматизированной системы централизованного оповещения населения
-
-					//===== текст в рамке =====
-					.txt-warning
-						.txt-bold В настоящее время проводится проработка возможности реализации на основе государственно-частного партнёрства и концессионных соглашений ещё 9 проектов в сфере спорта, дорожного строительства и т.д.
-						.txt-semi Орган исполнительной власти Нижегородской области, уполномоченный в сфере государственно-частного партнёрства и концессии — министерство экономического развития и инвестиций Нижегородской области.
-		
-					//===== Контакты ======
-					.special-project__contacts
-						.title-24 Контакты
-						.double-block
-							//==== persone card ======
-							.contact-persone.fl-block.info-card
-								.info-card__icon
-									svg.svg-userId
-										use(href="./img/spriteSvg.svg#svg-userId")
-								
-								.info-card__text
-									.txt-upper Управление государственно-частного партнерства и концессий министерства экономического развития и инвестиций Нижегородской области
-									
-							
-							//==== contacts card ======
-							.contact-list.info-card
-								//=== contact-item==
-								a(href="tel:+78314690360").info-card-item.fl-block
-									.info-card__icon
-										svg.svg-call
-											use(href="./img/spriteSvg.svg#svg-call")
-									
-									.info-card__text
-										.txt-upper Телефон
-										.txt-semi +7 (831) 469-03-60
-
-								//=== contact-item==
-								a(href="mailto:abv@minec.kreml.nnov.ru").info-card-item.fl-block
-									.info-card__icon
-										svg.svg-mail
-											use(href="./img/spriteSvg.svg#svg-mail")
-									
-									.info-card__text
-										.txt-upper E-mail
-										.txt-semi abv@minec.kreml.nnov.ru
-		
-					p.body-reg Подробнее о государственно-частном партнерстве и концессионных соглашениях в регионе можно узнать на сайте #[a(href="#!").link Министерства экономического развития и инвестиций Нижегородской области]
-		
-		//===== Антимонопольный комплаенс ======
-		article.projects-showcase.sticky-menu-section#projects-showcase
-			.container
-				.h2 Витрина ГЧП-проектов
-				
-				
-				form.showcase-form(action="" method="method")
-					fieldset.form-fieldset
-						.form-row
-							//===single select ====
-							.form-item
-								label.text-label Стадия реализации
-								.mySelect
-									.mySelect-icon
-									.mySelect-input
-										input.selectValue(type='text' readonly='' placeholder="Выберите значение")
-									.mySelect-drop
-										input.mySelect-options(type='text' readonly='' value='Значение-1')
-										input.mySelect-options(type='text' readonly='' value='Значение-2')
-										input.mySelect-options(type='text' readonly='' value='Значение-3')
-										input.mySelect-options(type='text' readonly='' value='Значение-4')
-							
-							//===single select ====
-							.form-item
-								label.text-label Отрасль
-								.mySelect
-									.mySelect-icon
-									.mySelect-input
-										input.selectValue(type='text' readonly='' placeholder="Выберите значение")
-									.mySelect-drop
-										input.mySelect-options(type='text' readonly='' value='Значение-1')
-										input.mySelect-options(type='text' readonly='' value='Значение-2')
-										input.mySelect-options(type='text' readonly='' value='Значение-3')
-										input.mySelect-options(type='text' readonly='' value='Значение-4')
-							
-							//===single select ====
-							.form-item
-								label.text-label Форма участия
-								.mySelect
-									.mySelect-icon
-									.mySelect-input
-										input.selectValue(type='text' readonly='' placeholder="Выберите значение")
-									.mySelect-drop
-										input.mySelect-options(type='text' readonly='' value='Значение-1')
-										input.mySelect-options(type='text' readonly='' value='Значение-2')
-										input.mySelect-options(type='text' readonly='' value='Значение-3')
-										input.mySelect-options(type='text' readonly='' value='Значение-4')
-							
-							.form-btn
-								button(type="button").btn-outline
-									span Поиск
-									svg.svg-check
-										use(href="./img/spriteSvg.svg#svg-check")
-				
-				.invest-catalogy__cards
-					+foto-card('Концессионное соглашение', 'Имущественный комплекс наземного электрического транспорта общего пользования', 'img1')
-					+foto-card('Концессионное соглашение', 'IT-кампус',  'img2')
-					+foto-card('Концессионное соглашение', 'Универсальный спортивный комплекс с искусственным льдом', 'img3')
-					+foto-card('Концессионное соглашение', 'Единый образовательный комплекс', 'img4')
-				
-				//===== блок с кнопкой ======
-				.btn-wrapper.fly-center
-					a(href="#!").btn-outline
-						span Загрузить еще проекты
-						svg.svg-add
-							use(href="./img/spriteSvg.svg#svg-add")
-
-					.cards-counter 4 / 12		
-		
-		
-		//========Нормативные документы========		
-		article.normative.sticky-menu-section#normative
-			.container
-				.h2 Нормативно-правовые акты в сфере государственно-частного партнерства
-				.download-cards-wrapper
-					+download-card('Федеральный закон от 21.07.2005 № 115-ФЗ «О концессионных соглашениях»', 'pdf')
-					+download-card('Федеральный закон от 13.07.2015 № 224-ФЗ «О государственно-частном партнерстве, муниципально-частном партнерстве в Российской Федерации и внесении изменений в отдельные законодательные акты Российской Федерации»', 'pdf')
-					+download-card('Приказ Минэкономразвития России от 30.11.2015 № 894 «Об утверждении Методики оценки эффективности проекта государственно-частного партнерства, проекта муниципально-частного партнерства и определения их сравнительного преимущества»')
-					+download-card('Закон Нижегородской области от 31.08.2016 № 134-З «О государственно-частном партнерстве в Нижегородской области»', 'pdf')
-					+download-card('Постановление Правительства Нижегородской области от 27.10.2016 № 722 «О подготовке и реализации проектов на основе концессионных соглашений и соглашений о государственно-частном партнерстве, а также проведении оценки эффективности проекта муниципально-частного партнерства и определении его сравнительного преимущества»', 'pdf')
+	//- 			.cards-counter 4 / 12		
+	
+	
+	//- //========Нормативные документы========		
+	//- article.normative.sticky-menu-section#normative
+	//- 	.container
+	//- 		.h2 Нормативно-правовые акты в сфере государственно-частного партнерства
+	//- 		.download-cards-wrapper
+	//- 			+download-card('Федеральный закон от 21.07.2005 № 115-ФЗ «О концессионных соглашениях»', 'pdf')
+	//- 			+download-card('Федеральный закон от 13.07.2015 № 224-ФЗ «О государственно-частном партнерстве, муниципально-частном партнерстве в Российской Федерации и внесении изменений в отдельные законодательные акты Российской Федерации»', 'pdf')
+	//- 			+download-card('Приказ Минэкономразвития России от 30.11.2015 № 894 «Об утверждении Методики оценки эффективности проекта государственно-частного партнерства, проекта муниципально-частного партнерства и определения их сравнительного преимущества»')
+	//- 			+download-card('Закон Нижегородской области от 31.08.2016 № 134-З «О государственно-частном партнерстве в Нижегородской области»', 'pdf')
+	//- 			+download-card('Постановление Правительства Нижегородской области от 27.10.2016 № 722 «О подготовке и реализации проектов на основе концессионных соглашений и соглашений о государственно-частном партнерстве, а также проведении оценки эффективности проекта муниципально-частного партнерства и определении его сравнительного преимущества»', 'pdf')

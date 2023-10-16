@@ -1,0 +1,15 @@
+extends ../layouts/layout.pug
+
+block content
+	.page-grid
+		include ../sections/_main-menu
+		include ../sections/_header-video.pug
+		
+		//====== карточки новостей ======
+		include ../sections/_news-page-cards.pug
+	
+	//====footer======
+	include ../sections/_footer.pug
+	
+block variables
+	-var title = "Новости";

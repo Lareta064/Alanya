@@ -9,6 +9,9 @@
 	animation-duration: .3s;
 	animation-fill-mode: forwards;
 	animation-timing-function: ease-in-out;
+	@media(max-width:1199px){
+		z-index: 20;
+	}
 }
 
 .modal-frame-wrapper {
@@ -22,7 +25,13 @@
 	justify-content: center;
 	overflow: hidden;
 	overflow-y: auto;
-
+    padding-left: 449px;
+	@media(max-width:1919px){
+		padding-left: 300px;
+	}
+	@media(max-width:1199px) {
+		padding-left: 0;
+	}
 	.icon-close {
 		position: absolute;
 		top: 40px;
@@ -42,13 +51,24 @@
 }	
 .modal-frame{
 	position: relative;
-	
+	width: 95%;
+	max-width: 1350px;
 	border-radius: 20px;
 	border: 1px solid $sec2;
 	background: $sec4;
 	box-shadow: 0px 4px 40px 0px rgba(169, 173, 198, 0.35);
 	padding: 40px 30px;
+	@media (max-width: 767px) {
+	width: 100%;
+	}
 }
-.modal-frame.modal-frame--subscribe{
-	width: 490px;
+.modal-frame-wrapper.modal-frame-subscribe{
+padding-left: 0;
+.modal-frame{
+	width: 100%;
+	max-width:490px;
+	@media (max-width: 767px) {
+
+		}
+	}
 }

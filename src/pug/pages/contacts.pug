@@ -1,0 +1,54 @@
+extends ../layouts/layout.pug
+
+block content
+	.page-grid
+		include ../sections/_main-menu
+		header.header.header-inner
+			.header-content.fly-center(style="background-image: url(./img/contacts-bg.webp)")
+				
+				.gradient-block.gradient-block--contacts
+					.gradient-box.mb-30
+						h1.h2 Контакты
+				
+					.gradient-block__group
+						//==== single block ===
+						.gradient-box.gradient-box--special
+							.gradient-box__icon
+								img(src="./img/icons/golf.webp", width="28" height="28" alt="alt")
+							.gradient-box__content.fly-center
+								
+								.gradient-box__text
+									.body-3 Корпорация инвестиционного развития РСО-Алания
+									ul
+										li 362000, г. Владикавказ, РСО-Алания улица Шмулевича, д. 8/Б Офис: 106
+										li 
+											a(href="tel:+78672700140") +7 (8672) 70-01-40
+										li 
+											a(href="www.alania-invest.ru") www.alania-invest.ru
+										li 
+											a(href="mailto:alania-invest@mail.ru") alania-invest@mail.ru
+						
+						//==== single block ===
+						.gradient-box.gradient-box--special
+							.gradient-box__icon
+								img(src="./img/icons/golf.webp", width="28" height="28" alt="alt")
+							.gradient-box__content.fly-center
+								.gradient-box__text
+									.body-3 Парламент Республики Северная Осетия-Алания
+									ul
+										li 362038, РСО-Алания, г.Владикавказ, пл.Свободы, д.1
+										li 
+											a(href="tel:+78672539632") +7 (8672) 53-96-32
+										li 
+											a(href="www.parlament.alania.gov.ru") www.parlament.alania.gov.ru
+										li 
+											a(href="mailto:info@parlament.alania.gov.ru") info@parlament.alania.gov.ru
+		
+		//====== content ======
+		include ../sections/_contacts.pug
+	
+	//====footer======
+	include ../sections/_footer.pug
+	
+block variables
+	-var title = "Контакты";

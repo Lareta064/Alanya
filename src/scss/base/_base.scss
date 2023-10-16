@@ -24,6 +24,8 @@ body {
 	font-family: $reg;
 	font-size: 16px;
 	line-height: 1.3;
+	
+	
 	-webkit-font-smoothing: antialiased;
 	@media (max-width: 767px) {
 	  line-height: 1.4;
@@ -177,7 +179,7 @@ article{
 	}
 }
 .economy-republic .container, .partnership-block__wrapper,
-.company-presentation .container, .partnership .container, .calculator .container {
+.company-presentation .container, .partnership .container, .calculator .container, .support-measures article>.container {
 	&>*+* {
 		margin-top: 40px;
 	}
@@ -204,6 +206,9 @@ article{
 .fl-column-20{
 	 row-gap:20px;
 	&>*{width: 100%;}
+	@media (max-width: 767px) {
+		row-gap: 10px;
+	}
 }
 
 .fly-bottom{align-items: flex-end!important;}
@@ -228,6 +233,26 @@ article{
 	@media (max-width: 991px) {
 	  margin-bottom: 10px;
 	}
+}
+.gap-30{
+	&>*+*{
+		margin-top: 30px;
+		@media (max-width: 767px) {
+		margin-top: 20px;
+		}
+	}
+}
+.gap-40{
+	&>*+* {
+		margin-top: 40px;
+
+		@media (max-width: 767px) {
+			margin-top: 30px;
+		}
+	}
+}
+.gap-10{
+	&>*+*{margin-top: 10px!important;}
 }
 .mb-40{
 	margin-bottom: 40px;
@@ -324,5 +349,29 @@ article{
 	}
 	@media (max-width: 767px) {
 		grid-template-columns: 1fr;
+	}
+}
+.back-top{
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background-color: $ac1;
+	transition: .5s;
+	svg{
+		fill:white;
+		transform: rotate(90deg);
+	}
+	position: fixed;
+	left: 500px;
+	bottom: 40px;
+	z-index: 10;
+	&:hover{opacity: .8;}
+	@media (max-width: 1919px) {
+		bottom: 20px;
+		left: 330px;
+	}
+	@media (max-width: 1199px) {
+	bottom: 20px;
+	left: 30px;
 	}
 }

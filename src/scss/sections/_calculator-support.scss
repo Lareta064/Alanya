@@ -1,0 +1,91 @@
+.regional-measures__block >*+*{margin-top: 40px;
+@media (max-width: 767px) {
+margin-top: 20px;
+}}
+.support-measures__text{
+	p{margin-top: 10px;
+	margin-bottom: 10px;}
+}
+.support-measures .download-cards-wrapper{
+	padding-top: 20px;
+	padding-bottom: 30px;
+	@media (max-width: 767px) {
+	padding-top: 10px;
+	padding-bottom: 15px;
+	}
+}
+.support-measures{padding-top: 0;}
+.support-measures article{
+	margin-top: -20px;
+	padding-top: 50px;
+	@media (max-width: 991px) {
+	margin-top: -70px;
+	padding-top: 85px;
+	padding-bottom: 15px;
+	}
+}
+.support-measures-acor{
+	.acor-container input:checked + label + .acor-body{padding-bottom: 20px;}
+	.acor-body{
+		
+		strong{
+			display: block;
+			color: $pr;
+		}
+		ul li,ol li,p{
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		 h4, h5, h6{
+			font-size: 18px;
+			color: $pr;
+			line-height: 1.4;
+			margin-top: 16px;
+			margin-bottom: 10px;
+			@media (max-width: 767px) {
+			font-size: 14px;
+			}
+		}
+		ul li {
+			padding-left: 10px;
+			position: relative;
+			
+		}
+		ol, ul{padding-left: 16px;}
+		ul li:before {
+			content:'';
+			border-radius: 50%;
+			background-color: $sec;
+			width: 5px;
+			height: 5px;
+			top: 8px;
+			display: block;
+			position: absolute;
+			left: 0;
+		}
+		.download-card +.download-card{margin-top: 10px;}
+	}
+	@media (max-width: 767px) {
+	.title-24{
+		font-size: 14px;
+	}
+	}
+}
+.icon-title{
+	display: flex;
+	align-items: center;
+	
+}
+.icon-title__svg{
+	flex-shrink:0;
+	margin-right: 20px;
+	width: 60px;
+	height: 60px;
+	border-radius: 12px;
+	background-color: $ac3;
+	display: flex;
+	svg{
+		fill: white;
+		margin: auto;
+	}
+}

@@ -355,7 +355,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 
 	}
-	const okvedItems = document.querySelectorAll('.okved-sub-item');
+	const okvedItems = document.querySelectorAll('.okved-list__header');
 	if (okvedItems.length > 0) {
 		for (let item of okvedItems)
 			item.addEventListener('click', function () {
@@ -371,4 +371,20 @@ document.addEventListener("DOMContentLoaded", function (){
 
 			})
 	}
+
+	/*кнопка вверх */
+	$("#back-top").hide();
+
+
+	$(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 200) {
+				$('#back-top').fadeIn();
+			} else {
+				$('#back-top').fadeOut();
+				$('.header-top').removeClass('fixed');
+			}
+		});
+
+	});
 });

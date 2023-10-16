@@ -239,10 +239,27 @@ svg{transition: .3s;}
 [class^="svg-icon_"]{
 	fill:#767DA2;
 	width: 39px;
-	height: 34px;
+	height: 39px;
 }
-.svg-icon_2,.svg-icon_8{height: 34px;}
+// .svg-icon_2,.svg-icon_8{height: 34px;}
 .svg-icon_11,
-.svg-icon_5 {
+.svg-icon_5,.svg-icon_12, .svg-icon_21 {
 	width: 34px;
+}
+.svg-icon_25{height: 31px;}
+.svg-book{
+	width: 24px;
+	height: 30px;
+	fill: white;
+}
+.svg-right, .svg-left{
+	width: 20px;
+	height: 16px;
+	fill:white;
+}
+.svg-left{fill:#5162FF;}
+.svg-list{
+	width: 20px;
+	height: 12px;
+	fill: #767DA2;
 }

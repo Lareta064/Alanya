@@ -1,0 +1,82 @@
+include _mixins-links.pug
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		
+		
+		
+		//=======убрать перевод цифр в номер телефона на ios  и safari ======
+		meta(name="format-detection" content="telephone=no")
+		
+		//- link(rel="stylesheet", href="./fonts/fonts.css")
+
+		//==== owl carousel ========
+		link(rel="stylesheet", href="./libs/owlCarousel/owl.carousel.min.css")
+		
+		link(rel="stylesheet", href="./css/main.css")
+		
+		title !{title}
+
+		//======= подключение шрифтов в тег head  ускоряет загрузку страницы ======
+		style.
+
+			@font-face {
+				font-family: "Manrope-Regular";
+				src: url(./fonts/Manrope-Regular.woff2) format("woff2");
+				font-weight: 400;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: "Manrope-Medium";
+				src: url(./fonts/Manrope-Medium.woff2) format("woff2");
+				font-weight: 500;
+				font-style: normal;
+				font-display: swap;
+			}
+
+			@font-face {
+				font-family: "Manrope-SemiBold";
+				src: url(./fonts/Manrope-SemiBold.woff2) format("woff2");
+				font-weight: 600;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: "Manrope-Bold";
+				src: url(./fonts/Manrope-Bold.woff2) format("woff2");
+				font-weight: 700;
+				font-style: normal;
+				font-display: swap;
+			}
+	body#top(class=(bodyCl !=="" ? bodyCl : ''))
+		
+		block content
+		
+
+		//======модальное окно-форма подписки =======
+		//========================	Модальные окна имеют атрибут  frame-modal и по умолчанию имеют dispaly:none; Элемент, по клику на который оно отображается, имеет атрибут frame-btn.  По клику на frame-btn, frame-modal добавляется класс visible с dispaly:flex; ==========
+		
+		include ../sections/_modal-form.pug
+
+		//======back top ======
+		a(href="#top")#back-top.back-top.fl-center
+			svg.svg-left
+				use(href="./img/spriteSvg.svg#svg-left")
+		//=============== jquery ===================
+		script(src="./libs/jquery/jquery-3.0.0.min.js")
+		
+		//=============== owl.carousel ===================
+		script(src="./libs/owlCarousel/owl.carousel.min.js")
+		
+		
+		
+		//=============== мои скрипты ===================
+		
+		script(src="./js/form.js")
+		script(src="./js/calculator-page.js")

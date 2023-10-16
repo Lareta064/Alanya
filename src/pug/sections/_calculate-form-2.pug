@@ -1,0 +1,181 @@
+//============= СТР 2 ============
+.calculator-form-page.gap-30(data-page="page_2")
+	//======== Объем вложений ============
+	.form-fieldset
+		.calculator-range-block.switch-block
+			.form-fieldset__title.fly-center
+				.body-bold Объем вложений по инвестиционному проекту (млн руб.)
+
+				//===switch=====
+				label.switch-item.switch-toggle
+					p ДИАПАЗОН
+					input(type="checkbox")
+					.switch-item__toggle
+						span
+						span
+					p ЗНАЧЕНИЕ
+			
+			.switch-content_of
+				.range
+					.range-slider
+						input.rangeSlider.range-input(type='range' min='0' max='5000' value='0' step='10')
+						.sliderticks
+							span 0
+							span от 10
+							span от 25
+							span от 50
+							span от 100
+							span от 250
+							span от 500
+							span от 750
+							span от 1 млрд
+							span от 1.5 млрд
+							span от 5 млрд
+			
+			.switch-content_on
+				.form-item.form-item--range
+					input(type="text" placeholder="Введите число")
+					span.body-6 млн руб.
+	
+	//======== Количество создаваемых рабочих мест ============
+	.form-fieldset
+		.calculator-range-block.switch-block
+			.form-fieldset__title.fly-center
+				.body-bold Количество создаваемых рабочих мест
+
+				//===switch=====
+				label.switch-item.switch-toggle
+					p ДИАПАЗОН
+					input(type="checkbox")
+					.switch-item__toggle
+						span
+						span
+					p ЗНАЧЕНИЕ
+			
+			.switch-content_of
+				.range
+					.range-slider
+						input.rangeSlider.range-input(type='range' min='0' max='750' value='0' step='10')
+						.sliderticks
+							span 0
+							span до 10
+							span до 25
+							span до 50
+							span до 100
+							span до 250
+							span до 500
+							span от 750
+							
+			
+			.switch-content_on
+				.form-item.form-item--range
+					input(type="text" placeholder="Введите число")
+					
+	//======== Объем капитальных вложений ============		
+	.form-fieldset
+		.calculator-range-block.switch-block
+			.form-fieldset__title.fly-center
+				.body-bold Объем капитальных вложений (млн руб.)
+
+				//===switch=====
+				label.switch-item.switch-toggle
+					p ДИАПАЗОН
+					input(type="checkbox")
+					.switch-item__toggle
+						span
+						span
+					p ЗНАЧЕНИЕ
+			
+			.switch-content_of
+				.range
+					.range-slider
+						input.rangeSlider.range-input(type='range' min='0' max='5000' value='0' step='10')
+						.sliderticks
+							span 0
+							span от 10
+							span от 25
+							span от 50
+							span от 100
+							span от 250
+							span от 500
+							span от 750
+							span от 1 млрд
+							span от 1.5 млрд
+							span от 5 млрд
+			
+			.switch-content_on
+				.form-item.form-item--range
+					input(type="text" placeholder="Введите число")
+					span.body-6 млн руб.			
+	
+	//========Объем собственных средств ============			
+	.form-fieldset
+		.calculator-range-block.switch-block
+			.form-fieldset__title.fly-center
+				.body-bold Объем собственных средств (млн руб.)
+
+				//===switch=====
+				label.switch-item.switch-toggle
+					p ДИАПАЗОН
+					input(type="checkbox")
+					.switch-item__toggle
+						span
+						span
+					p ЗНАЧЕНИЕ
+			
+			.switch-content_of
+				.range
+					.range-slider
+						input.rangeSlider.range-input(type='range' min='0' max='5000' value='0' step='10')
+						.sliderticks
+							span 0
+							span от 10
+							span от 25
+							span от 50
+							span от 100
+							span от 250
+							span от 500
+							span от 750
+							span от 1 млрд
+							span от 1.5 млрд
+							span от 5 млрд
+			
+			.switch-content_on
+				.form-item.form-item--range
+					input(type="text" placeholder="Введите число")
+					span.body-6 млн руб.			
+			
+			//======скрипт для шкалы диапазона ========
+			script.
+				
+				/*=== for input Range =====*/
+				const rangeSliders = document.querySelectorAll(".rangeSlider")
+				
+				for(let item of rangeSliders)
+				item.addEventListener("input", (event) => {
+				const tempSliderValue = event.target.value; 
+				
+				
+				const progress = (tempSliderValue / item.max) * 100;
+				
+				item.style.background = `linear-gradient(to right, #B2B9FF ${progress}%, #ccc ${progress}%)`;
+				})
+
+	//====== calculator  form  page footer =====
+	.calculator-form-footer.fl-block
+		button.btn.mini-btn(type="button" data-btn = "page_1")
+			svg.svg-left
+				use(href="./img/spriteSvg.svg#svg-left")
+		
+		.fly-center
+			button.btn(type="button")
+				span Сбросить фильтры
+				svg.svg-reload
+					use(href="./img/spriteSvg.svg#svg-reload")
+		
+			button.btn-accent(type="button"  data-btn = "page_3")
+				span Найти
+				svg.svg-search
+					use(href="./img/spriteSvg.svg#svg-search")
+
+			.calculator-page 2/2
