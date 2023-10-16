@@ -27,7 +27,7 @@
 		
 		&>*+*{margin-top: 0;}
 		.form-checkbox, .form-radio{
-			min-width: 135px;
+			min-width: 120px;
 			
 		}
 		.body-5{padding-left: 10px; text-align: left;}
@@ -57,7 +57,7 @@
 		@media (max-width: 767px) {
 			grid-template-columns: 1fr 1fr;
 		}
-		.form-checkbox,.form-radio{min-width: 135px; }
+		// .form-checkbox,.form-radio{min-width: 135px; }
 		.fl-column {
 			text-align: center;
 			align-items: center;

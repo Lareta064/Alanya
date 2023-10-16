@@ -48,7 +48,7 @@
 				+calc-check('checkbox', '9', 9,'Имущественная')
 				+calc-check('checkbox', '10', 10,'Образовательная')
 				
-				// =====Если элементов больше, чем 6 , то добавляется юлок с кнопками -переключения страниц с элементами.
+				// =====Если элементов больше, чем 6 , то добавляется блок с кнопками -переключения страниц с элементами.
 				.categories-page-toggle.flex-mobile
 					button.circle-button.active
 					button.circle-button
@@ -64,7 +64,7 @@
 					//==== переключатель отрасль / оквэд
 					label.switch-item.switch-toggle
 						p Отрасль
-						input(type="checkbox" checked)
+						input(type="checkbox" )
 						.switch-item__toggle
 							span
 							span
@@ -86,15 +86,15 @@
 				//=======контент для ОТРАСЛЬ ========
 				.switch-content_of.active
 					.industry-grid__block
-						+calc-check('checkbox', '5', 5,'Консультационная')
-						+calc-check('checkbox', '6', 6,'Налоговая')
-						+calc-check('checkbox', '7', 7,'Кредиты и займы')
-						+calc-check('checkbox', '8', 8,'Субсидия')
-						+calc-check('checkbox', '9', 9,'Имущественная')
-						+calc-check('checkbox', '10', 10,'Образовательная')
-						+calc-check('checkbox', '8', 8,'Субсидия')
-						+calc-check('checkbox', '9', 9,'Имущественная')
-						+calc-check('checkbox', '10', 10,'Образовательная')
+						+calc-check('checkbox', '11', 11,'Все')
+						+calc-check('checkbox', '12', 12,'Химическая и нефтехимическая промышленность')
+						+calc-check('checkbox', '13', 13,'Промышленность строительных материалов')
+						+calc-check('checkbox', '14', 14,'Строительство')
+						+calc-check('checkbox', '15', 15,'Сельское хозяйство')
+						+calc-check('checkbox', '16', 16,'Торговля и общественное питание')
+						+calc-check('checkbox', '17', 17,'Транспорт и связь')
+						+calc-check('checkbox', '18', 18,'Туризм и рекреация')
+						+calc-check('checkbox', '19', 19,'Здравоохранение')
 				
 						//==== переключатель отраслей на мобильной версии , которые отображаются по 9 штук в правой колонке внутри .industry-grid__block =====
 						.categories-page-toggle.flex-mobile
@@ -151,9 +151,7 @@
 								//===== Если нет значений, отображается тег <p> с текстом  Нет данных
 								
 								ul
-									
 									li
-										
 										p Нет данных
 									li
 										.form-checkbox.okved-item
@@ -200,6 +198,33 @@
 												span.okved-num 01.1
 												p.okved-name Выращивание однолетних культур
 				
+	//==== form-block Тип поддержки =====
+	.calculator-form__group.flex-center
+		.large-card
+			.project-card
+				.project-card__head
+					.body-bold  Территория реализации инвестиционного проекта
+					
+					//==== переключатель  блоков с отраслями по 6 штук на десктоп версии  в правой колонке внутри  =====
+					.categories-page-toggle.flex-768
+						button.circle-button.active
+						button.circle-button
+						button.circle-button
+				
+				
+				.project-card__footer
+					p Выберите тип поддержки
+
+			.large-card__text
+				
+				+calc-check('checkbox', '20', 20,'Промышленные парки')
+				+calc-check('checkbox', '21', 21,'Технопарки')
+				+calc-check('checkbox', '22', 22,'Площадки greenfield')
+				+calc-check('checkbox', '23', 23,'ОЭЗ')
+				+calc-check('checkbox', '24', 24,'Площадки brownfield')
+				+calc-check('checkbox', '25', 25,'ТОСЭР')
+	
+	
 	//======= calculator  form  page footer =============
 	.calculator-form-footer.fl-block
 		button.btn(type="button")

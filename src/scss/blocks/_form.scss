@@ -250,6 +250,10 @@ textarea:focus{border: 1px solid $sec1;}
       border-radius: 12px;
       transition: .5s;
       flex-shrink: 0;
+      &:hover{
+        background-color: $ac1;
+        svg{fill:white;}
+      }
       svg{
         fill: $sec;
         transition: .5s;
