@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function (){
-
+	$(function () {
+		$('.lazy').Lazy();
+	});
 	/*============= open/close mob menu ===============*/
 	const menuToggle = document.querySelector('#menu-toggle');
 
@@ -227,18 +229,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			advForm.classList.toggle('open');
 		});
 	}
-	/**подсветка активного пункта меню*/
-	// const stickyMenu = document.querySelector('#sticky-menu');
-	// if (stickyMenu){
-	// 	const stickyMenuLi = document.querySelectorAll('li');
-	// 	for (let item of stickyMenuLi){
-	// 		const itemLinkLength = item.querySelector('a').textContent.length;
-	// 		console.log(itemLinkLength);
-	// 		if (itemLinkLength > 19){
-	// 			item.classList.add(	'w-150');
-	// 		}
-	// 	}
-	// }
+
 
 	jQuery(($) => {
 

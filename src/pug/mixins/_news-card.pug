@@ -1,7 +1,7 @@
 mixin news-card(img, sp1, sp2, title)
 	a(href="#!").news-card.fl-block
 		.news-card__img
-			img(src="./img/news"+ img +".webp", width="320"  height="200" alt="img")
+			img.lazy(src="./img/news"+ img +".webp", width="320"  height="200" alt="img")
 		
 		.news-card__info.fl-block 
 			.news-card__date.fl-block

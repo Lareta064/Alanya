@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function (){
-
+	$(function () {
+		$('.lazy').Lazy();
+	});
 	/*============= open/close mob menu ===============*/
 	const menuToggle = document.querySelector('#menu-toggle');
 
