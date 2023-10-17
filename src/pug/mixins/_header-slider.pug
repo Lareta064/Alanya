@@ -3,6 +3,6 @@ mixin header-slider(img, text)
 	.gradient-box.gradient-box--special
 		.gradient-box__content.fly-center
 			.gradient-box__icon.fl-center
-				img(src="./img/icons/"+ img +".svg", width="56" height="56" alt="alt")
+				img.lazy(src="./img/icons/"+ img +".svg", width="56" height="56" alt="alt")
 
 			.body-3 !{text}
